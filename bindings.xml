@@ -1,0 +1,15 @@
+<Bindings>
+	<Layer name="SI_KEYBINDINGS_LAYER_GENERAL">
+		<Category name="The Gaming Council">
+			<Action name="TGC_DEBUG">
+				<Up>TGC.Debug()</Up>
+			</Action>
+			<Action name="TGC_GUILD_INVITE">
+				<Up>TGC.GuildInvite()</Up>
+			</Action>
+			<Action name="TGC_GUILD_ASK">
+				<Up>TGC.GuildAsk()</Up>
+			</Action>
+		</Category>
+	</Layer>
+</Bindings>
