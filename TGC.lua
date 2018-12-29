@@ -23,43 +23,7 @@ local TGCGuildVarDefaults = {
 TGC.lastScanEvents = 0
 TGC.firstScan = true
 
--- localize calls to ESO API
-local GetUniqueNameForCharacter = GetUniqueNameForCharacter
-local GetUnitType = GetUnitType
-local GetUnitName = GetUnitName
-local GetUnitReaction = GetUnitReaction
-local GetUnitLevel = GetUnitLevel
-local GetMapName = GetMapName
-local GetUnitZone = GetUnitZone
-local GetUnitTitle = GetUnitTitle
-local GetUnitRace = GetUnitRace
-local GetUnitClass = GetUnitClass
-local GetUnitGender = GetUnitGender 
-local GetUnitChampionPoints = GetUnitChampionPoints
-local GetUnitAvARank = GetUnitAvARank
-local GetAvARankName = GetAvARankName
-local GetUnitAlliance = GetUnitAlliance
-local GetAllianceName = GetAllianceName 
-local GetUnitCaption = GetUnitCaption
-local GetGuildMemberInfo = GetGuildMemberInfo
-local GetGuildMemberCharacterInfo = GetGuildMemberCharacterInfo
-local GetGuildId = GetGuildId
-local GetGuildName = GetGuildName
-local GetNumGuildMembers = GetNumGuildMembers
-local IsUnitIgnored = IsUnitIgnored
-local IsUnitFriend = IsUnitFriend
-local GetNumGuildEvents = GetNumGuildEvents
-local StartChatInput = StartChatInput
 local backgroundToggle = true
-
-local ICON_SIZE = 24
-local CHARACTER_NAME_ICON = "/esoui/art/miscellaneous/gamepad/gp_charnameicon.dds"
-local FRIEND_ICON_TEXTURE = "/esoui/art/campaign/campaignbrowser_friends.dds"
-local GUILD_ICON_TEXTURE = "/esoui/art/campaign/campaignbrowser_guild.dds"
-local IGNORE_ICON_TEXTURE = "/esoui/art/contacts/tabicon_ignored_up.dds"
-local LEADER_ICON_TEXTURE = "/esoui/art/unitframes/groupicon_leader.dds"
-local GROUP_LEADER_ICON = "/esoui/art/icons/mapkey/mapkey_groupleader.dds"
-local GROUP_MEMBER_ICON = "/esoui/art/icons/mapkey/mapkey_groupmember.dds"
   
 -- Next we create a function that will initialize our addon
 function TGC:Initialize()
@@ -115,8 +79,8 @@ function TGC.GetGuildMembers()
   if( TGC.guildId ~= 0 ) then
     local members = GetNumGuildMembers(TGC.guildId)
     for member=1, members do
-      local player = GetGuildMemberInfo(TGC.guildId,member)
-      TGC.guildMembers[player] = {}
+      local player, _, rank = GetGuildMemberInfo(TGC.guildId,member)
+      TGC.guildMembers[player] = { rank = TGC.GetGuildRankName( rank ) }
     end
   end
 end
@@ -148,7 +112,7 @@ function TGC.GuildStatus( player )
   local inGuild = player and TGC and TGC.guildMembers and TGC.guildMembers[player]
 
   if inGuild then
-    return "In Guild"
+    return "The Gaming Council - " .. TGC.guildMembers[player].rank
   elseif TGC.personalInvites[player] then
     return "Personally Invited"
   elseif savedVars.priorMembers[player] then
@@ -187,7 +151,7 @@ function TGC.GuildInvite()
     GuildInvite(TGC.guildId, name)
     local player = GetUnitDisplayName(unitTag)
     TGC.personalInvites[player] = {}
-    zo_callLater(function() TGC.NewScan() end, 1000)
+    d( "Attempted to invite " .. player )
   end
 end
 
@@ -199,8 +163,20 @@ function TGC.GuildAsk()
   end
 end
 
+function TGC.GetGuildRankName( rankIndex )
+  if rankIndex == 1 then
+    return "Guildmaster"
+  elseif rankIndex == 4 then
+    return "Officer"
+  elseif rankIndex == 8 then
+    return "Member"
+  else
+    return GetGuildRankCustomName( TGC.guildId, rankIndex )
+  end
+end
+
 function TGC.Debug()
-  TGC.NewScan()
+  --TGC.NewScan()
   --local theEvent = {}
   --theEvent.eventType, theEvent.secondsSince, theEvent.member, theEvent.invitee = GetGuildEventInfo(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER, 31)
   --d( theEvent )
@@ -307,7 +283,7 @@ function TGC.OnGuildMemberAdded( eventCode, guildId, displayName )
     if savedVars.invitedMembers[displayName] then
       savedVars.invitedMembers[displayName] = nil
     end
-    TGC.guildMembers[displayName] = {}
+    TGC.GetGuildMembers()
   end
 end
 
