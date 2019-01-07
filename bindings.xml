@@ -10,6 +10,9 @@
 			<Action name="TGC_GUILD_ASK">
 				<Up>TGC.GuildAsk()</Up>
 			</Action>
+			<Action name="TGC_HIDE_MAP_CLUTTER">
+				<Up>TGC.HideMapClutter()</Up>
+			</Action>
 		</Category>
 	</Layer>
 </Bindings>

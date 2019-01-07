@@ -22,9 +22,31 @@ local TGCGuildVarDefaults = {
 }
 TGC.lastScanEvents = 0
 TGC.firstScan = true
+TGC.hideTamriel = false
 
 local backgroundToggle = true
-  
+
+local original = GetFastTravelNodeInfo
+
+GetFastTravelNodeInfo = function(nodeIndex, ...)
+
+  local known, name, normalizedX, normalizedY, icon, glowIcon, poiType, isShownInCurrentMap, linkedCollectibleIsLocked = original(nodeIndex, ...)
+
+  if GetMapType() == MAPTYPE_WORLD then
+    if TGC.hideTamriel then -- Everything
+      return false, name, normalizedX, normalizedY, icon, glowIcon, poiType, isShownInCurrentMap, linkedCollectibleIsLocked
+    end
+
+    return known, name, normalizedX, normalizedY, icon, glowIcon, poiType, isShownInCurrentMap, linkedCollectibleIsLocked
+
+  end
+
+  return known, name, normalizedX, normalizedY, icon, glowIcon, poiType, isShownInCurrentMap, linkedCollectibleIsLocked
+
+end
+
+
+
 -- Next we create a function that will initialize our addon
 function TGC:Initialize()
   -- ...but we don't have anything to initialize yet. We'll come back to this.
@@ -175,7 +197,21 @@ function TGC.GetGuildRankName( rankIndex )
   end
 end
 
+function TGC.HideMapClutter()
+  if TGC.hideTamriel then
+    TGC.hideTamriel = false
+    ZO_WorldMap_UpdateMap()
+  else
+    TGC.hideTamriel = true
+    ZO_WorldMap_UpdateMap()
+  end
+end
+
 function TGC.Debug()
+  --local questName = GetJournalQuestInfo( 2 )
+  --local zoneName, _, zoneIndex = GetJournalQuestLocationInfo( 2 )
+  --d( "Name " .. questName )
+  --d( "Zone " .. zoneName .. _ .. " " .. zoneIndex )
   --TGC.NewScan()
   --local theEvent = {}
   --theEvent.eventType, theEvent.secondsSince, theEvent.member, theEvent.invitee = GetGuildEventInfo(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER, 31)
