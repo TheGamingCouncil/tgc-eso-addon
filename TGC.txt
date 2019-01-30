@@ -7,5 +7,9 @@
 lang/en.lua
 
 TGC.xml
+LibBinaryEncode.lua
+packetTypes.lua
+byteStream.lua
+md5.lua
 TGC.lua
 bindings.xml

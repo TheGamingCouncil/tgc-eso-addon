@@ -102,7 +102,7 @@ function TGC.GetGuildMembers()
     local members = GetNumGuildMembers(TGC.guildId)
     for member=1, members do
       local player, _, rank = GetGuildMemberInfo(TGC.guildId,member)
-      TGC.guildMembers[player] = { rank = TGC.GetGuildRankName( rank ) }
+      TGC.guildMembers[player] = { rank = TGC.GetGuildRankName( rank ), memberIndex = member }
     end
   end
 end
@@ -205,22 +205,6 @@ function TGC.HideMapClutter()
     TGC.hideTamriel = true
     ZO_WorldMap_UpdateMap()
   end
-end
-
-function TGC.Debug()
-  --local questName = GetJournalQuestInfo( 2 )
-  --local zoneName, _, zoneIndex = GetJournalQuestLocationInfo( 2 )
-  --d( "Name " .. questName )
-  --d( "Zone " .. zoneName .. _ .. " " .. zoneIndex )
-  --TGC.NewScan()
-  --local theEvent = {}
-  --theEvent.eventType, theEvent.secondsSince, theEvent.member, theEvent.invitee = GetGuildEventInfo(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER, 31)
-  --d( theEvent )
-  --local numEvents = GetNumGuildEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
-  --d( numEvents )
-  -- d( TGCIndicator )
-  -- local theEvent = {}
-  -- theEvent.eventType, theEvent.secsSince, theEvent.member, theEvent.invitee = GetGuildEventInfo(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER, 1)
 end
 
 function TGC.ScanLoop()
@@ -329,9 +313,49 @@ function TGC.OnGuildMemberRemoved( eventCode, guildId, displayName, characterNam
     TGC.NewScan()
   end
 end
+
+function TGC.OnGuildMemberNoteChanged( eventCode, guildId, displayName, note )
+  if guildId == TGC.guildId then
+    
+    --d( displayName )
+    d( note )
+    if note:sub( 1, 3 ) == "tgc" then
+      local bss = ByteStream:NewFromStream( note )
+      local obj = bss:GetOutput()
+      d( obj )
+    end
+  end
+end
+
+function TGC.Debug()
+  TGCB.Debug()
+  --GetAddOnManager():RequestAddOnSavedVariablesPrioritySave( "pChat" )
+  --d(7 << 1)
+  --d( "test start" )
+  --CHAT_SYSTEM:SetChannel( CHAT_CHANNEL_GUILD2 )
+  --CHAT_SYSTEM:AddMessage("Something something")
+  --ReloadUI("ingame")
+  --SetGuildMemberNote(number guildId, number memberIndex, string note)
+  --local questName = GetJournalQuestInfo( 2 )
+  --local zoneName, _, zoneIndex = GetJournalQuestLocationInfo( 2 )
+  --d( "Name " .. questName )
+  --d( "Zone " .. zoneName .. _ .. " " .. zoneIndex )
+  --TGC.NewScan()
+  --local theEvent = {}
+  --theEvent.eventType, theEvent.secondsSince, theEvent.member, theEvent.invitee = GetGuildEventInfo(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER, 31)
+  --d( theEvent )
+  --local numEvents = GetNumGuildEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
+  --d( numEvents )
+  -- d( TGCIndicator )
+  -- local theEvent = {}
+  -- theEvent.eventType, theEvent.secsSince, theEvent.member, theEvent.invitee = GetGuildEventInfo(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER, 1)
+end
    
 -- Finally, we'll register our event handler function to be called when the proper event occurs.
+  
+
 EVENT_MANAGER:RegisterForEvent(TGC.addon, EVENT_RETICLE_TARGET_CHANGED, TGC.OnTargetChange)
 EVENT_MANAGER:RegisterForEvent(TGC.addon, EVENT_ADD_ON_LOADED, TGC.OnAddOnLoaded)
 EVENT_MANAGER:RegisterForEvent(TGC.addon, EVENT_GUILD_MEMBER_ADDED, TGC.OnGuildMemberAdded)
 EVENT_MANAGER:RegisterForEvent(TGC.addon, EVENT_GUILD_MEMBER_REMOVED, TGC.OnGuildMemberRemoved)
+EVENT_MANAGER:RegisterForEvent(TGC.addon, EVENT_GUILD_MEMBER_NOTE_CHANGED, TGC.OnGuildMemberNoteChanged)
