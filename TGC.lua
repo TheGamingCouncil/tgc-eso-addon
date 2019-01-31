@@ -318,7 +318,7 @@ function TGC.OnGuildMemberNoteChanged( eventCode, guildId, displayName, note )
   if guildId == TGC.guildId then
     
     --d( displayName )
-    d( note )
+    --d( note )
     if note:sub( 1, 3 ) == "tgc" then
       local bss = ByteStream:NewFromStream( note )
       local obj = bss:GetOutput()
@@ -328,7 +328,7 @@ function TGC.OnGuildMemberNoteChanged( eventCode, guildId, displayName, note )
 end
 
 function TGC.Debug()
-  TGCB.Debug()
+  -- TGCB.Debug()
   --GetAddOnManager():RequestAddOnSavedVariablesPrioritySave( "pChat" )
   --d(7 << 1)
   --d( "test start" )
