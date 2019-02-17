@@ -120,7 +120,7 @@ function TGC.ScanHistory( oldNumberOfEvents, badLoads )
     if numberOfEvents > oldNumberOfEvents then badLoads = 0 else badLoads = badLoads + 1 end
     if TGC.firstScan and DoesGuildHistoryCategoryHaveMoreEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER) and badLoads < 10 and lastEventTimeStamp > savedVars.lastScan then
       RequestGuildHistoryCategoryOlder( TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER )
-      zo_callLater(function() TGC.ScanHistory(numberOfEvents, badLoads) end, 1500)
+      zo_callLater(function() TGC.ScanHistory(numberOfEvents, badLoads) end, 5000)
     else
       TGC.firstScan = false
       TGC.MapEventsToMemory()
@@ -214,7 +214,7 @@ end
 
 function TGC.NewScan()
   RequestGuildHistoryCategoryNewest(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
-  zo_callLater(function() TGC.ScanHistory() end, 1000)
+  zo_callLater(function() TGC.ScanHistory() end, 10000)
 end
 
 function TGC.MapEventsToMemory()
@@ -322,7 +322,7 @@ function TGC.OnGuildMemberNoteChanged( eventCode, guildId, displayName, note )
     if note:sub( 1, 3 ) == "tgc" then
       local bss = ByteStream:NewFromStream( note )
       local obj = bss:GetOutput()
-      d( obj )
+      --d( obj )
     end
   end
 end
