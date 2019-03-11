@@ -20,7 +20,6 @@ end
 function TGC.OnGuildMemberRemoved( eventCode, guildId, displayName, characterName )
   if guildId == TGC.guildId then
     TGC.guildMembers[displayName] = nil
-    TGC.NewScan()
   end
 end
 

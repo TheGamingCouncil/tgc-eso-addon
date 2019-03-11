@@ -7,6 +7,11 @@ function TGC.LoadDatabase()
       signupList = {},
       eventList = {}
     },
+    inventories = {
+      chests = {},
+      characters = {},
+      bank = {}
+    },
     options = {
       guildOptions = {
         randomMessages = {
@@ -15,8 +20,19 @@ function TGC.LoadDatabase()
           "Hi, are you looking for a social and trials guild by chance? :)"
         },
         scanHistory = false
+      },
+      setTracker = {
+        tankRole = true,
+        stamDpsRole = true,
+        magDpsRole = true,
+        healRole = true,
+        supportRole = true,
+        pvpType = true,
+        pveType = true,
+        duplicateCount = 2,
+        onlyCorrectTrait = false
       }
     }
   }
-  TGC.db = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 4, nil, TGCGuildVarDefaults )
+  TGC.db = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 5, nil, TGCGuildVarDefaults )
 end

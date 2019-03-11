@@ -48,6 +48,8 @@ function TGC:Initialize()
   if TGC.db.options.guildOptions.scanHistory then
     TGC.ScanLoop();
   end
+
+  TGC.SetTrackerBagHook()
 end
   
 -- Then we create an event handler function which will be called when the "addon loaded" event
@@ -70,6 +72,64 @@ function TGC.OnGuildMemberNoteChanged( eventCode, guildId, displayName, note )
       --d( obj )
     end
   end
+end
+
+local LN = LibStub:GetLibrary("LibNotifications")
+TGC.LN_provider = LN:CreateProvider()
+
+function TGC.OnPlayerActivated()
+
+  local function removeNotification(provider, data)
+    t = provider.notifications
+    j = data.notificationId
+    -- Loop through table starting at index
+    for i=j, #t do
+      -- Replace current element with next element
+      t[i] = t[i+1]
+      -- Update index in data
+      if i<#t then
+        t[i].notificationId = i
+      end
+    end
+    provider:UpdateNotifications()
+  end
+  -- Callback functions
+  local function acceptCallback(data)
+    removeNotification(TGC.LN_provider, data)
+  end
+  local function declineCallback(data)
+    removeNotification(TGC.LN_provider, data)
+  end
+  -- Custom notification info
+  local msg = {
+    dataType = NOTIFICATIONS_ALERT_DATA,-- NOTIFICATIONS_REQUEST_DATA,
+    secsSinceRequest = ZO_NormalizeSecondsSince(0),
+    note = "Please update The Gaming Concil Addon, visit tgcguild.com and download the latist version.",
+    message = "The Gaming Concil Addon is out of date.",
+    heading = "TGC Update",
+    texture = "EsoUI/Art/Notifications/Gamepad/gp_notification_cs.dds",
+    shortDisplayText = "Short",
+    controlsOwnSounds = false,
+    keyboardAcceptCallback = acceptCallback,
+    keybaordDeclineCallback = declineCallback,
+    gamepadAcceptCallback = acceptCallback,
+    gamepadDeclineCallback = declineCallback,
+    -- Custom keys
+    notificationId = #TGC.LN_provider.notifications + 1,
+  }
+  -- Add custom notification
+  local guildMotd = GetGuildMotD( TGC.guildId )
+  local startFind = string.find(guildMotd, "av[", 0, true)
+  local endFind = string.find(guildMotd, "]", startFind, true )
+
+
+  local version = string.sub( guildMotd, startFind + 3, endFind - 1)
+
+  if not ( TGC.version == version ) then
+    table.insert(TGC.LN_provider.notifications, msg)
+    TGC.LN_provider:UpdateNotifications()
+  end
+
 end
 
 function TGC.Debug()
@@ -99,3 +159,4 @@ end
 -- Finally, we'll register our event handler function to be called when the proper event occurs.
 EVENT_MANAGER:RegisterForEvent(TGC.addon, EVENT_ADD_ON_LOADED, TGC.OnAddOnLoaded)
 EVENT_MANAGER:RegisterForEvent(TGC.addon, EVENT_GUILD_MEMBER_NOTE_CHANGED, TGC.OnGuildMemberNoteChanged)
+EVENT_MANAGER:RegisterForEvent(TGC.addon, EVENT_PLAYER_ACTIVATED, TGC.OnPlayerActivated)
