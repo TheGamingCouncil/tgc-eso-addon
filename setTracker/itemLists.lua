@@ -111,13 +111,8 @@ function TGC.AddSetIndicator(control, bagID, slotIndex, itemLink, relativePoint,
     control:SetHandler("OnMouseExit", nil)
   end
   local function HandleTooltips(control, text)
-    if ESOMRL.ASV.aOpts.inventoryIT then
-      control:SetMouseEnabled(true)
-      AddIconTooltips(control, text)
-    else
-      control:SetMouseEnabled(false)
-      RemoveIconTooltips(control)
-    end
+    control:SetMouseEnabled(true)
+    AddIconTooltips(control, text)
   end
   local function SetInventoryIcon(control, size, icon, icontext)
     control:SetDimensions(size, size)
