@@ -1,5 +1,6 @@
 function TGC.LoadDatabase()
   local TGCGuildVarDefaults = {
+    guildName = "The Gaming Council",
     lastScan = 0,
     invitedMembers = {},
     priorMembers = {},
@@ -34,5 +35,5 @@ function TGC.LoadDatabase()
       }
     }
   }
-  TGC.db = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 5, nil, TGCGuildVarDefaults )
+  TGC.db = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 6, nil, TGCGuildVarDefaults )
 end

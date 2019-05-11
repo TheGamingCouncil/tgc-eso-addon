@@ -42,6 +42,9 @@ guildFeatures/historyScanner.lua
 guildFeatures/inviter.lua
 guildFeatures/roaster.lua
 guildFeatures/targeter.lua
+setTracker/itemEnums.lua
+setTracker/buildDatabase.lua
+setTracker/setDatabase.lua
 setTracker/itemLists.lua
 chat.lua
 bindings.xml

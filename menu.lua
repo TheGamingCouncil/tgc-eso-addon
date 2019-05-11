@@ -32,6 +32,17 @@ function TGC.CreateMenu()
         end,
         width = "full",
         default = TGC.db.options.guildOptions.scanHistory,
+      },
+      {
+        type = "editbox",
+        name = "Guild Name",
+        tooltip = "Full name of gaming council guild use to look up roster and perform auto invites.\n\nReloadUI after this is changed!",
+        getFunc = function() return TGC.db.guildName end,
+        setFunc = function(newValue)
+          TGC.db.guildName = newValue
+        end,
+        width = "full",
+        default = TGC.db.guildName,
       }
     }
   }

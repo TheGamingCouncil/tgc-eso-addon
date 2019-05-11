@@ -1,5 +1,7 @@
 -- First, we create a namespace for our addon by declaring a top-level table that will hold everything else.
-TGC = {}
+TGC = {
+  enums = {}
+}
 
 local LMM = LibStub("LibMainMenu")
 
@@ -7,8 +9,7 @@ local LMM = LibStub("LibMainMenu")
 -- Better to define it in a single place rather than retyping the same string.
 TGC.name = "TGC"
 TGC.addon = "TGC"
-TGC.guildName = "The Gaming Council"
-TGC.version = "0.0.2"
+TGC.version = "0.0.3"
 TGC.guildId = 0
 TGC.guildMembers = {}
 TGC.personalInvites = {}
@@ -17,18 +18,27 @@ TGC.firstScan = true
 
 local backgroundToggle = true
 
+function TGC.SetGuild()
+  if TGC.guildId == 0 then
+    for i=1,15 do
+      if GetGuildName( i ) == TGC.guildName then
+        TGC.guildId = i
+      else
+      end
+    end
+  end
+end
+
 -- Next we create a function that will initialize our addon
 function TGC:Initialize()
   -- ...but we don't have anything to initialize yet. We'll come back to this.
   TGC.LoadDatabase()
 
+  TGC.guildName = TGC.db.guildName
+
   TGC.CreateMenu()
 
-  for i=1,5 do
-    if GetGuildName( i ) == TGC.guildName then
-      TGC.guildId = i
-    end
-  end
+  TGC.SetGuild()
 
   SLASH_COMMANDS["/tgc-toggle-background"] = function (extra)
     if backgroundToggle == true then
@@ -78,7 +88,7 @@ local LN = LibStub:GetLibrary("LibNotifications")
 TGC.LN_provider = LN:CreateProvider()
 
 function TGC.OnPlayerActivated()
-
+  TGC.SetGuild()
   local function removeNotification(provider, data)
     t = provider.notifications
     j = data.notificationId
@@ -133,6 +143,7 @@ function TGC.OnPlayerActivated()
 end
 
 function TGC.Debug()
+  -- StartChatInput( ZO_LinkHandler_CreateLink( "@alexdragian", nil, DISPLAY_NAME_LINK_TYPE, "@alexdragian" ), CHAT_CHANNEL_WHISPER, "@Chance_25")
   -- TGCB.Debug()
   --GetAddOnManager():RequestAddOnSavedVariablesPrioritySave( "pChat" )
   --d(7 << 1)
