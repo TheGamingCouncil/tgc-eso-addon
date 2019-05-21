@@ -9,7 +9,7 @@ local LMM = LibStub("LibMainMenu")
 -- Better to define it in a single place rather than retyping the same string.
 TGC.name = "TGC"
 TGC.addon = "TGC"
-TGC.version = "0.0.3"
+TGC.version = "0.0.4"
 TGC.guildId = 0
 TGC.guildMembers = {}
 TGC.personalInvites = {}
@@ -20,9 +20,10 @@ local backgroundToggle = true
 
 function TGC.SetGuild()
   if TGC.guildId == 0 then
-    for i=1,15 do
-      if GetGuildName( i ) == TGC.guildName then
-        TGC.guildId = i
+    for i=1,5 do
+      guildId = GetGuildId( i )
+      if GetGuildName( guildId ) == TGC.guildName then
+        TGC.guildId = guildId
       else
       end
     end
