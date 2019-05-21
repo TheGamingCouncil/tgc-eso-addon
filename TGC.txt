@@ -1,7 +1,7 @@
 ## Title: The Gaming Council Addon
 ## Author: alexdragian
 ## Description: Helper Addon for all guild members of The Gaming Council.
-## APIVersion: 100026
+## APIVersion: 100027
 ## SavedVariables: TGC_SavedVariables
 
 lib/libstub/libstub.lua
