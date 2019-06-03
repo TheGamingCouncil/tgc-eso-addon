@@ -154,7 +154,6 @@ function guildRecruitLeaderboardList:BuildMasterList()
   for k, v in ipairs(TGC.rosterDb.invitedHistory) do
     if playerList[TGC.rosterDb.invitedHistory[k].member] == nil then
       playerList[TGC.rosterDb.invitedHistory[k].member] = { thisweek = 0, lastweek = 0 }
-      d( TGC.rosterDb.invitedHistory[k].member )
     end
 
     local gmtTimeStamp = os.time( os.date("!*t", TGC.rosterDb.invitedHistory[k].timeStamp ) )
