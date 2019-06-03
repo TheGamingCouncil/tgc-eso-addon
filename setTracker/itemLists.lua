@@ -10,6 +10,11 @@ function TGC.SetTrackerBagHook()
 	end
 end
 
+--            <Label name="$(parent)Name" width="200" height="25" font="ZoFontGameLargeBold" inheritAlpha="true" color="EFEFEF"
+--wrapMode="TRUNCATE" verticalAlignment="TOP" horizontalAlignment="LEFT" text="Recruitment Leader Boards">
+--<Anchor point="TOP" relativeTo="$(parent)" relativePoint="TOP" offsetX="150" />
+--</Label>
+
 function TGC.AddSetIndicator(control, bagID, slotIndex, itemLink, relativePoint, opt)
 	local function CreateSetKeepControl(parent)
 		local control = WINDOW_MANAGER:CreateControl(parent:GetName() .. 'SetKeepControl', parent, CT_TEXTURE)

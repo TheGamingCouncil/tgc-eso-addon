@@ -33,13 +33,13 @@ function TGC.GuildStatus( player )
     return "The Gaming Council - " .. TGC.guildMembers[player].rank
   elseif TGC.personalInvites[player] then
     return "Personally Invited"
-  elseif TGC.db.priorMembers[player] then
-    if TGC.db.priorMembers[player].eventType == 12 then
+  elseif TGC.rosterDb.priorMembers[player] then
+    if TGC.rosterDb.priorMembers[player].eventType == 12 then
       return "Kicked Guild Member"
     else
       return "Prior Guild Member"
     end
-  elseif TGC.db.invitedMembers[player] then
+  elseif TGC.rosterDb.invitedMembers[player] then
     return "Previously Invited"
   else
     return "No Guild Status"

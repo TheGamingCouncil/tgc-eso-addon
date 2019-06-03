@@ -1,9 +1,6 @@
 function TGC.LoadDatabase()
   local TGCGuildVarDefaults = {
     guildName = "The Gaming Council",
-    lastScan = 0,
-    invitedMembers = {},
-    priorMembers = {},
     guildEvents = {
       signupList = {},
       eventList = {}
@@ -35,5 +32,14 @@ function TGC.LoadDatabase()
       }
     }
   }
+
+  local TGCGuildRosterDefaults = {
+    lastScan = 0,
+    invitedMembers = {},
+    invitedHistory = {},
+    priorMembers = {},
+  }
+
+  TGC.rosterDb = ZO_SavedVars:NewAccountWide("TGC_SavedRosterData", 2, nil, TGCGuildRosterDefaults )
   TGC.db = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 6, nil, TGCGuildVarDefaults )
 end

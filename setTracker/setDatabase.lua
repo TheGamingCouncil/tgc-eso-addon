@@ -100,8 +100,7 @@ TGC.setDb = {
     helmLocation = "Direfrost Keep",
     shoulderChest = TGC.enums.undauntedChests.glirion,
     playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    setWeight = TGC.enums.setWeights.all
   },
   ["Ilambris"] = {
     type = TGC.enums.setTypes.monster,

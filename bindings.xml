@@ -13,6 +13,9 @@
 			<Action name="TGC_HIDE_MAP_CLUTTER">
 				<Up>TGC.HideMapClutter()</Up>
 			</Action>
+			<Action name="TGC_GUILD_MENU">
+				<Down>return ZO_KeybindStrip_HandleKeybindDown(keybind)</Down>
+			</Action>
 		</Category>
 	</Layer>
 </Bindings>

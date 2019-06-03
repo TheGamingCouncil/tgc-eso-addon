@@ -10,8 +10,8 @@ end
 
 function TGC.OnGuildMemberAdded( eventCode, guildId, displayName )
   if guildId == TGC.guildId then
-    if TGC.db.invitedMembers[displayName] then
-      TGC.db.invitedMembers[displayName] = nil
+    if TGC.rosterDb.invitedMembers[displayName] then
+      TGC.rosterDb.invitedMembers[displayName] = nil
     end
     TGC.GetGuildMembers()
   end

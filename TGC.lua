@@ -3,13 +3,13 @@ TGC = {
   enums = {}
 }
 
-local LMM = LibStub("LibMainMenu")
+local LMM2 = LibStub("LibMainMenu-2.0")
 
 -- This isn't strictly necessary, but we'll use this string later when registering events.
 -- Better to define it in a single place rather than retyping the same string.
 TGC.name = "TGC"
 TGC.addon = "TGC"
-TGC.version = "0.0.4"
+TGC.version = "0.0.5"
 TGC.guildId = 0
 TGC.guildMembers = {}
 TGC.personalInvites = {}
@@ -56,11 +56,12 @@ function TGC:Initialize()
   TGCIndicatorBG:SetAlpha(0)
   EVENT_MANAGER:UnregisterForEvent(TGC.addon, EVENT_ADD_ON_LOADED)
   TGC.GetGuildMembers()
-  if TGC.db.options.guildOptions.scanHistory then
-    TGC.ScanLoop();
-  end
+  TGC.SetupHistoryScans()
+
 
   TGC.SetTrackerBagHook()
+  LMM2:Init()
+  TGC.SetGuildTabHook( LMM2 )
 end
   
 -- Then we create an event handler function which will be called when the "addon loaded" event
