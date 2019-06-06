@@ -9,7 +9,7 @@ local LMM2 = LibStub("LibMainMenu-2.0")
 -- Better to define it in a single place rather than retyping the same string.
 TGC.name = "TGC"
 TGC.addon = "TGC"
-TGC.version = "0.0.5"
+TGC.version = "0.0.6"
 TGC.guildId = 0
 TGC.guildMembers = {}
 TGC.personalInvites = {}
