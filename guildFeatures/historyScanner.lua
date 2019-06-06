@@ -1,4 +1,5 @@
 function TGC.SetupHistoryScans()
+  TGC.personalInvites = {}
   TGC.NewScan()
 end
 
