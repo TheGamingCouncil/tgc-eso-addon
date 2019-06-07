@@ -130,12 +130,9 @@ function guildRecruitLeaderboardList:BuildMasterList()
   --TGC.rosterDb.invitedHistory = trimList
 
   local currentDateTime = os.date("!*t")
-  d( currentDateTime )
   --each set is from wday 2 - hour 6 
   local day = 60 * 60 * 24
   local currentDayStart = os.time({year=currentDateTime.year, month=currentDateTime.month, day=currentDateTime.day, hour=6, minute=0})
-  d( currentDayStart )
-  d( day )
   local endOfCurrentWeek = 0
   if currentDateTime.wday == 2 then
     if( currentDateTime.hour < 6 ) then

@@ -7,7 +7,7 @@
 lib/libstub/libstub.lua
 lib/LibAnnyoingUpdateNotificationInGame/LibAnnyoingUpdateNotificationInGame.lua
 lib/LibMediaProvider-1.0/LibMediaProvider-1.0.lua
-lib/LibMainMenu/LibMainMenu.lua
+lib/LibMainMenu-2.0/LibMainMenu-2.0.lua
 lib/LibCustomTitles/LibCustomTitles.lua
 lib/LibNotification/LibNotification.lua
 
