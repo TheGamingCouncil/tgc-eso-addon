@@ -121,7 +121,6 @@ function guildRecruitLeaderboardList:BuildMasterList()
   local maxSecondsLast = 60 * 60 * 24 * 7 * 3
   --trim saved list
   for k, v in ipairs(TGC.rosterDb.invitedHistory) do 
-    --table.insert( trimIndex, k )
     if TGC.rosterDb.invitedHistory[k].timeStamp > GetTimeStamp() - maxSecondsLast then
       table.insert( trimList, TGC.rosterDb.invitedHistory[k] )
     end
@@ -149,17 +148,33 @@ function guildRecruitLeaderboardList:BuildMasterList()
   local startOfCurrentWeek = endOfCurrentWeek - ( day * 7 )
   local startOfLastWeek = endOfCurrentWeek - ( day * 14 )
 
+  local dropListCW = {}
+  local dropListLW = {}
+  for k, v in pairs(TGC.rosterDb.priorMembers) do
+    if TGC.rosterDb.priorMembers[k].eventType == 8 and TGC.rosterDb.priorMembers[k].member ~= nil then
+      local gmtTimeStamp = os.time( os.date("!*t", TGC.rosterDb.priorMembers[k].timeStamp ) )
+      if gmtTimeStamp > startOfCurrentWeek then
+        dropListCW[TGC.rosterDb.priorMembers[k].member] = true
+      elseif gmtTimeStamp > startOfLastWeek then
+        dropListLW[TGC.rosterDb.priorMembers[k].member] = true
+      end
+    end
+  end
+
   local playerList = {}
 
   for k, v in ipairs(TGC.rosterDb.invitedHistory) do
-    if playerList[TGC.rosterDb.invitedHistory[k].member] == nil then
-      playerList[TGC.rosterDb.invitedHistory[k].member] = { thisweek = 0, lastweek = 0 }
-    end
 
     local gmtTimeStamp = os.time( os.date("!*t", TGC.rosterDb.invitedHistory[k].timeStamp ) )
-    if gmtTimeStamp > startOfCurrentWeek then
+    if gmtTimeStamp > startOfCurrentWeek and dropListCW[TGC.rosterDb.invitedHistory[k].invitee] == nil then
+      if playerList[TGC.rosterDb.invitedHistory[k].member] == nil then
+        playerList[TGC.rosterDb.invitedHistory[k].member] = { thisweek = 0, lastweek = 0 }
+      end
       playerList[TGC.rosterDb.invitedHistory[k].member].thisweek = playerList[TGC.rosterDb.invitedHistory[k].member].thisweek + 1
-    elseif gmtTimeStamp > startOfLastWeek then
+    elseif gmtTimeStamp > startOfLastWeek and dropListLW[TGC.rosterDb.invitedHistory[k].invitee] == nil then
+      if playerList[TGC.rosterDb.invitedHistory[k].member] == nil then
+        playerList[TGC.rosterDb.invitedHistory[k].member] = { thisweek = 0, lastweek = 0 }
+      end
       playerList[TGC.rosterDb.invitedHistory[k].member].lastweek = playerList[TGC.rosterDb.invitedHistory[k].member].lastweek + 1
     end
   end

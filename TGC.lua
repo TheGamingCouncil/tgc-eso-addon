@@ -9,7 +9,7 @@ local LMM2 = LibStub("LibMainMenu-2.0")
 -- Better to define it in a single place rather than retyping the same string.
 TGC.name = "TGC"
 TGC.addon = "TGC"
-TGC.version = "0.0.7"
+TGC.version = "0.0.8"
 TGC.guildId = 0
 TGC.guildMembers = {}
 TGC.personalInvites = {}
@@ -51,8 +51,7 @@ function TGC:Initialize()
     end
   end
 
-  
-  RequestGuildHistoryCategoryNewest(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
+  RequestMoreGuildHistoryCategoryEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
   TGCIndicatorBG:SetAlpha(0)
   EVENT_MANAGER:UnregisterForEvent(TGC.addon, EVENT_ADD_ON_LOADED)
   TGC.GetGuildMembers()

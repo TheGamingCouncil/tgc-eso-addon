@@ -53,7 +53,7 @@
         </Control>
       </Controls>
     </TopLevelControl>
-    <TopLevelControl name="TGCIndicator" mouseEnabled="true" movable="true" clampedToScreen="true">
+    <TopLevelControl name="TGCIndicator" mouseEnabled="true" movable="true" hidden="true" clampedToScreen="true">
       <Dimensions x="200" y="50" />
       <Anchor point="CENTER" relativeTo="GuiRoot" relativePoint="CENTER" offsetY="-300" />
  

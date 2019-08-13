@@ -9,7 +9,7 @@ function TGC.ScanLoop()
 end
 
 function TGC.NewScan()
-  RequestGuildHistoryCategoryNewest(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
+  RequestMoreGuildHistoryCategoryEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
   zo_callLater(function() TGC.ScanHistory() end, 10000)
 end
 
@@ -109,7 +109,7 @@ function TGC.ScanHistory( oldNumberOfEvents, badLoads )
     if numberOfEvents > oldNumberOfEvents then badLoads = 0 else badLoads = badLoads + 1 end
     if TGC.firstScan and DoesGuildHistoryCategoryHaveMoreEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
       and badLoads < 10 and lastEventTimeStamp > TGC.rosterDb.lastScan and ( TGC.db.options.guildOptions.scanHistory or secondsLast < maxSecondsLast ) then
-      RequestGuildHistoryCategoryOlder( TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER )
+        RequestMoreGuildHistoryCategoryEvents( TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER )
       zo_callLater(function() TGC.ScanHistory(numberOfEvents, badLoads) end, 10000)
     else
       if TGC.firstScan then
