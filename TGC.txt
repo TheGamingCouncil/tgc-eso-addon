@@ -26,7 +26,6 @@ lib/LibAddonMenu-2.0/controls/colorpicker.lua
 lib/LibAddonMenu-2.0/controls/dropdown.lua
 lib/LibAddonMenu-2.0/controls/header.lua
 lib/LibAddonMenu-2.0/controls/slider.lua
-lib/libChat2/libChat2.lua
 
 lang/en.lua
 
@@ -47,5 +46,4 @@ setTracker/itemEnums.lua
 setTracker/buildDatabase.lua
 setTracker/setDatabase.lua
 setTracker/itemLists.lua
-chat.lua
 bindings.xml
