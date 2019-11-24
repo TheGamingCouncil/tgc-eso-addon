@@ -1,301 +1,359 @@
 TGC.setDb = {
   ["Balorgh"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "March of Sacrifices",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.expert,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.expert,
+    ["builds"] = {
       TGC.buildDb["Bomb"],
-      TGC.buildDb["Hammer of Justice"]
+      TGC.buildDb["Hammer of Justice"],
     },
-    research = { "Werewolf" }
+    ["research"] = "",
+    ["name"] = "Balorgh",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "March of Sacrifices",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
-  ["Blood Spawn"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Spindleclutch 2",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.easy,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+  ["Bloodspawn"] = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
       TGC.buildDb["Capacitor"],
-      TGC.buildDb["Catalyst"],
+      TGC.buildDb["Hammer of Justice"],
       TGC.buildDb["Frostbite"],
       TGC.buildDb["Paladin"],
       TGC.buildDb["Siphoner"],
-      TGC.buildDb["Spartan"],
+      TGC.buildDb["Catalyst"],
       TGC.buildDb["Assassin"],
-      TGC.buildDb["Hammer of Justice"],
       TGC.buildDb["Spectre"],
       TGC.buildDb["Storm"],
       TGC.buildDb["Guardplar"],
       TGC.buildDb["Ritualist"],
-      TGC.buildDb["Berserker"]
-    }
+      TGC.buildDb["Berserker"],
+    },
+    ["name"] = "Bloodspawn",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Spindleclutch 2",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Chokethorn"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Elden Hollow 1",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
-      TGC.buildDb["Woeler Guardian"],
-      TGC.buildDb["Darkness"],
-      TGC.buildDb["Spartan"],
-      TGC.buildDb["Patron"],
-      TGC.buildDb["Blossom"]
-    }
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Blossom"],
+    },
+    ["name"] = "Chokethorn",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Elden Hollow 1",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Domihaus"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Falkreath Hold",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Blooddrinker"],
-      TGC.buildDb["Wrath"]
-    }
+      TGC.buildDb["Wrath"],
+    },
+    ["name"] = "Domihaus",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Falkreath Hold",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Earthgore"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Bloodroot Forge",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.easy,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
       TGC.buildDb["Obsidian"],
       TGC.buildDb["Illusion"],
       TGC.buildDb["Surge"],
       TGC.buildDb["Reliever"],
       TGC.buildDb["Blossom"],
       TGC.buildDb["Rage"],
-      TGC.buildDb["Shepherd"]
-    }
+      TGC.buildDb["Shepherd"],
+    },
+    ["name"] = "Earthgore",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Bloodroot Forge",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Engine Guardian"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Darkshade Caverns 2",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Engine Guardian",
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Darkshade Caverns 2",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Grothdarr"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Vaults of Madness",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Valakas"],
       TGC.buildDb["Azure"],
       TGC.buildDb["Beamplar"],
-      TGC.buildDb["Ice & Fire"]
-    }
+      TGC.buildDb["Ice & Fire"],
+    },
+    ["name"] = "Grothdarr",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Vaults of Madness",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Iceheart"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Direfrost Keep",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["isTrash"] = false,
+    ["name"] = "Iceheart",
+    ["builds"] = {
+  
+    },
+    ["research"] = "Builds",
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Direfrost Keep",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Ilambris"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Crypt of Hearts 1",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Ice & Fire"],
       TGC.buildDb["Wrath"],
-      TGC.buildDb["Adept"]
-    }
+      TGC.buildDb["Adept"],
+    },
+    ["name"] = "Ilambris",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Crypt of Hearts 1",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Infernal Guardian"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "City of Ash 1",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Infernal Guardian",
+    ["builds"] = {
+  
+    },
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "City of Ash 1",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Kra'gh"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Fungal Grotto 1",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["isTrash"] = false,
+    ["name"] = "Kra'gh",
+    ["builds"] = {
+      TGC.buildDb["Toxin"],
+      TGC.buildDb["Blight"],
+      TGC.buildDb["Focus"],
+      TGC.buildDb["Racer"],
+    },
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Fungal Grotto 1",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Lord Warden"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Imperial City Prison",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.expert,
+    ["builds"] = {
       TGC.buildDb["Capacitor"],
       TGC.buildDb["Catalyst"],
       TGC.buildDb["Pulse"],
       TGC.buildDb["Siphoner"],
-      TGC.buildDb["Spartan"]
-    }
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Lord Warden",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Imperial City Prison",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Maw of the Infernal"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "The Banished Cells 2",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Maw of the Infernal",
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "The Banished Cells 2",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Mighty Chudan"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Ruins of Mazzatun",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
-      TGC.buildDb["Catalyst"]
-    }
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Catalyst"],
+    },
+    ["name"] = "Mighty Chudan",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Ruins of Mazzatun",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Molag Kena"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "White-Gold Tower",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Obsidian"],
       TGC.buildDb["Claws"],
       TGC.buildDb["Silencium"],
       TGC.buildDb["Azure"],
       TGC.buildDb["Surge"],
       TGC.buildDb["Reliever"],
-      TGC.buildDb["Illusion"]
-    }
+      TGC.buildDb["Illusion"],
+    },
+    ["name"] = "Molag Kena",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "White-Gold Tower",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Nerien'eth"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Crypt of Hearts 2",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
-      TGC.buildDb["Caluurion"]
-    }
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Caluurion"],
+    },
+    ["name"] = "Nerien'eth",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Crypt of Hearts 2",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Nightflame"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Elden Hollow 2",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
       TGC.buildDb["Surge"],
-      TGC.buildDb["Reliever"]
-    }
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Scourge"],
+      TGC.buildDb["Illusion"],
+    },
+    ["name"] = "Nightflame",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Elden Hollow 2",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Pirate Skeleton"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Blackheart Haven",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Pirate Skeleton",
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Blackheart Haven",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Scourge Harvester"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Wayrest Sewers 2",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Scourge Harvester",
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Wayrest Sewers 2",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Selene"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Selene's Web",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
       TGC.buildDb["Venom"],
       TGC.buildDb["Claws"],
       TGC.buildDb["Rage"],
       TGC.buildDb["Windwalker"],
       TGC.buildDb["Jabsmania"],
       TGC.buildDb["Rampage"],
-      TGC.buildDb["Guardian"]
-    }
+      TGC.buildDb["Guardian"],
+    },
+    ["name"] = "Selene",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Selene's Web",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Sellistrix"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Arx Corinium",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Sellistrix",
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Arx Corinium",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Sentinel of Rkugamz"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Darkshade Caverns 1",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
       TGC.buildDb["Capacitor"],
-      TGC.buildDb["Paladin"]
-    }
+      TGC.buildDb["Paladin"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Sentinel of Rkugamz",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Darkshade Caverns 1",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Shadowrend"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "The Banished Cells 1",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
-      TGC.buildDb["Woeler Guardian"],
-      TGC.buildDb["Darkness"],
-      TGC.buildDb["Spartan"],
-      TGC.buildDb["Patron"]
-    }
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Shadowrend",
+    ["isTrash"] = true,
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "The Banished Cells 1",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Slimecraw"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Wayrest Sewers 1",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
-      TGC.buildDb["Ice & Fire"]
-    }
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Ice & Fire"],
+    },
+    ["name"] = "Slimecraw",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Wayrest Sewers 1",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Spawn of Mephala"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Fungal Grotto 2",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Spawn of Mephala",
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Fungal Grotto 2",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Stonekeeper"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Frostvault",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    research = { "New" }
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["research"] = "New",
+    ["name"] = "Stonekeeper",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Frostvault",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Stormfist"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Tempest Island",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
       TGC.buildDb["Venom"],
       TGC.buildDb["Serpent"],
       TGC.buildDb["Rampage"],
@@ -303,67 +361,85 @@ TGC.setDb = {
       TGC.buildDb["Windwalker"],
       TGC.buildDb["Jabsmania"],
       TGC.buildDb["Racer"],
-      TGC.buildDb["Guardian"]
-    }
+      TGC.buildDb["Guardian"],
+    },
+    ["name"] = "Stormfist",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Tempest Island",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Swarm Mother"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Spindleclutch 1",
-    shoulderChest = TGC.enums.undauntedChests.maj,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Siphoner"],
       TGC.buildDb["Paladin"],
       TGC.buildDb["Capacitor"],
-      TGC.buildDb["Frostbite"]
-    }
+      TGC.buildDb["Frostbite"],
+    },
+    ["name"] = "Swarm Mother",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
+    ["helmLocation"] = "Spindleclutch 1",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Symphony of Blades"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Depths of Malatar",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    research = { "New" }
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["research"] = "New",
+    ["name"] = "Symphony of Blades",
+    ["isTrash"] = false,
+    ["builds"] = {
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Depths of Malatar",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["The Troll King"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Blessed Crucible",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Rage"],
-      TGC.buildDb["Hammer of Justice"]
+      TGC.buildDb["Hammer of Justice"],
     },
-    research = { "Werewolf" }
+    ["research"] = "Werewolf",
+    ["name"] = "The Troll King",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Blessed Crucible",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Thurvokun"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Fang Lair",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
-      TGC.buildDb["Paladin"]
-    }
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Paladin"],
+    },
+    ["name"] = "Thurvokun",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Fang Lair",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Tremorscale"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Volenfell",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Tremorscale",
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "Volenfell",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Valkyn Skoria"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "City of Ash 2",
-    shoulderChest = TGC.enums.undauntedChests.glirion,
-    playerLevel = TGC.enums.playerLevel.easy,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
       TGC.buildDb["Eruption"],
       TGC.buildDb["Valakas"],
       TGC.buildDb["Azure"],
@@ -374,16 +450,18 @@ TGC.setDb = {
       TGC.buildDb["Ice & Fire"],
       TGC.buildDb["Adept"],
       TGC.buildDb["Spectral"],
-      TGC.buildDb["Blazeplar"]
-    }
+      TGC.buildDb["Blazeplar"],
+    },
+    ["name"] = "Valkyn Skoria",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
+    ["helmLocation"] = "City of Ash 2",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Velidreth"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Cradle of Shadows",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.intermediate,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
       TGC.buildDb["Venom"],
       TGC.buildDb["Serpent"],
       TGC.buildDb["Assassin"],
@@ -391,870 +469,2189 @@ TGC.setDb = {
       TGC.buildDb["Rampage"],
       TGC.buildDb["Windwalker"],
       TGC.buildDb["Jabsmania"],
-      TGC.buildDb["Guardian"]
-    }
+      TGC.buildDb["Guardian"],
+    },
+    ["name"] = "Velidreth",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Cradle of Shadows",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Vykosa"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Moon Hunter Keep",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Vykosa",
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Moon Hunter Keep",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
   ["Zaan"] = {
-    type = TGC.enums.setTypes.monster,
-    helmLocation = "Scalecaller Peak",
-    shoulderChest = TGC.enums.undauntedChests.urgalarg,
-    playerLevel = TGC.enums.playerLevel.intermediate,
-    setWeight = TGC.enums.setWeights.all,
-    builds = {
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
       TGC.buildDb["Eruption"],
       TGC.buildDb["Valakas"],
       TGC.buildDb["Azure"],
       TGC.buildDb["Ice & Fire"],
-      TGC.buildDb["Beamplar"]
-    }
+      TGC.buildDb["Beamplar"],
+    },
+    ["name"] = "Zaan",
+    ["isTrash"] = false,
+    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
+    ["helmLocation"] = "Scalecaller Peak",
+    ["itemTypesText"] = "Helm, Shoulder",
   },
-  ----ALL WEIGHT SETS---------
   ["Armor of the Trainee"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Stros M'Kai, Khenarthi's Roost, Bleakrock Isle, Betnikh, and Bal Foyen",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Armor of the Trainee",
+    ["location"] = "Bal Foyen, Betnikh, Bleakrock Isle, Khenarthi's Roost, Stros M'Kai",
+    ["itemTypesText"] = "Heavy, Light, Medium",
   },
   ["Bahraha's Curse"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Hew's Bane",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.all,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Bahraha's Curse",
+    ["location"] = "Hew's Bane",
+    ["itemTypesText"] = "Heavy, Light, Medium",
   },
-  
-  ----LIGHT SETS--------------
   ["Almalexia's Mercy"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Almalexia's Mercy",
+    ["builds"] = {
+  
+    },
+    ["location"] = "Cropsford, Cyrodiil",
+    ["itemTypesText"] = "Light",
   },
   ["Amber Plasm"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Ruins of Mazzatun",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Amber Plasm",
+    ["builds"] = {
+  
+    },
+    ["location"] = "Ruins of Mazzatun",
+    ["itemTypesText"] = "Light",
   },
   ["Auroran's Thunder"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Depths of Malatar",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    research = { "New" }
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["research"] = "New",
+    ["name"] = "Auroran's Thunder",
+    ["isTrash"] = false,
+    ["location"] = "Depths of Malatar",
+    ["itemTypesText"] = "Light",
   },
   ["Bloodthorn's Touch"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Glenumbra",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = false,
+    ["name"] = "Bloodthorn's Touch",
+    ["builds"] = {
+      TGC.buildDb["Adept Nightblade"],
+      TGC.buildDb["Adept Necromancer"],
+    },
+    ["location"] = "Glenumbra",
+    ["itemTypesText"] = "Light",
   },
   ["Bright-Throat's Boast"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Murkmire",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Blazeplar"]
-    }
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Blazeplar"],
+    },
+    ["name"] = "Bright-Throat's Boast",
+    ["isTrash"] = false,
+    ["location"] = "Murkmire",
+    ["itemTypesText"] = "Light",
   },
   ["Buffer of the Swift"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil, and Rewards of the Worthy",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Buffer of the Swift",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Light",
   },
   ["Burning Spellweave"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "City of Ash",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
       TGC.buildDb["Eruption"],
       TGC.buildDb["Valakas"],
       TGC.buildDb["Azure"],
       TGC.buildDb["Ice & Fire"],
-      TGC.buildDb["Beamplar"]
-    }
+      TGC.buildDb["Beamplar"],
+    },
+    ["name"] = "Burning Spellweave",
+    ["isTrash"] = false,
+    ["location"] = "City of Ash",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
   },
   ["Caluurion's Legacy"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Fang Lair",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Caluurion"]
-    }
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Caluurion"],
+    },
+    ["name"] = "Caluurion's Legacy",
+    ["isTrash"] = false,
+    ["location"] = "Fang Lair",
+    ["itemTypesText"] = "Light",
   },
   ["Combat Physician"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Wayrest Sewers",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Combat Physician",
+    ["location"] = "Wayrest Sewers",
+    ["itemTypesText"] = "Light",
   },
   ["Curse Eater"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Curse Eater",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Light",
   },
   ["Desert Rose"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Guardplar"]
-    }
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Guardplar"],
+    },
+    ["name"] = "Desert Rose",
+    ["isTrash"] = false,
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Light",
   },
   ["Destructive Mage"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Hel Ra Citadel",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Destructive Mage",
+    ["location"] = "Hel Ra Citadel",
+    ["itemTypesText"] = "Light",
   },
   ["Draugr's Rest"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Falkreath Hold",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Draugr's Rest",
+    ["location"] = "Falkreath Hold",
+    ["itemTypesText"] = "Light",
   },
   ["Dreamer's Mantle"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Stormhaven",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Dreamer's Mantle",
+    ["location"] = "Stormhaven",
+    ["itemTypesText"] = "Light",
   },
   ["Elemental Succession"] = {
-    type = TGC.enums.setTypes.arena,
-    location = "Maelstrom Arena",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.arena,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Elemental Succession",
+    ["location"] = "Maelstrom Arena",
+    ["itemTypesText"] = "Light",
   },
   ["Flame Blossom"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Bloodroot Forge",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Flame Blossom",
+    ["location"] = "Bloodroot Forge",
+    ["itemTypesText"] = "Light",
   },
   ["Galerion's Revenge"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Imperial Sewers",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Galerion's Revenge",
+    ["location"] = "Imperial Sewers",
+    ["itemTypesText"] = "Light",
   },
   ["Gossamer"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Cradle of Shadows",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Illusion"]
-    }
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Illusion"],
+    },
+    ["name"] = "Gossamer",
+    ["isTrash"] = false,
+    ["research"] = "Healing",
+    ["location"] = "Cradle of Shadows",
+    ["itemTypesText"] = "Light",
   },
   ["Hanu's Compassion"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "March of Sacrifices",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    research = { "Wolf hunter" }
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["research"] = "Wolf hunter",
+    ["name"] = "Hanu's Compassion",
+    ["isTrash"] = false,
+    ["location"] = "March of Sacrifices",
+    ["itemTypesText"] = "Light",
   },
   ["Healer's Habit"] = {
-    type = TGC.enums.setTypes.arena,
-    location = "Dragonstar Arena",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.arena,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Healer's Habit",
+    ["location"] = "Dragonstar Arena",
+    ["itemTypesText"] = "Light",
   },
   ["Healing Mage"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Aetherian Archive",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Obsidian"],
-      TGC.buildDb["Illusion"],
-      TGC.buildDb["Surge"],
-      TGC.buildDb["Reliever"],
-      TGC.buildDb["Blossom"]
-    }
-  },
-  ["Icy Conjuror"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Frostvault",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    research = { "New" }
-  },
-  ["Imperial Physique"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Imperial Sewers",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Hammer of Justice"]
-    }
-  },
-  ["Impregnable Armor"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Battlegrounds",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Rage"],
-      TGC.buildDb["Guardplar"]
-    }
-  },
-  ["Indomitable Fury"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Infallible Mage"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Hel Ra Citadel, Aetherian Archive, and Sanctum Ophidia",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Surge"],
-      TGC.buildDb["Reliever"],
-      TGC.buildDb["Blossom"]
-    }
-  },
-  ["Inventor's Guard"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Halls of Fabrication",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Jorvuld's Guidance"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Scalecaller Peak",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Obsidian"],
-      TGC.buildDb["Illusion"],
-      TGC.buildDb["Surge"],
-      TGC.buildDb["Reliever"],
-      TGC.buildDb["Blossom"]
-    }
-  },
-  ["Knight Slayer"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Battlegrounds",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Lamia's Song"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Arx Corinium",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Light of Cyrodiil"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Light Speaker"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Elden Hollow",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Mad Tinkerer"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "The Clockwork City",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Magicka Furnace"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Direfrost Keep",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Mantle of Siroria"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Cloudrest",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Valakas"],
-      TGC.buildDb["Azure"],
-      TGC.buildDb["Ice & Fire"],
-      TGC.buildDb["Beamplar"]
-    }
-  },
-  ["Master Architect"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Halls of Fabrication",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Azure"],
-      TGC.buildDb["Ice & Fire"],
-      TGC.buildDb["Beamplar"]
-    }
-  },
-  ["Meritorious Service"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Imperial Sewers",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Moon Hunter"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Moon Hunter Keep",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    research = { "Wolf hunter" }
-  },
-  ["Moondancer"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Maw of Lorkhaj",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Valakas"],
-      TGC.buildDb["Azure"],
-      TGC.buildDb["Beamplar"]
-    }
-  },
-  ["Mother's Sorrow"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Deshaan",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Valakas"],
-      TGC.buildDb["Azure"],
-      TGC.buildDb["Beamplar"],
-      TGC.buildDb["Ice & Fire"]
-    }
-  },
-  ["Necropotence"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Rivenspire",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Freezer"],
-      TGC.buildDb["Ice & Fire"]
-    }
-  },
-  ["Netch's Touch"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Darkshade Caverns",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Noble Duelist's Silks"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Blessed Crucible",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Overwhelming Surge"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Tempest Island",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Perfect Mantle of Siroria"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Cloudrest Veteran",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Valakas"],
-      TGC.buildDb["Azure"],
-      TGC.buildDb["Ice & Fire"],
-      TGC.buildDb["Beamplar"]
-    }
-  },
-  ["Perfect Vestment of Olorime"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Cloudrest Veteran",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Obsidian"],
-      TGC.buildDb["Illusion"],
-      TGC.buildDb["Surge"],
-      TGC.buildDb["Reliever"],
-      TGC.buildDb["Blossom"]
-    }
-  },
-  ["Phoenix"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Imperial Sewers",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Prayer Shawl"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Spindleclutch",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Prisoner's Rags"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Coldharbour",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    research = { "Werewolf" }
-  },
-  ["Queen's Elegance"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Auridon",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Robes of Alteration Mastery"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Robes of Destruction Mastery"] = {
-    type = TGC.enums.setTypes.arena,
-    location = "Dragonstar Arena",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Robes of the Hist"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Shadowfen",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Robes of the Withered Hand"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Alik'r Desert",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Robes of Transmutation"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Ritualist"]
-    }
-  },
-  ["Sanctuary"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "The Banished Cells",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Obsidian"],
-      TGC.buildDb["Illusion"],
-      TGC.buildDb["Surge"],
-      TGC.buildDb["Reliever"],
-      TGC.buildDb["Blossom"]
-    }
-  },
-  ["Scathing Mage"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Imperial City Prison",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Shadow Dancer's Raiment"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Greenshade",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Shroud of the Lich"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Crypt of Hearts",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Wrath"]
-    }
-  },
-  ["Silks of the Sun"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Stonefalls",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Valakas"]
-    }
-  },
-  ["Sithis' Touch"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "The Gold Coast",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Skooma Smuggler"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Reaper's March",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
-  },
-  ["Spell Power Cure"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "White-Gold Tower",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
       TGC.buildDb["Obsidian"],
       TGC.buildDb["Illusion"],
       TGC.buildDb["Surge"],
       TGC.buildDb["Reliever"],
       TGC.buildDb["Blossom"],
-      TGC.buildDb["Darkness"]
-    }
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Healing Mage",
+    ["isTrash"] = false,
+    ["location"] = "Aetherian Archive",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
   },
-  ["Spell Strategist"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
+  ["Icy Conjuror"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["research"] = "New",
+    ["name"] = "Icy Conjuror",
+    ["isTrash"] = false,
+    ["location"] = "Frostvault",
+    ["itemTypesText"] = "Light",
+  },
+  ["Imperial Physique"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Hammer of Justice"],
+    },
+    ["name"] = "Imperial Physique",
+    ["isTrash"] = false,
+    ["location"] = "Imperial Sewers",
+    ["itemTypesText"] = "Light",
+  },
+  ["Impregnable Armor"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Rage"],
+      TGC.buildDb["Guardplar"],
+    },
+    ["name"] = "Impregnable Armor",
+    ["isTrash"] = false,
+    ["location"] = "Battlegrounds",
+    ["itemTypesText"] = "Light",
+  },
+  ["Indomitable Fury"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Indomitable Fury",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Light",
+  },
+  ["Infallible Mage"] = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Blossom"],
+    },
+    ["name"] = "Infallible Mage",
+    ["isTrash"] = false,
+    ["location"] = "Aetherian Archive, Hel Ra Citadel, Sanctum Ophidia",
+    ["itemTypesText"] = "Light",
+  },
+  ["Inventor's Guard"] = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Inventor's Guard",
+    ["location"] = "Halls of Fabrication",
+    ["itemTypesText"] = "Light",
+  },
+  ["Jorvuld's Guidance"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Jorvuld's Guidance",
+    ["isTrash"] = false,
+    ["location"] = "Scalecaller Peak",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  },
+  ["Knight Slayer"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Knight Slayer",
+    ["location"] = "Battlegrounds",
+    ["itemTypesText"] = "Light",
+  },
+  ["Lamia's Song"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Lamia's Song",
+    ["location"] = "Arx Corinium",
+    ["itemTypesText"] = "Light",
+  },
+  ["Light of Cyrodiil"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Light of Cyrodiil",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Light",
+  },
+  ["Light Speaker"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Light Speaker",
+    ["location"] = "Elden Hollow",
+    ["itemTypesText"] = "Light",
+  },
+  ["Mad Tinkerer"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Mad Tinkerer",
+    ["location"] = "The Clockwork City",
+    ["itemTypesText"] = "Light",
+  },
+  ["Magicka Furnace"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Magicka Furnace",
+    ["location"] = "Direfrost Keep",
+    ["itemTypesText"] = "Light",
+  },
+  ["Mantle of Siroria"] = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Valakas"],
       TGC.buildDb["Azure"],
       TGC.buildDb["Ice & Fire"],
-      TGC.buildDb["Beamplar"]
-    }
+      TGC.buildDb["Beamplar"],
+    },
+    ["name"] = "Mantle of Siroria",
+    ["isTrash"] = false,
+    ["location"] = "Cloudrest",
+    ["itemTypesText"] = "Light",
+  },
+  ["Master Architect"] = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Azure"],
+      TGC.buildDb["Ice & Fire"],
+      TGC.buildDb["Beamplar"],
+    },
+    ["name"] = "Master Architect",
+    ["isTrash"] = false,
+    ["location"] = "Halls of Fabrication",
+    ["itemTypesText"] = "Light",
+  },
+  ["Meritorious Service"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Meritorious Service",
+    ["location"] = "Imperial Sewers",
+    ["itemTypesText"] = "Light",
+  },
+  ["Moon Hunter"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["research"] = "Wolf hunter",
+    ["name"] = "Moon Hunter",
+    ["isTrash"] = false,
+    ["location"] = "Moon Hunter Keep",
+    ["itemTypesText"] = "Light",
+  },
+  ["Moondancer"] = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Valakas"],
+      TGC.buildDb["Azure"],
+      TGC.buildDb["Beamplar"],
+    },
+    ["name"] = "Moondancer",
+    ["isTrash"] = false,
+    ["location"] = "Maw of Lorkhaj",
+    ["itemTypesText"] = "Light",
+  },
+  ["Mother's Sorrow"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Valakas"],
+      TGC.buildDb["Azure"],
+      TGC.buildDb["Beamplar"],
+      TGC.buildDb["Ice & Fire"],
+    },
+    ["name"] = "Mother's Sorrow",
+    ["isTrash"] = false,
+    ["location"] = "Deshaan",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  },
+  ["Necropotence"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Freezer"],
+      TGC.buildDb["Ice & Fire"],
+    },
+    ["name"] = "Necropotence",
+    ["isTrash"] = false,
+    ["location"] = "Rivenspire",
+    ["itemTypesText"] = "Light",
+  },
+  ["Netch's Touch"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Netch's Touch",
+    ["location"] = "Darkshade Caverns",
+    ["itemTypesText"] = "Light",
+  },
+  ["Noble Duelist's Silks"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Noble Duelist's Silks",
+    ["location"] = "Blessed Crucible",
+    ["itemTypesText"] = "Light",
+  },
+  ["Overwhelming Surge"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Overwhelming Surge",
+    ["location"] = "Tempest Island",
+    ["itemTypesText"] = "Light",
+  },
+  ["Perfect Mantle of Siroria"] = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Valakas"],
+      TGC.buildDb["Azure"],
+      TGC.buildDb["Ice & Fire"],
+      TGC.buildDb["Beamplar"],
+    },
+    ["name"] = "Perfect Mantle of Siroria",
+    ["isTrash"] = false,
+    ["location"] = "Cloudrest Veteran",
+    ["itemTypesText"] = "Light",
+  },
+  ["Perfect Vestment of Olorime"] = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Blossom"],
+    },
+    ["name"] = "Perfect Vestment of Olorime",
+    ["isTrash"] = false,
+    ["location"] = "Cloudrest Veteran",
+    ["itemTypesText"] = "Light",
+  },
+  ["Phoenix"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Phoenix",
+    ["location"] = "Imperial Sewers",
+    ["itemTypesText"] = "Light",
+  },
+  ["Prayer Shawl"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Prayer Shawl",
+    ["location"] = "Spindleclutch",
+    ["itemTypesText"] = "Light",
+  },
+  ["Prisoner's Rags"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["research"] = "Werewolf",
+    ["name"] = "Prisoner's Rags",
+    ["isTrash"] = false,
+    ["location"] = "Coldharbour",
+    ["itemTypesText"] = "Light",
+  },
+  ["Queen's Elegance"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Queen's Elegance",
+    ["location"] = "Auridon",
+    ["itemTypesText"] = "Light",
+  },
+  ["Robes of Alteration Mastery"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Robes of Alteration Mastery",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Light",
+  },
+  ["Robes of Destruction Mastery"] = {
+    ["type"] = TGC.enums.setTypes.arena,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Robes of Destruction Mastery",
+    ["location"] = "Dragonstar Arena",
+    ["itemTypesText"] = "Light",
+  },
+  ["Robes of the Hist"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Robes of the Hist",
+    ["location"] = "Shadowfen",
+    ["itemTypesText"] = "Light",
+  },
+  ["Robes of the Withered Hand"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Robes of the Withered Hand",
+    ["location"] = "Alik'r Desert",
+    ["itemTypesText"] = "Light",
+  },
+  ["Robes of Transmutation"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Ritualist"],
+    },
+    ["name"] = "Robes of Transmutation",
+    ["isTrash"] = false,
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Light",
+  },
+  ["Sanctuary"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Sanctuary",
+    ["isTrash"] = false,
+    ["location"] = "The Banished Cells",
+    ["itemTypesText"] = "Light",
+  },
+  ["Scathing Mage"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["isTrash"] = false,
+    ["name"] = "Scathing Mage",
+    ["builds"] = {
+      TGC.buildDb["Valakas"],
+      TGC.buildDb["Azure"],
+      TGC.buildDb["Mystic"],
+      TGC.buildDb["Beamplar"],
+      TGC.buildDb["Ice & Fire"],
+      TGC.buildDb["Curse"],
+      TGC.buildDb["Solo Magicka Templar"],
+    },
+    ["location"] = "Imperial City Prison",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  },
+  ["Shadow Dancer's Raiment"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Shadow Dancer's Raiment",
+    ["location"] = "Greenshade",
+    ["itemTypesText"] = "Light",
+  },
+  ["Shroud of the Lich"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Wrath"],
+    },
+    ["name"] = "Shroud of the Lich",
+    ["isTrash"] = false,
+    ["location"] = "Crypt of Hearts",
+    ["itemTypesText"] = "Light",
+  },
+  ["Silks of the Sun"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Valakas"],
+    },
+    ["name"] = "Silks of the Sun",
+    ["isTrash"] = false,
+    ["location"] = "Stonefalls",
+    ["itemTypesText"] = "Light",
+  },
+  ["Sithis' Touch"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Sithis' Touch",
+    ["location"] = "The Gold Coast",
+    ["itemTypesText"] = "Light",
+  },
+  ["Skooma Smuggler"] = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Skooma Smuggler",
+    ["location"] = "Reaper's March",
+    ["itemTypesText"] = "Light",
+  },
+  ["Spell Power Cure"] = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Blossom"],
+    },
+    ["name"] = "Spell Power Cure",
+    ["isTrash"] = false,
+    ["location"] = "White-Gold Tower",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  },
+  ["Spell Strategist"] = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Valakas"],
+      TGC.buildDb["Azure"],
+      TGC.buildDb["Ice & Fire"],
+      TGC.buildDb["Beamplar"],
+    },
+    ["name"] = "Spell Strategist",
+    ["isTrash"] = false,
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
   },
   ["Spider Cultist Cowl"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Fungal Grotto",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Spider Cultist Cowl",
+    ["location"] = "Fungal Grotto",
+    ["itemTypesText"] = "Light",
   },
   ["Spinner's Garments"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Malabal Tor",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Azure"],
       TGC.buildDb["Caluurion"],
       TGC.buildDb["Ice & Fire"],
-      TGC.buildDb["Bomb"]
-    }
+      TGC.buildDb["Bomb"],
+    },
+    ["name"] = "Spinner's Garments",
+    ["isTrash"] = false,
+    ["location"] = "Malabal Tor",
+    ["itemTypesText"] = "Light",
   },
   ["Stendarr's Embrace"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Eastmarch",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Stendarr's Embrace",
+    ["location"] = "Eastmarch",
+    ["itemTypesText"] = "Light",
   },
   ["Syrabane's Grip"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Grahtwood",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Syrabane's Grip",
+    ["location"] = "Grahtwood",
+    ["itemTypesText"] = "Light",
   },
   ["Syvarra's Scales"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Hew's Bane",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Syvarra's Scales",
+    ["location"] = "Hew's Bane",
+    ["itemTypesText"] = "Light",
   },
   ["The Arch-Mage"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "The Arch-Mage",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Light",
   },
   ["The Worm's Raiment"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Vaults of Madness",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
       TGC.buildDb["Obsidian"],
       TGC.buildDb["Illusion"],
       TGC.buildDb["Surge"],
       TGC.buildDb["Reliever"],
-      TGC.buildDb["Blossom"]
-    }
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "The Worm's Raiment",
+    ["isTrash"] = false,
+    ["location"] = "Vaults of Madness",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
   },
   ["Treasure Hunter"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Volenfell",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Treasure Hunter",
+    ["location"] = "Volenfell",
+    ["itemTypesText"] = "Light",
   },
   ["Trinimac's Valor"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Wrothgar",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Trinimac's Valor",
+    ["location"] = "Wrothgar",
+    ["itemTypesText"] = "Light",
   },
   ["Twilight Remedy"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Maw of Lorkhaj",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Twilight Remedy",
+    ["location"] = "Maw of Lorkhaj",
+    ["itemTypesText"] = "Light",
   },
   ["Undaunted Unweaver"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Blackheart Haven",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Undaunted Unweaver",
+    ["location"] = "Blackheart Haven",
+    ["itemTypesText"] = "Light",
   },
   ["Vampire Lord"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Bangkorai",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Vampire Lord",
+    ["location"] = "Bangkorai",
+    ["itemTypesText"] = "Light",
   },
   ["Vestment of Olorime"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Cloudrest",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Obsidian"],
       TGC.buildDb["Illusion"],
       TGC.buildDb["Surge"],
       TGC.buildDb["Reliever"],
-      TGC.buildDb["Blossom"]
-    }
+      TGC.buildDb["Blossom"],
+    },
+    ["name"] = "Vestment of Olorime",
+    ["isTrash"] = false,
+    ["location"] = "Cloudrest",
+    ["itemTypesText"] = "Light",
   },
   ["Vestments of the Warlock"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Selene's Web",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Vestments of the Warlock",
+    ["location"] = "Selene's Web",
+    ["itemTypesText"] = "Light",
   },
   ["Vicious Death"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Bomb"],
-      TGC.buildDb["Hammer of Justice"]
-    }
+      TGC.buildDb["Hammer of Justice"],
+    },
+    ["name"] = "Vicious Death",
+    ["isTrash"] = false,
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Light",
   },
   ["War Maiden"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Vvardenfell",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Bomb"]
-    }
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Bomb"],
+    },
+    ["name"] = "War Maiden",
+    ["isTrash"] = false,
+    ["location"] = "Vvardenfell",
+    ["itemTypesText"] = "Light",
   },
   ["Way of Martial Knowledge"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Craglorn",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.expert,
+    ["isTrash"] = false,
+    ["name"] = "Way of Martial Knowledge",
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["location"] = "Craglorn",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
   },
   ["Winterborn"] = {
-    type = TGC.enums.setTypes.arena,
-    location = "Maelstrom Arena",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.arena,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Winterborn",
+    ["location"] = "Maelstrom Arena",
+    ["itemTypesText"] = "Light",
   },
   ["Wisdom of Vanus"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Summerset",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Wisdom of Vanus",
+    ["location"] = "Summerset",
+    ["itemTypesText"] = "Light",
   },
   ["Wise Mage"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Sanctum Ophidia",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Wise Mage",
+    ["location"] = "Sanctum Ophidia",
+    ["itemTypesText"] = "Light",
   },
   ["Wizard's Riposte"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Battlegrounds",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    builds = {
-      TGC.buildDb["Wrath"]
-    }
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Wrath"],
+    },
+    ["name"] = "Wizard's Riposte",
+    ["isTrash"] = false,
+    ["location"] = "Battlegrounds",
+    ["itemTypesText"] = "Light",
   },
   ["Ysgramor's Birthright"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "The Rift",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.light,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Ysgramor's Birthright",
+    ["location"] = "The Rift",
+    ["itemTypesText"] = "Light",
   },
-
-  ----MED SETS----------------
   ["Archer's Mind"] = {
-    type = TGC.enums.setTypes.arena,
-    location = "Dragonstar Arena",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.medium,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.arena,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Archer's Mind",
+    ["location"] = "Dragonstar Arena",
+    ["itemTypesText"] = "Medium",
   },
   ["Arms of Relequen"] = {
-    type = TGC.enums.setTypes.trial,
-    location = "Cloudrest",
-    playerLevel = TGC.enums.playerLevel.expert,
-    setWeight = TGC.enums.setWeights.medium,
-    builds = {
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.expert,
+    ["builds"] = {
       TGC.buildDb["Venom"],
       TGC.buildDb["Claws"],
       TGC.buildDb["Windwalker"],
       TGC.buildDb["Rampage"],
       TGC.buildDb["Jabsmania"],
       TGC.buildDb["Racer"],
-      TGC.buildDb["Guardian"]
-    }
+      TGC.buildDb["Guardian"],
+      TGC.buildDb["Solo Werewolf"],
+    },
+    ["name"] = "Arms of Relequen",
+    ["isTrash"] = false,
+    ["location"] = "Cloudrest",
+    ["itemTypesText"] = "Medium",
   },
   ["Barkskin"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Elden Hollow",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.medium,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Barkskin",
+    ["location"] = "Elden Hollow",
+    ["itemTypesText"] = "Medium",
   },
   ["Battlefield Acrobat"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Cyrodiil",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.medium,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Battlefield Acrobat",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Medium",
   },
   ["Blood Moon"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "March of Sacrifices",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.medium,
-    builds = {
-      TGC.buildDb["Claws"]
-    }
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Claws"],
+      TGC.buildDb["Solo Werewolf"],
+    },
+    ["name"] = "Blood Moon",
+    ["isTrash"] = false,
+    ["location"] = "March of Sacrifices",
+    ["itemTypesText"] = "Medium",
   },
   ["Blooddrinker"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Bloodroot Forge",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.medium,
-    builds = {
-      TGC.buildDb["Blooddrinker"]
-    }
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Blooddrinker"],
+      TGC.buildDb["Claws"],
+      TGC.buildDb["Solo Werewolf"],
+    },
+    ["name"] = "Blooddrinker",
+    ["isTrash"] = false,
+    ["location"] = "Bloodroot Forge",
+    ["itemTypesText"] = "Medium",
   },
   ["Bone Pirate's Tatters"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Blackheart Haven",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.medium,
-    builds = {
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
       TGC.buildDb["Assassin"],
       TGC.buildDb["Rage"],
       TGC.buildDb["Piercer"],
       TGC.buildDb["Spectre"],
-      TGC.buildDb["Racer"]
-    }
+      TGC.buildDb["Racer"],
+    },
+    ["name"] = "Bone Pirate's Tatters",
+    ["isTrash"] = false,
+    ["location"] = "Blackheart Haven",
+    ["itemTypesText"] = "Medium",
   },
   ["Briarheart"] = {
-    type = TGC.enums.setTypes.overworld,
-    location = "Wrothgar",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.medium,
-    builds = {
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
       TGC.buildDb["Venom"],
       TGC.buildDb["Rampage"],
       TGC.buildDb["Windwalker"],
       TGC.buildDb["Jabsmania"],
-      TGC.buildDb["Guardian"]
-    }
+      TGC.buildDb["Guardian"],
+      TGC.buildDb["Reaper"],
+      TGC.buildDb["Solo Werewolf"],
+    },
+    ["name"] = "Briarheart",
+    ["isTrash"] = false,
+    ["location"] = "Wrothgar",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
   },
   ["Coward's Gear"] = {
-    type = TGC.enums.setTypes.pvp,
-    location = "Battlegrounds",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.medium,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Coward's Gear",
+    ["location"] = "Battlegrounds",
+    ["itemTypesText"] = "Medium",
   },
   ["Crusader"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "Volenfell",
-    playerLevel = TGC.enums.playerLevel.unknown,
-    setWeight = TGC.enums.setWeights.medium,
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["isTrash"] = true,
+    ["name"] = "Crusader",
+    ["location"] = "Volenfell",
+    ["itemTypesText"] = "Medium",
   },
-
-  ----HEAVY SETS--------------
   ["Embershield"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "City of Ash",
-    isTrash = true
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["isTrash"] = true,
+    ["name"] = "Embershield",
+    ["builds"] = {
+  
+    },
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["location"] = "City of Ash",
+    ["itemTypesText"] = "Heavy",
   },
   ["Sunderflame"] = {
-    type = TGC.enums.setTypes.dungeon,
-    location = "City of Ash"
-  }
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["name"] = "Sunderflame",
+    ["isTrash"] = true,
+    ["builds"] = {
+  
+    },
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["location"] = "City of Ash",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Fiord's Legacy"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Fiord's Legacy",
+    ["location"] = "Eastmarch",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Tormentor"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Tormentor",
+    ["location"] = "The Banished Cells",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Seventh Legion Brute"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Abyss"],
+      TGC.buildDb["Bloodrush"],
+      TGC.buildDb["Legion"],
+    },
+    ["name"] = "Seventh Legion Brute",
+    ["location"] = "Bangkorai",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Ebon Armory"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.expert,
+    ["builds"] = {
+      TGC.buildDb["Colossus"],
+      TGC.buildDb["Catalyst"],
+      TGC.buildDb["Siphoner"],
+      TGC.buildDb["Capacitor"],
+      TGC.buildDb["Paladin"],
+      TGC.buildDb["Frostbite"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Ebon Armory",
+    ["location"] = "Crypt of Hearts",
+    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+  },
+  ["Sheer Venom"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Sheer Venom",
+    ["location"] = "Imperial City Prison",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Essence Thief"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Essence Thief",
+    ["location"] = "White-Gold Tower",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Night Mother's Embrace"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Night Mother's Embrace",
+    ["location"] = "Deshaan",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Spelunker"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Spelunker",
+    ["location"] = "Spindleclutch",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Spriggan's Thorns"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Assassin"],
+      TGC.buildDb["Solo Slam"],
+    },
+    ["name"] = "Spriggan's Thorns",
+    ["location"] = "Bangkorai",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Automated Defense"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Automated Defense",
+    ["location"] = "Halls of Fabrication",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Unfathomable Darkness"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Unfathomable Darkness",
+    ["location"] = "The Clockwork City",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Strength of the Automaton"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Windwalker"],
+      TGC.buildDb["Deathstroke"],
+    },
+    ["name"] = "Strength of the Automaton",
+    ["location"] = "Darkshade Caverns",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Battalion Defender"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Siphoner"],
+      TGC.buildDb["Catalyst"],
+    },
+    ["name"] = "Battalion Defender",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Viper's Sting"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Infection"],
+    },
+    ["name"] = "Viper's Sting",
+    ["location"] = "Fungal Grotto",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Meridia's Blessed Armor"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Meridia's Blessed Armor",
+    ["location"] = "Coldharbour",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Night Terror"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Night Terror",
+    ["location"] = "Stormhaven",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Vicious Serpent"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Jabsmania"],
+      TGC.buildDb["Guardian"],
+      TGC.buildDb["Deathstroke"],
+      TGC.buildDb["Solo Slam"],
+      TGC.buildDb["Rampage"],
+      TGC.buildDb["Windwalker"],
+      TGC.buildDb["Racer"],
+      TGC.buildDb["Venom"],
+      TGC.buildDb["Toxin"],
+      TGC.buildDb["Blight"],
+      TGC.buildDb["Warrior"],
+      TGC.buildDb["Focus"],
+      TGC.buildDb["Predator"],
+      TGC.buildDb["Reaper"],
+    },
+    ["name"] = "Vicious Serpent",
+    ["location"] = "Aetherian Archive, Hel Ra Citadel, Sanctum Ophidia",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Champion of the Hist"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Champion of the Hist",
+    ["location"] = "Murkmire",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Draugr's Heritage"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Draugr's Heritage",
+    ["location"] = "The Rift",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Akaviri Dragonguard"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Catalyst"],
+    },
+    ["name"] = "Akaviri Dragonguard",
+    ["location"] = "Eastmarch",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Brands of Imperium"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Pulse"],
+      TGC.buildDb["Paladin"],
+    },
+    ["name"] = "Brands of Imperium",
+    ["location"] = "White-Gold Tower",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Sergeant's Mail"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Sergeant's Mail",
+    ["location"] = "Wayrest Sewers",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Darkstride"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Darkstride",
+    ["location"] = "Rivenspire",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Defiler"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Defiler",
+    ["location"] = "Vvardenfell",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Hatchling's Shell"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Hatchling's Shell",
+    ["location"] = "Shadowfen",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Aegis of Galenwe"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Aegis of Galenwe",
+    ["location"] = "Cloudrest Normal",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Durok's Bane"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Durok's Bane",
+    ["location"] = "Selene's Web",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Berserking Warrior"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Blight"],
+      TGC.buildDb["Serpent"],
+      TGC.buildDb["Windwalker"],
+    },
+    ["name"] = "Berserking Warrior",
+    ["location"] = "Hel Ra Citadel",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Eternal Warrior"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Eternal Warrior",
+    ["location"] = "Aetherian Archive, Hel Ra Citadel, Sanctum Ophidia",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Knightmare"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Knightmare",
+    ["location"] = "Spindleclutch",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Dreugh King Slayer"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Dreugh King Slayer",
+    ["location"] = "Fungal Grotto",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Wyrd Tree's Blessing"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Wyrd Tree's Blessing",
+    ["location"] = "Glenumbra",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Armor of Truth"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Armor of Truth",
+    ["location"] = "Darkshade Caverns",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Grace of Gloom"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Grace of Gloom",
+    ["location"] = "Summerset",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Leeching Plate"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Leeching Plate",
+    ["location"] = "Imperial City Prison",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Gryphon's Ferocity"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Gryphon's Ferocity",
+    ["location"] = "Summerset",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Heem-Jas' Retribution"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Heem-Jas' Retribution",
+    ["location"] = "Ruins of Mazzatun",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Hircine's Veneer"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Hircine's Veneer",
+    ["location"] = "Selene's Web",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Draugr Hulk"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Draugr Hulk",
+    ["research"] = "Werewolf",
+    ["location"] = "Direfrost Keep",
+    ["itemTypesText"] = "Medium",
+  },
+  ["The Ice Furnace"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "The Ice Furnace",
+    ["location"] = "Direfrost Keep",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Witchman Armor"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Witchman Armor",
+    ["location"] = "The Rift",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Order of Diagna"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Order of Diagna",
+    ["location"] = "Alik'r Desert",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Undaunted Bastion"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Undaunted Bastion",
+    ["location"] = "Elden Hollow",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Poisonous Serpent"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Poisonous Serpent",
+    ["location"] = "Hel Ra Citadel",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Plague Doctor"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Catalyst"],
+      TGC.buildDb["Colossus"],
+      TGC.buildDb["Siphoner"],
+      TGC.buildDb["Capacitor"],
+      TGC.buildDb["Maelstrom 1 Bar"],
+      TGC.buildDb["Paladin"],
+      TGC.buildDb["Frostbite"],
+    },
+    ["name"] = "Plague Doctor",
+    ["location"] = "Deshaan",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Swamp Raider"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Swamp Raider",
+    ["location"] = "Shadowfen",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Sword-Singer"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Sword-Singer",
+    ["location"] = "Alik'r Desert",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Shadow of the Red Mountain"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Ride the Lightning"],
+    },
+    ["name"] = "Shadow of the Red Mountain",
+    ["location"] = "Stonefalls",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Jolting Arms"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Jolting Arms",
+    ["location"] = "Tempest Island",
+    ["itemTypesText"] = "Heavy",
+  },
+  ["Leviathan"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Cleave"],
+      TGC.buildDb["Serpent"],
+      TGC.buildDb["Solo Werewolf"],
+      TGC.buildDb["Warrior"],
+      TGC.buildDb["Predator"],
+    },
+    ["name"] = "Leviathan",
+    ["location"] = "Crypt of Hearts",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Tooth of Lokkestiiz"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.expert,
+    ["builds"] = {
+      TGC.buildDb["Toxin"],
+      TGC.buildDb["Blight"],
+    },
+    ["name"] = "Tooth of Lokkestiiz",
+    ["location"] = "Sunspire",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Senche's Bite"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Senche's Bite",
+    ["location"] = "Reaper's March",
+    ["itemTypesText"] = "Medium",
+  },
+  ["Deadly Strike"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Venom"],
+      TGC.buildDb["Jabsmania"],
+      TGC.buildDb["Cleave"],
+      TGC.buildDb["Serpent"],
+      TGC.buildDb["Deathstroke"],
+      TGC.buildDb["Warrior"],
+      TGC.buildDb["Rampage"],
+      TGC.buildDb["Windwalker"],
+      TGC.buildDb["Predator"],
+      TGC.buildDb["Guardian"],
+      TGC.buildDb["Reaper"],
+    },
+    ["name"] = "Deadly Strike",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Twice-Fanged Serpent"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Toxin"],
+      TGC.buildDb["Venom"],
+      TGC.buildDb["Jabsmania"],
+      TGC.buildDb["Cleave"],
+      TGC.buildDb["Blight"],
+      TGC.buildDb["Serpent"],
+      TGC.buildDb["Deathstroke"],
+      TGC.buildDb["Warrior"],
+      TGC.buildDb["Focus"],
+      TGC.buildDb["Rampage"],
+      TGC.buildDb["Windwalker"],
+      TGC.buildDb["Predator"],
+      TGC.buildDb["Racer"],
+      TGC.buildDb["Guardian"],
+      TGC.buildDb["Reaper"],
+    },
+    ["name"] = "Twice-Fanged Serpent",
+    ["location"] = "Sanctum Ophidia",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Tzogvin's Warband"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Toxin"],
+      TGC.buildDb["Focus"],
+      TGC.buildDb["Blight"],
+      TGC.buildDb["Warrior"],
+      TGC.buildDb["Solo Werewolf"],
+      TGC.buildDb["Predator"],
+      TGC.buildDb["Racer"],
+    },
+    ["name"] = "Tzogvin's Warband",
+    ["location"] = "Frostvault",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Maarselok"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.monster,
+    ["playerLevel"] = TGC.enums.playerLevel.expert,
+    ["builds"] = {
+      TGC.buildDb["Venom"],
+      TGC.buildDb["Jabsmania"],
+      TGC.buildDb["Cleave"],
+      TGC.buildDb["Serpent"],
+      TGC.buildDb["Deathstroke"],
+      TGC.buildDb["Warrior"],
+      TGC.buildDb["Rampage"],
+      TGC.buildDb["Windwalker"],
+      TGC.buildDb["Predator"],
+      TGC.buildDb["Guardian"],
+      TGC.buildDb["Reaper"],
+    },
+    ["name"] = "Maarselok",
+    ["helmLocation"] = "Lair of Maarselok",
+    ["itemTypesText"] = "Helm, Shoulder",
+  },
+  ["Endurance"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Abyss"],
+    },
+    ["name"] = "Endurance",
+    ["location"] = "Dungeonfinder, Imperial City",
+    ["itemTypesText"] = "Jewelry, Shields, Weapons",
+  },
+  ["Agility"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Toxin"],
+      TGC.buildDb["Venom"],
+      TGC.buildDb["Focus"],
+      TGC.buildDb["Assassin"],
+      TGC.buildDb["Jabsmania"],
+      TGC.buildDb["Racer"],
+      TGC.buildDb["Cleave"],
+      TGC.buildDb["Blight"],
+      TGC.buildDb["Bloodrush"],
+      TGC.buildDb["Serpent"],
+      TGC.buildDb["Claws"],
+      TGC.buildDb["Rampage"],
+      TGC.buildDb["Deathstroke"],
+      TGC.buildDb["Windwalker"],
+      TGC.buildDb["Guardian"],
+      TGC.buildDb["Reaper"],
+      TGC.buildDb["Legion"],
+      TGC.buildDb["Warrior"],
+      TGC.buildDb["Predator"],
+      TGC.buildDb["War Machine"],
+    },
+    ["name"] = "Agility",
+    ["location"] = "Dungeonfinder, Imperial City",
+    ["itemTypesText"] = "Jewelry, Shields, Weapons",
+  },
+  ["Willpower"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Azure"],
+      TGC.buildDb["Adept Nightblade"],
+      TGC.buildDb["Adept"],
+      TGC.buildDb["Ice & Fire"],
+      TGC.buildDb["Adept Necromancer"],
+      TGC.buildDb["Valakas"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Wrath"],
+      TGC.buildDb["Beamplar"],
+      TGC.buildDb["Caluurion"],
+      TGC.buildDb["Summoner"],
+      TGC.buildDb["Mystic"],
+      TGC.buildDb["Solo Magicka Templar"],
+      TGC.buildDb["Curse"],
+    },
+    ["name"] = "Willpower",
+    ["location"] = "Dungeonfinder, Imperial City",
+    ["itemTypesText"] = "Jewelry, Shields, Weapons",
+  },
+  ["Vengeance Leech"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Solo Slam"],
+    },
+    ["name"] = "Vengeance Leech",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Jewelry, Shields, Weapons",
+  },
+  ["Plague Slinger"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Infection"],
+    },
+    ["name"] = "Plague Slinger",
+    ["research"] = "StamDPS",
+    ["location"] = "Scalecaller Peak",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Rattlecage"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Rattlecage",
+    ["location"] = "Vaults of Madness",
+    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+  },
+  ["Vengeance Leech"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Solo Slam"],
+    },
+    ["name"] = "Vengeance Leech",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Jewelry, Shields, Weapons",
+  },
+  ["Salvation"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Salvation",
+    ["research"] = "Werewolf",
+    ["location"] = "Malabal Tor",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Way of Air"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Way of Air",
+    ["location"] = "Craglorn",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Way of Fire"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Way of Fire",
+    ["location"] = "Craglorn",
+    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+  },
+  ["Storm Knight's Plate"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Storm Knight's Plate",
+    ["location"] = "Stormhaven",
+    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+  },
+  ["Crest of Cyrodiil"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Crest of Cyrodiil",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+  },
+  ["Shalk Exoskeleton"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Shalk Exoskeleton",
+    ["location"] = "Stonefalls",
+    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+  },
+  ["Soldier of Anguish"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Soldier of Anguish",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Steadfast Hero"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.pvp,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Steadfast Hero",
+    ["location"] = "Cyrodiil",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Storm Master"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Storm Master",
+    ["location"] = "Tempest Island",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Defensive Position"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Pulse"],
+    },
+    ["name"] = "Defensive Position",
+    ["location"] = "Asylum Sanctorium",
+    ["itemTypesText"] = "Sword and Shield",
+  },
+  ["Trappings of Invigoration"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+      TGC.buildDb["Ride the Lightning"],
+      TGC.buildDb["Shepherd"],
+      TGC.buildDb["Bonecrusher"],
+    },
+    ["name"] = "Trappings of Invigoration",
+    ["location"] = "Fang Lair",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Hide of the Werewolf"] = {
+    ["isTrash"] = true,
+    ["type"] = TGC.enums.setTypes.overworld,
+    ["playerLevel"] = TGC.enums.playerLevel.unknown,
+    ["builds"] = {
+  
+    },
+    ["name"] = "Hide of the Werewolf",
+    ["location"] = "Glenumbra",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Savage Werewolf"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Claws"],
+      TGC.buildDb["Solo Werewolf"],
+    },
+    ["name"] = "Savage Werewolf",
+    ["location"] = "Moon Hunter Keep",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Dro'Zakar's Claws"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Claws"],
+      TGC.buildDb["Solo Werewolf"],
+    },
+    ["name"] = "Dro'Zakar's Claws",
+    ["location"] = "Moongrave Fane",
+    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+  },
+  ["Z'en's Redress"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.expert,
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Z'en's Redress",
+    ["location"] = "Lair of Maarselok",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  },
+  ["Hollowfang Thirst"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.dungeon,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Hollowfang Thirst",
+    ["location"] = "Moongrave Fane",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  },
+  ["Timeless Blessing"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Timeless Blessing",
+    ["location"] = "Asylum Sanctorium",
+    ["itemTypesText"] = "Destruction, Restoration",
+  },
+  ["Timeless Blessing (Perfected)"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.intermediate,
+    ["builds"] = {
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Illusion"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Scourge"],
+    },
+    ["name"] = "Timeless Blessing (Perfected)",
+    ["location"] = "Asylum Sanctorium",
+    ["itemTypesText"] = "Destruction, Restoration",
+  },
+  ["Grand Rejuvenation"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.arena,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Scourge"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+    },
+    ["name"] = "Grand Rejuvenation",
+    ["location"] = "Dragonstar Arena Vet",
+    ["itemTypesText"] = "Restoration",
+  },
+  ["Precise Regeneration"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.arena,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Scourge"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+    },
+    ["name"] = "Precise Regeneration",
+    ["location"] = "Maelstrom Arena Vet",
+    ["itemTypesText"] = "Restoration",
+  },
+  ["Perfect Mender's Ward"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.arena,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Scourge"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+    },
+    ["name"] = "Perfect Mender's Ward",
+    ["location"] = "Blackrose Prison",
+    ["itemTypesText"] = "Restoration",
+  },
+  ["Mender's Ward"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.arena,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Blossom"],
+      TGC.buildDb["Reliever"],
+      TGC.buildDb["Scourge"],
+      TGC.buildDb["Surge"],
+      TGC.buildDb["Obsidian"],
+      TGC.buildDb["Illusion"],
+    },
+    ["name"] = "Mender's Ward",
+    ["location"] = "Blackrose Prison",
+    ["itemTypesText"] = "Restoration",
+  },
+  ["Perfected False God's Devotion"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Valakas"],
+      TGC.buildDb["Azure"],
+      TGC.buildDb["Mystic"],
+      TGC.buildDb["Beamplar"],
+      TGC.buildDb["Ice & Fire"],
+      TGC.buildDb["Curse"],
+      TGC.buildDb["Solo Magicka Templar"],
+    },
+    ["name"] = "Perfected False God's Devotion",
+    ["location"] = "Sunspire",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  },
+  ["False God's Devotion"] = {
+    ["isTrash"] = false,
+    ["type"] = TGC.enums.setTypes.trial,
+    ["playerLevel"] = TGC.enums.playerLevel.easy,
+    ["builds"] = {
+      TGC.buildDb["Valakas"],
+      TGC.buildDb["Azure"],
+      TGC.buildDb["Mystic"],
+      TGC.buildDb["Beamplar"],
+      TGC.buildDb["Ice & Fire"],
+      TGC.buildDb["Curse"],
+      TGC.buildDb["Solo Magicka Templar"],
+    },
+    ["name"] = "False God's Devotion",
+    ["location"] = "Sunspire",
+    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  },
 }

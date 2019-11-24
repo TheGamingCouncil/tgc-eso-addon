@@ -20,7 +20,7 @@ function TGC.CreateMenu()
 
   optionsData[#optionsData + 1] = {
     type = "submenu",
-    name = "Guild Recuriting",
+    name = "Guild Recruiting",
     controls = {
       {
         type = "checkbox",

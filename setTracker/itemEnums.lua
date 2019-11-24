@@ -1,3 +1,9 @@
+TGC.enums.itemType = {
+  armor = 1000,
+  weapon = 1001,
+  jewelry = 1002
+}
+
 TGC.enums.armor = {
   head = 3000,
   shoulder = 3001,
@@ -74,6 +80,13 @@ TGC.enums.playerLevel = {
   unknown = 6003
 }
 
+TGC.enums.playerLevelText = {
+  [6000] = "Easy",
+  [6001] = "Intermediate",
+  [6002] = "Expert",
+  [6003] = "Unknown"
+}
+
 TGC.enums.setTypes = {
   monster = 7000,
   dungeon = 7001,
@@ -88,6 +101,12 @@ TGC.enums.undauntedChests = {
   maj = 8000,
   glirion = 8001,
   urgalarg = 8002
+}
+
+TGC.enums.undauntedChestText = {
+  [8000] = "Maj al-Ragath",
+  [8001] = "Glirion the Redbeard",
+  [8002] = "Urgarlag Chief-Bane"
 }
 
 TGC.enums.classes = {
@@ -105,4 +124,11 @@ TGC.enums.setWeights = {
   medium = 5001,
   heavy = 5002,
   all = 5003
+}
+
+TGC.enums.setWeightsText = {
+  [5000] = "Light",
+  [5001] = "Medium",
+  [5002] = "Heavy",
+  [5003] = "Any Weight"
 }

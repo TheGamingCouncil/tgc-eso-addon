@@ -9,7 +9,7 @@ local LMM2 = LibStub("LibMainMenu-2.0")
 -- Better to define it in a single place rather than retyping the same string.
 TGC.name = "TGC"
 TGC.addon = "TGC"
-TGC.version = "0.0.10"
+TGC.version = "0.0.11"
 TGC.guildId = 0
 TGC.guildMembers = {}
 TGC.personalInvites = {}
@@ -144,6 +144,7 @@ function TGC.OnPlayerActivated()
 end
 
 function TGC.Debug()
+  --d( UI_COMBAT_OVERLAY_FRAGMENT )
   -- StartChatInput( ZO_LinkHandler_CreateLink( "@alexdragian", nil, DISPLAY_NAME_LINK_TYPE, "@alexdragian" ), CHAT_CHANNEL_WHISPER, "@Chance_25")
   -- TGCB.Debug()
   --GetAddOnManager():RequestAddOnSavedVariablesPrioritySave( "pChat" )

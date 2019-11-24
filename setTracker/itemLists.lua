@@ -1,13 +1,18 @@
 function TGC.SetTrackerBagHook()
 	for k,v in pairs(PLAYER_INVENTORY.inventories) do
-		local listView = v.listView
+    local listView = v.listView
 		if ( listView and listView.dataTypes and listView.dataTypes[1] ) then
 			ZO_PreHook(listView.dataTypes[1], "setupCallback", function(control, slot)
 				local itemLink = GetItemLink(control.dataEntry.data.bagId, control.dataEntry.data.slotIndex, LINK_STYLE_BRACKETS)
 				TGC.AddSetIndicator(control, control.dataEntry.data.bagId, control.dataEntry.data.slotIndex, itemLink, RIGHT, 1)
 			end)
 		end
-	end
+  end
+  
+  ZO_PreHook(ZO_SmithingTopLevelDeconstructionPanelInventoryBackpack.dataTypes[1], "setupCallback", function(control, slot)
+    local itemLink = GetItemLink(control.dataEntry.data.bagId, control.dataEntry.data.slotIndex, LINK_STYLE_BRACKETS)
+    TGC.AddSetIndicator(control, control.dataEntry.data.bagId, control.dataEntry.data.slotIndex, itemLink, RIGHT, 1)
+  end)
 end
 
 --            <Label name="$(parent)Name" width="200" height="25" font="ZoFontGameLargeBold" inheritAlpha="true" color="EFEFEF"
@@ -70,39 +75,53 @@ function TGC.AddSetIndicator(control, bagID, slotIndex, itemLink, relativePoint,
     local level = GetItemRequiredLevel( bagID, slotIndex )
     local champLevel = GetItemRequiredChampionPoints( bagID, slotIndex )
     local linkName = ""
+    local linkText = ""
     local setData = {}
-    if level < 50 or champLevel < 160 then
-      local creator = GetItemCreatorName( bagID, slotIndex )
-      if creator == nil or creator == "" then
-        linkName = "Trash"
+    local hasSet, setName = GetItemLinkSetInfo( itemLink, false )
+    local creator = GetItemCreatorName( bagID, slotIndex )
+    if creator == nil or creator == "" then
+      if level < 50 or champLevel < 160 then
+        if hasSet then
+          linkName = "trash"
+          linkText = "|cff0000Trash|r\nBelow CP160"
+        else
+          linkName = "trash"
+          linkText = "|cff0000Trash|r\nBelow CP160\nNot in a set"
+        end
+      else
+        if hasSet then
+          linkName, linkText = TGC.CheckSetDatabase( setName, TGC.NormaliseEquipType( itemType, bagID, slotIndex, itemLink ) )
+        else
+          linkName = "trash"
+          linkText = "|cff0000Trash|r\nNot in a set"
+        end
       end
     else
-      local hasSet, setName = GetItemLinkSetInfo( itemLink, false )
-      
+      linkName = "crafted"
       if hasSet then
-        linkName, setData = TGC.CheckSetDatabase( setName, TGC.NormaliseEquipType( itemType, bagID, slotIndex, itemLink ) )
+        _, linkText = TGC.CheckSetDatabase( setName, TGC.NormaliseEquipType( itemType, bagID, slotIndex, itemLink ), true )
       else
-        linkName = "Trash"
+        linkText = "|c4444ffCrafted|"
       end
+
+      linkText = "|c4444ffCrafted|r\n" .. linkText
     end
     
-    if linkName == "Trash" then
+    if linkName ~= "" and linkName ~= nil then
       -- handle positioning icons from saved variables
       local controlName = WINDOW_MANAGER:GetControlByName(control:GetName() .. 'Name')
       TrashControl:ClearAnchors()
       TrashControl:SetAnchor(LEFT, controlName, relativePoint, 9, 0)
-      SetInventoryIcon(TrashControl, 32, "/TGC/assets/trash.dds", linkName )
-    elseif linkName == "Question" then
-      -- handle positioning icons from saved variables
-      local controlName = WINDOW_MANAGER:GetControlByName(control:GetName() .. 'Name')
-      TrashControl:ClearAnchors()
-      TrashControl:SetAnchor(LEFT, controlName, relativePoint, 9, 0)
-      SetInventoryIcon(TrashControl, 32, "/TGC/assets/trash.dds", linkName )
+      SetInventoryIcon(TrashControl, 32, "/TGC/assets/" .. linkName .. ".dds", linkText )
     end
 
     --d( name .. " " .. level .. " " .. champLevel )
   end
   --d( itemType )
+end
+
+function TGC.EquipmentTooltip()
+
 end
 
 function TGC.DecribeSet( env, role, knownBuilds, traits )
@@ -127,16 +146,74 @@ function TGC.NormaliseTrait( apiTrait )
 
 end
 
-function TGC.CheckSetDatabase( setName, itemType, itemEquipType, weaponType )
-  
+function TGC.EquipmentText( setData, ignoreTrash )
+  local text = ""
+  if( setData["isTrash"] and ignoreTrash == false ) then
+    text = "|cff0000Trash|r\n"
+  end
+  text = text .. "|c55ffffTypes|r: " .. setData["itemTypesText"]
 
-  for k, v in pairs(TGC.setDb) do
-    if k == setName then
-      if TGC.setDb[setName]["isTrash"] then
-        return "Trash", TGC.setDb[setName]
-      elseif TGC.setDb[setName]["gear"] then
-        local doStuffWithBuildGear = ""
-      end
+  if setData["type"] == TGC.enums.setTypes.monster then
+    text = text .. "\n" .. "|c55ffffHelm|r: " .. TGC.enums.undauntedChestText[setData["shoulderChest"]]
+    text = text .. "\n" .. "|c55ffffShoulder|r: " .. setData["helmLocation"]
+  else
+    text = text .. "\n" .. "|c55ffffLocation|r: " .. setData["location"]
+  end
+
+  text = text .. "\n" .. "|c55ffffPlayer Level|r: " .. TGC.enums.playerLevelText[setData["playerLevel"]]
+
+  if setData["builds"] and #setData["builds"] > 0 then
+    --for build in setData["builds"] do
+    local builds = {};
+    for i, build in ipairs(setData["builds"]) do
+       builds[#builds+1] = build.name
+    end
+    table.sort(builds)
+    text = text .. "\n" .. "|c55ffffBuilds|r: " .. table.concat(builds, ", ")
+  end
+
+  return text
+end
+
+function TGC.CheckBuildHasType( type, types )
+
+end
+
+function TGC.CheckSetDatabase( setName, itemType, ignoreTrash )
+  
+  if ignoreTrash == nil then
+    ignoreTrash = false
+  end
+
+  if TGC.setDb[setName] ~= nil and TGC.setDb[setName]["isTrash"] then
+    return "trash", TGC.EquipmentText( TGC.setDb[setName], ignoreTrash )
+  elseif TGC.setDb[setName] ~= nil and TGC.setDb[setName]["research"] ~= nil then
+    return "research", TGC.EquipmentText( TGC.setDb[setName], ignoreTrash )
+  elseif TGC.setDb[setName] ~= nil and TGC.setDb[setName]["builds"] then
+    local builds = TGC.setDb[setName]["builds"]
+    local buildTypes = {}
+    for kb, vb in pairs(builds) do
+      buildTypes[#buildTypes+1] = builds[kb]["type"]
+    end
+    --d( "is a build" )
+    if itemType.type == TGC.enums.itemType.weapon and ignoreTrash == false then
+      --d( "is weapon not ignored" )
+
+      --Basic logic here -- Shilds are only for tank builds
+      --Bows are only for stam dps
+      --Melee weapons are only for dps classes
+      --Staffs are only for magic users unless resto then ok for tanks
+      return "set", TGC.EquipmentText( TGC.setDb[setName], ignoreTrash )
+    else
+      --d( "is set returning" )
+      return "set", TGC.EquipmentText( TGC.setDb[setName], ignoreTrash )
+    end
+  else
+    if TGC.setDb[setName] then
+      --d( "No builds found" )
+      local p = 'm'
+    else
+      return "unknown", "|cffff00Unknown Set|r"
     end
   end
 end
@@ -145,54 +222,54 @@ function TGC.NormaliseEquipType( itemType, bagID, slotIndex, itemLink )
   if itemType == ITEMTYPE_ARMOR then
     local equipType = GetItemLinkEquipType( itemLink )
     if equipType == EQUIP_TYPE_CHEST then
-      return TGC.enums.armor.chest
+      return { type = TGC.enums.itemType.armor, subType = TGC.enums.armor.chest }
     elseif equipType == EQUIP_TYPE_FEET then
-      return TGC.enums.armor.feet
+      return { type = TGC.enums.itemType.armor, subType = TGC.enums.armor.feet }
     elseif equipType == EQUIP_TYPE_HAND then
-      return TGC.enums.armor.hands
+      return { type = TGC.enums.itemType.armor, subType = TGC.enums.armor.hands }
     elseif equipType == EQUIP_TYPE_HEAD then
-      return TGC.enums.armor.head
+      return { type = TGC.enums.itemType.armor, subType = TGC.enums.armor.head }
     elseif equipType == EQUIP_TYPE_LEGS then
-      return TGC.enums.armor.legs
+      return { type = TGC.enums.itemType.armor, subType = TGC.enums.armor.legs }
     elseif equipType == EQUIP_TYPE_NECK then
-      return TGC.enums.jewelry.neck
+      return { type = TGC.enums.itemType.jewelry, subType = TGC.enums.jewelry.neck }
     elseif equipType == EQUIP_TYPE_OFF_HAND then
-      return TGC.enums.armor.shield
+      return { type = TGC.enums.itemType.armor, subType = TGC.enums.armor.shield }
     elseif equipType == EQUIP_TYPE_RING then
-      return TGC.enums.jewelry.ring
+      return { type = TGC.enums.itemType.jewelry, subType = TGC.enums.jewelry.ring }
     elseif equipType == EQUIP_TYPE_SHOULDERS then
-      return TGC.enums.armor.shoulder
+      return { type = TGC.enums.itemType.armor, subType = TGC.enums.armor.shoulder }
     elseif equipType == EQUIP_TYPE_WAIST then
-      return TGC.enums.armor.belt
+      return { type = TGC.enums.itemType.armor, subType = TGC.enums.armor.belt }
     end
   elseif itemType == ITEMTYPE_WEAPON then
     local weaponType = GetItemWeaponType( bagID, slotIndex )
     if weaponType == WEAPONTYPE_TWO_HANDED_AXE then
-      return TGC.enums.weapons.axeTwoHand
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.axeTwoHand }
     elseif weaponType == WEAPONTYPE_AXE then
-      return TGC.enums.weapons.axe
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.axe }
     elseif weaponType == WEAPONTYPE_BOW then
-      return TGC.enums.weapons.bow
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.bow }
     elseif weaponType == WEAPONTYPE_DAGGER then
-      return TGC.enums.weapons.dagger
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.dagger }
     elseif weaponType == WEAPONTYPE_FIRE_STAFF then
-      return TGC.enums.weapons.fireStaff
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.fireStaff }
     elseif weaponType == WEAPONTYPE_FROST_STAFF then
-      return TGC.enums.weapons.iceStaff
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.iceStaff }
     elseif weaponType == WEAPONTYPE_LIGHTNING_STAFF then
-      return TGC.enums.weapons.lightningStaff
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.lightningStaff }
     elseif weaponType == WEAPONTYPE_HEALING_STAFF then
-      return TGC.enums.weapons.healingStaff
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.healingStaff }
     elseif weaponType == WEAPONTYPE_TWO_HANDED_HAMMER then
-      return TGC.enums.weapons.hammerTwoHand
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.hammerTwoHand }
     elseif weaponType == WEAPONTYPE_HAMMER then
-      return TGC.enums.weapons.hammer
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.hammer }
     elseif weaponType == WEAPONTYPE_SHIELD then
-      return TGC.enums.armor.shield
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.armor.shield }
     elseif weaponType == WEAPONTYPE_TWO_HANDED_SWORD then
-      return TGC.enums.weapons.swordTwoHand
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.swordTwoHand }
     elseif weaponType == WEAPONTYPE_SWORD then
-      return TGC.enums.weapons.sword
+      return { type = TGC.enums.itemType.weapon, subType = TGC.enums.weapons.sword }
     end
   end
   
