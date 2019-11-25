@@ -219,5 +219,5 @@ function guildRecruitLeaderboardListMouseExit(control)
 end
 
 function guildRecruitLeaderboardListMouseUp(control, button, upInside)
-	d("something something")
+	--d("something something")
 end

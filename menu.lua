@@ -36,7 +36,7 @@ function TGC.CreateMenu()
       {
         type = "editbox",
         name = "Guild Name",
-        tooltip = "Full name of gaming council guild use to look up roster and perform auto invites.\n\nReloadUI after this is changed!",
+        tooltip = "Full name of guild use to look up roster and perform auto invites.\n\nReloadUI after this is changed!",
         getFunc = function() return TGC.db.guildName end,
         setFunc = function(newValue)
           TGC.db.guildName = newValue
