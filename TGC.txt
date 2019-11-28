@@ -2,7 +2,7 @@
 ## Author: alexdragian
 ## Description: Guild helper addon created by The Gaming Council.
 ## APIVersion: 100029
-## Version: 0.0.12
+## Version: 0.0.13
 ## DependsOn: LibAddonMenu-2.0 LibMainMenu-2.0
 ## SavedVariables: TGC_SavedVariables TGC_SavedRosterData
 
