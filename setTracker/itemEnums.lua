@@ -73,20 +73,6 @@ TGC.enums.env = {
   pve = 5001
 }
 
-TGC.enums.playerLevel = {
-  easy = 6000,
-  intermediate = 6001,
-  expert = 6002,
-  unknown = 6003
-}
-
-TGC.enums.playerLevelText = {
-  [6000] = "Easy",
-  [6001] = "Intermediate",
-  [6002] = "Expert",
-  [6003] = "Unknown"
-}
-
 TGC.enums.setTypes = {
   monster = 7000,
   dungeon = 7001,

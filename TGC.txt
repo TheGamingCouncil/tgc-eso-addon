@@ -6,8 +6,6 @@
 ## DependsOn: LibAddonMenu-2.0 LibMainMenu-2.0
 ## SavedVariables: TGC_SavedVariables TGC_SavedRosterData
 
-lib/libstub/libstub.lua
-
 lang/en.lua
 
 TGC.xml

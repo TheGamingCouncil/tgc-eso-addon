@@ -160,18 +160,6 @@ function TGC.EquipmentText( setData, ignoreTrash )
     text = text .. "\n" .. "|c55ffffLocation|r: " .. setData["location"]
   end
 
-  text = text .. "\n" .. "|c55ffffPlayer Level|r: " .. TGC.enums.playerLevelText[setData["playerLevel"]]
-
-  if setData["builds"] and #setData["builds"] > 0 then
-    --for build in setData["builds"] do
-    local builds = {};
-    for i, build in ipairs(setData["builds"]) do
-       builds[#builds+1] = build.name
-    end
-    table.sort(builds)
-    text = text .. "\n" .. "|c55ffffBuilds|r: " .. table.concat(builds, ", ")
-  end
-
   return text
 end
 
@@ -187,14 +175,7 @@ function TGC.CheckSetDatabase( setName, itemType, ignoreTrash )
 
   if TGC.setDb[setName] ~= nil and TGC.setDb[setName]["isTrash"] then
     return "trash", TGC.EquipmentText( TGC.setDb[setName], ignoreTrash )
-  elseif TGC.setDb[setName] ~= nil and TGC.setDb[setName]["research"] ~= nil then
-    return "research", TGC.EquipmentText( TGC.setDb[setName], ignoreTrash )
-  elseif TGC.setDb[setName] ~= nil and TGC.setDb[setName]["builds"] then
-    local builds = TGC.setDb[setName]["builds"]
-    local buildTypes = {}
-    for kb, vb in pairs(builds) do
-      buildTypes[#buildTypes+1] = builds[kb]["type"]
-    end
+  elseif TGC.setDb[setName] ~= nil then
     --d( "is a build" )
     if itemType.type == TGC.enums.itemType.weapon and ignoreTrash == false then
       --d( "is weapon not ignored" )

@@ -29,6 +29,18 @@ function TGC.LoadDatabase()
         pveType = true,
         duplicateCount = 2,
         onlyCorrectTrait = false
+      },
+      mapFlags = {
+        homePreviewsZone = false,
+        homePreviews = false,
+        ownedHomes = true,
+        dungeons = true,
+        trials = true,
+        waypoints = true
+      },
+      optionFlags = {
+        hideMapHomePreview = true,
+        hideMapDungeons = false
       }
     }
   }
@@ -40,6 +52,12 @@ function TGC.LoadDatabase()
     priorMembers = {},
   }
 
+  local TGCGearDB = {
+    sets = {},
+    builds = {}
+  }
+
   TGC.rosterDb = ZO_SavedVars:NewAccountWide("TGC_SavedRosterData", 2, nil, TGCGuildRosterDefaults )
-  TGC.db = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 6, nil, TGCGuildVarDefaults )
+  TGC.db = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 7, nil, TGCGuildVarDefaults )
+  TGC.gearDb = ZO_SavedVars:NewAccountWide("TGC_SavedGear", 1, nil, TGCSetDB )
 end

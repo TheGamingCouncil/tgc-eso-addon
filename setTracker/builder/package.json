@@ -1,0 +1,8 @@
+{
+  "name": "tgc-set-extractor",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "jsdom": "^16.2.2"
+  }
+}
