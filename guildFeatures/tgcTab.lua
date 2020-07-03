@@ -1,5 +1,6 @@
-local sceneName = "tgcGuildMenu"
-local descriptor = "tgcGuildMenu"
+local sceneName = "TgcGuildMenu"
+local sceneGroupName = "TgcGuildMenuSceneGroup"
+local descriptor = "TgcGuildMenu"
 local listData = nil
 
 function TGC.SetGuildTabHook( LMM2 )
@@ -46,7 +47,11 @@ function TGC.SetGuildTabHook( LMM2 )
   local modeBar = TgcGuildMenu:GetNamedChild("ModeMenuBar")
   ZO_MenuBar_AddButton(modeBar, leaderboards)
   
-  LMM2:AddMenuItem(descriptor, sceneName, categoryLayoutInfo, nil)
+  LMM2:AddMenuItem(descriptor, sceneName, categoryLayoutInfo, sceneGroupName)
+
+  function TGC.ToggleGuildTab()
+    LMM2:SelectMenuItem(descriptor)
+  end
 
   listData = guildRecruitLeaderboardList:New(TgcGuildMenuLeaderboard)
   
@@ -70,7 +75,7 @@ function TGC.GuildTabCreateScene()
 
   TGCGUILDMENU_SCENE:AddFragment(TGCGUILDMENU_FRAGMENT)
 
-	SCENE_MANAGER:AddSceneGroup("TgcGuildMenuSceneGroup", ZO_SceneGroup:New(descriptor))
+	SCENE_MANAGER:AddSceneGroup(sceneGroupName, ZO_SceneGroup:New(descriptor))
   
 end
 
