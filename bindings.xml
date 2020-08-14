@@ -5,7 +5,7 @@
 				<Up>TGC.Debug()</Up>
 			</Action>
 			<Action name="TGC_GUILD_MENU">
-				<Down>return ZO_KeybindStrip_HandleKeybindDown(keybind)</Down>
+				<Down>TGC.ToggleGuildTab()</Down>
 			</Action>
 		</Category>
 	</Layer>
