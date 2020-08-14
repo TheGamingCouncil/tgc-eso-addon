@@ -1,1601 +1,3096 @@
 TGC.setDb = {
-  ["Balorgh"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["research"] = "",
-    ["name"] = "Balorgh",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "March of Sacrifices",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Bloodspawn"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Bloodspawn",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Spindleclutch 2",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Chokethorn"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Chokethorn",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Elden Hollow 1",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Domihaus"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Domihaus",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Falkreath Hold",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Earthgore"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Earthgore",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Bloodroot Forge",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Engine Guardian"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = true,
-    ["name"] = "Engine Guardian",
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Darkshade Caverns 2",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Grothdarr"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Grothdarr",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Vaults of Madness",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Iceheart"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = false,
-    ["name"] = "Iceheart",
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Direfrost Keep",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Ilambris"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Ilambris",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Crypt of Hearts 1",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Infernal Guardian"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = true,
-    ["name"] = "Infernal Guardian",
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "City of Ash 1",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Kra'gh"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = false,
-    ["name"] = "Kra'gh",
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Fungal Grotto 1",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Lord Warden"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Lord Warden",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Imperial City Prison",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Maw of the Infernal"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = true,
-    ["name"] = "Maw of the Infernal",
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "The Banished Cells 2",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Mighty Chudan"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Mighty Chudan",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Ruins of Mazzatun",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Molag Kena"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Molag Kena",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "White-Gold Tower",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Nerien'eth"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Nerien'eth",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Crypt of Hearts 2",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Nightflame"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Nightflame",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Elden Hollow 2",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Pirate Skeleton"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = true,
-    ["name"] = "Pirate Skeleton",
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Blackheart Haven",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Scourge Harvester"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = true,
-    ["name"] = "Scourge Harvester",
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Wayrest Sewers 2",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Selene"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Selene",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Selene's Web",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Sellistrix"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = true,
-    ["name"] = "Sellistrix",
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Arx Corinium",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Sentinel of Rkugamz"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Sentinel of Rkugamz",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Darkshade Caverns 1",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Shadowrend"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Shadowrend",
-    ["isTrash"] = true,
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "The Banished Cells 1",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Slimecraw"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Slimecraw",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Wayrest Sewers 1",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Spawn of Mephala"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = true,
-    ["name"] = "Spawn of Mephala",
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Fungal Grotto 2",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Stonekeeper"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Stonekeeper",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Frostvault",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Stormfist"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Stormfist",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Tempest Island",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Swarm Mother"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Swarm Mother",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.maj,
-    ["helmLocation"] = "Spindleclutch 1",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Symphony of Blades"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Symphony of Blades",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Depths of Malatar",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["The Troll King"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "The Troll King",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Blessed Crucible",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Thurvokun"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Thurvokun",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Fang Lair",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Tremorscale"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = true,
-    ["name"] = "Tremorscale",
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "Volenfell",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Valkyn Skoria"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Valkyn Skoria",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.glirion,
-    ["helmLocation"] = "City of Ash 2",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Velidreth"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Velidreth",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Cradle of Shadows",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Vykosa"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["isTrash"] = true,
-    ["name"] = "Vykosa",
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Moon Hunter Keep",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Zaan"] = {
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Zaan",
-    ["isTrash"] = false,
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Scalecaller Peak",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Armor of the Trainee"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Armor of the Trainee",
-    ["location"] = "Bal Foyen, Betnikh, Bleakrock Isle, Khenarthi's Roost, Stros M'Kai",
-    ["itemTypesText"] = "Heavy, Light, Medium",
-  },
-  ["Bahraha's Curse"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Bahraha's Curse",
-    ["location"] = "Hew's Bane",
-    ["itemTypesText"] = "Heavy, Light, Medium",
-  },
-  ["Almalexia's Mercy"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Almalexia's Mercy",
-    ["location"] = "Cropsford, Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["Amber Plasm"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Amber Plasm",
-    ["location"] = "Ruins of Mazzatun",
-    ["itemTypesText"] = "Light",
-  },
-  ["Auroran's Thunder"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Auroran's Thunder",
-    ["isTrash"] = false,
-    ["location"] = "Depths of Malatar",
-    ["itemTypesText"] = "Light",
-  },
-  ["Bloodthorn's Touch"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = false,
-    ["name"] = "Bloodthorn's Touch",
-    ["location"] = "Glenumbra",
-    ["itemTypesText"] = "Light",
-  },
-  ["Bright-Throat's Boast"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Bright-Throat's Boast",
-    ["isTrash"] = false,
-    ["location"] = "Murkmire",
-    ["itemTypesText"] = "Light",
-  },
-  ["Buffer of the Swift"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Buffer of the Swift",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["Burning Spellweave"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Burning Spellweave",
-    ["isTrash"] = false,
-    ["location"] = "City of Ash",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
-  },
-  ["Caluurion's Legacy"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Caluurion's Legacy",
-    ["isTrash"] = false,
-    ["location"] = "Fang Lair",
-    ["itemTypesText"] = "Light",
-  },
-  ["Combat Physician"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Combat Physician",
-    ["location"] = "Wayrest Sewers",
-    ["itemTypesText"] = "Light",
-  },
-  ["Curse Eater"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Curse Eater",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["Desert Rose"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Desert Rose",
-    ["isTrash"] = false,
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["Destructive Mage"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["isTrash"] = true,
-    ["name"] = "Destructive Mage",
-    ["location"] = "Hel Ra Citadel",
-    ["itemTypesText"] = "Light",
-  },
-  ["Draugr's Rest"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Draugr's Rest",
-    ["location"] = "Falkreath Hold",
-    ["itemTypesText"] = "Light",
-  },
-  ["Dreamer's Mantle"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Dreamer's Mantle",
-    ["location"] = "Stormhaven",
-    ["itemTypesText"] = "Light",
-  },
-  ["Elemental Succession"] = {
-    ["type"] = TGC.enums.setTypes.arena,
-    ["isTrash"] = true,
-    ["name"] = "Elemental Succession",
-    ["location"] = "Maelstrom Arena",
-    ["itemTypesText"] = "Light",
-  },
-  ["Flame Blossom"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Flame Blossom",
-    ["location"] = "Bloodroot Forge",
-    ["itemTypesText"] = "Light",
-  },
-  ["Galerion's Revenge"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Galerion's Revenge",
-    ["location"] = "Imperial Sewers",
-    ["itemTypesText"] = "Light",
-  },
-  ["Gossamer"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Gossamer",
-    ["isTrash"] = false,
-    ["location"] = "Cradle of Shadows",
-    ["itemTypesText"] = "Light",
-  },
-  ["Hanu's Compassion"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Hanu's Compassion",
-    ["isTrash"] = false,
-    ["location"] = "March of Sacrifices",
-    ["itemTypesText"] = "Light",
-  },
-  ["Healer's Habit"] = {
-    ["type"] = TGC.enums.setTypes.arena,
-    ["isTrash"] = true,
-    ["name"] = "Healer's Habit",
-    ["location"] = "Dragonstar Arena",
-    ["itemTypesText"] = "Light",
-  },
-  ["Healing Mage"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Healing Mage",
-    ["isTrash"] = false,
-    ["location"] = "Aetherian Archive",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
-  },
-  ["Icy Conjuror"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Icy Conjuror",
-    ["isTrash"] = false,
-    ["location"] = "Frostvault",
-    ["itemTypesText"] = "Light",
-  },
-  ["Imperial Physique"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Imperial Physique",
-    ["isTrash"] = false,
-    ["location"] = "Imperial Sewers",
-    ["itemTypesText"] = "Light",
-  },
-  ["Impregnable Armor"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Impregnable Armor",
-    ["isTrash"] = false,
-    ["location"] = "Battlegrounds",
-    ["itemTypesText"] = "Light",
-  },
-  ["Indomitable Fury"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Indomitable Fury",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["Infallible Mage"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Infallible Mage",
-    ["isTrash"] = false,
-    ["location"] = "Aetherian Archive, Hel Ra Citadel, Sanctum Ophidia",
-    ["itemTypesText"] = "Light",
-  },
-  ["Inventor's Guard"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["isTrash"] = true,
-    ["name"] = "Inventor's Guard",
-    ["location"] = "Halls of Fabrication",
-    ["itemTypesText"] = "Light",
-  },
-  ["Jorvuld's Guidance"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Jorvuld's Guidance",
-    ["isTrash"] = false,
-    ["location"] = "Scalecaller Peak",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
-  },
-  ["Knight Slayer"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Knight Slayer",
-    ["location"] = "Battlegrounds",
-    ["itemTypesText"] = "Light",
-  },
-  ["Lamia's Song"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Lamia's Song",
-    ["location"] = "Arx Corinium",
-    ["itemTypesText"] = "Light",
-  },
-  ["Light of Cyrodiil"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Light of Cyrodiil",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["Light Speaker"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Light Speaker",
-    ["location"] = "Elden Hollow",
-    ["itemTypesText"] = "Light",
-  },
-  ["Mad Tinkerer"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Mad Tinkerer",
-    ["location"] = "The Clockwork City",
-    ["itemTypesText"] = "Light",
-  },
-  ["Magicka Furnace"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Magicka Furnace",
-    ["location"] = "Direfrost Keep",
-    ["itemTypesText"] = "Light",
-  },
-  ["Mantle of Siroria"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Mantle of Siroria",
-    ["isTrash"] = false,
-    ["location"] = "Cloudrest",
-    ["itemTypesText"] = "Light",
-  },
-  ["Master Architect"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Master Architect",
-    ["isTrash"] = false,
-    ["location"] = "Halls of Fabrication",
-    ["itemTypesText"] = "Light",
-  },
-  ["Meritorious Service"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Meritorious Service",
-    ["location"] = "Imperial Sewers",
-    ["itemTypesText"] = "Light",
-  },
-  ["Moon Hunter"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Moon Hunter",
-    ["isTrash"] = false,
-    ["location"] = "Moon Hunter Keep",
-    ["itemTypesText"] = "Light",
-  },
-  ["Moondancer"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Moondancer",
-    ["isTrash"] = false,
-    ["location"] = "Maw of Lorkhaj",
-    ["itemTypesText"] = "Light",
-  },
-  ["Mother's Sorrow"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Mother's Sorrow",
-    ["isTrash"] = false,
-    ["location"] = "Deshaan",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
-  },
-  ["Necropotence"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Necropotence",
-    ["isTrash"] = false,
-    ["location"] = "Rivenspire",
-    ["itemTypesText"] = "Light",
-  },
-  ["Netch's Touch"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Netch's Touch",
-    ["location"] = "Darkshade Caverns",
-    ["itemTypesText"] = "Light",
-  },
-  ["Noble Duelist's Silks"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Noble Duelist's Silks",
-    ["location"] = "Blessed Crucible",
-    ["itemTypesText"] = "Light",
-  },
-  ["Overwhelming Surge"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Overwhelming Surge",
-    ["location"] = "Tempest Island",
-    ["itemTypesText"] = "Light",
-  },
-  ["Perfect Mantle of Siroria"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Perfect Mantle of Siroria",
-    ["isTrash"] = false,
-    ["location"] = "Cloudrest Veteran",
-    ["itemTypesText"] = "Light",
-  },
-  ["Perfect Vestment of Olorime"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Perfect Vestment of Olorime",
-    ["isTrash"] = false,
-    ["location"] = "Cloudrest Veteran",
-    ["itemTypesText"] = "Light",
-  },
-  ["Phoenix"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Phoenix",
-    ["location"] = "Imperial Sewers",
-    ["itemTypesText"] = "Light",
-  },
-  ["Prayer Shawl"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Prayer Shawl",
-    ["location"] = "Spindleclutch",
-    ["itemTypesText"] = "Light",
-  },
-  ["Prisoner's Rags"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Prisoner's Rags",
-    ["isTrash"] = false,
-    ["location"] = "Coldharbour",
-    ["itemTypesText"] = "Light",
-  },
-  ["Queen's Elegance"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Queen's Elegance",
-    ["location"] = "Auridon",
-    ["itemTypesText"] = "Light",
-  },
-  ["Robes of Alteration Mastery"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Robes of Alteration Mastery",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["Robes of Destruction Mastery"] = {
-    ["type"] = TGC.enums.setTypes.arena,
-    ["isTrash"] = true,
-    ["name"] = "Robes of Destruction Mastery",
-    ["location"] = "Dragonstar Arena",
-    ["itemTypesText"] = "Light",
-  },
-  ["Robes of the Hist"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Robes of the Hist",
-    ["location"] = "Shadowfen",
-    ["itemTypesText"] = "Light",
-  },
-  ["Robes of the Withered Hand"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Robes of the Withered Hand",
-    ["location"] = "Alik'r Desert",
-    ["itemTypesText"] = "Light",
-  },
-  ["Robes of Transmutation"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Robes of Transmutation",
-    ["isTrash"] = false,
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["Sanctuary"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Sanctuary",
-    ["isTrash"] = false,
-    ["location"] = "The Banished Cells",
-    ["itemTypesText"] = "Light",
-  },
-  ["Scathing Mage"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = false,
-    ["name"] = "Scathing Mage",
-    ["location"] = "Imperial City Prison",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
-  },
-  ["Shadow Dancer's Raiment"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Shadow Dancer's Raiment",
-    ["location"] = "Greenshade",
-    ["itemTypesText"] = "Light",
-  },
-  ["Shroud of the Lich"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Shroud of the Lich",
-    ["isTrash"] = false,
-    ["location"] = "Crypt of Hearts",
-    ["itemTypesText"] = "Light",
-  },
-  ["Silks of the Sun"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Silks of the Sun",
-    ["isTrash"] = false,
-    ["location"] = "Stonefalls",
-    ["itemTypesText"] = "Light",
-  },
-  ["Sithis' Touch"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Sithis' Touch",
-    ["location"] = "The Gold Coast",
-    ["itemTypesText"] = "Light",
-  },
-  ["Skooma Smuggler"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Skooma Smuggler",
-    ["location"] = "Reaper's March",
-    ["itemTypesText"] = "Light",
-  },
-  ["Spell Power Cure"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Spell Power Cure",
-    ["isTrash"] = false,
-    ["location"] = "White-Gold Tower",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
-  },
-  ["Spell Strategist"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Spell Strategist",
-    ["isTrash"] = false,
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
-  },
-  ["Spider Cultist Cowl"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Spider Cultist Cowl",
-    ["location"] = "Fungal Grotto",
-    ["itemTypesText"] = "Light",
-  },
-  ["Spinner's Garments"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Spinner's Garments",
-    ["isTrash"] = false,
-    ["location"] = "Malabal Tor",
-    ["itemTypesText"] = "Light",
-  },
-  ["Stendarr's Embrace"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Stendarr's Embrace",
-    ["location"] = "Eastmarch",
-    ["itemTypesText"] = "Light",
-  },
-  ["Syrabane's Grip"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Syrabane's Grip",
-    ["location"] = "Grahtwood",
-    ["itemTypesText"] = "Light",
-  },
-  ["Syvarra's Scales"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Syvarra's Scales",
-    ["location"] = "Hew's Bane",
-    ["itemTypesText"] = "Light",
-  },
-  ["The Arch-Mage"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "The Arch-Mage",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["The Worm's Raiment"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "The Worm's Raiment",
-    ["isTrash"] = false,
-    ["location"] = "Vaults of Madness",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
-  },
-  ["Treasure Hunter"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Treasure Hunter",
-    ["location"] = "Volenfell",
-    ["itemTypesText"] = "Light",
-  },
-  ["Trinimac's Valor"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Trinimac's Valor",
-    ["location"] = "Wrothgar",
-    ["itemTypesText"] = "Light",
-  },
-  ["Twilight Remedy"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["isTrash"] = true,
-    ["name"] = "Twilight Remedy",
-    ["location"] = "Maw of Lorkhaj",
-    ["itemTypesText"] = "Light",
-  },
-  ["Undaunted Unweaver"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Undaunted Unweaver",
-    ["location"] = "Blackheart Haven",
-    ["itemTypesText"] = "Light",
-  },
-  ["Vampire Lord"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Vampire Lord",
-    ["location"] = "Bangkorai",
-    ["itemTypesText"] = "Light",
-  },
-  ["Vestment of Olorime"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Vestment of Olorime",
-    ["isTrash"] = false,
-    ["location"] = "Cloudrest",
-    ["itemTypesText"] = "Light",
-  },
-  ["Vestments of the Warlock"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Vestments of the Warlock",
-    ["location"] = "Selene's Web",
-    ["itemTypesText"] = "Light",
-  },
-  ["Vicious Death"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Vicious Death",
-    ["isTrash"] = false,
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Light",
-  },
-  ["War Maiden"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "War Maiden",
-    ["isTrash"] = false,
-    ["location"] = "Vvardenfell",
-    ["itemTypesText"] = "Light",
-  },
-  ["Way of Martial Knowledge"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = false,
-    ["name"] = "Way of Martial Knowledge",
-    ["location"] = "Craglorn",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
-  },
-  ["Winterborn"] = {
-    ["type"] = TGC.enums.setTypes.arena,
-    ["isTrash"] = true,
-    ["name"] = "Winterborn",
-    ["location"] = "Maelstrom Arena",
-    ["itemTypesText"] = "Light",
-  },
-  ["Wisdom of Vanus"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Wisdom of Vanus",
-    ["location"] = "Summerset",
-    ["itemTypesText"] = "Light",
-  },
-  ["Wise Mage"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["isTrash"] = true,
-    ["name"] = "Wise Mage",
-    ["location"] = "Sanctum Ophidia",
-    ["itemTypesText"] = "Light",
-  },
-  ["Wizard's Riposte"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Wizard's Riposte",
-    ["isTrash"] = false,
-    ["location"] = "Battlegrounds",
-    ["itemTypesText"] = "Light",
-  },
-  ["Ysgramor's Birthright"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["isTrash"] = true,
-    ["name"] = "Ysgramor's Birthright",
-    ["location"] = "The Rift",
-    ["itemTypesText"] = "Light",
-  },
-  ["Archer's Mind"] = {
-    ["type"] = TGC.enums.setTypes.arena,
-    ["isTrash"] = true,
-    ["name"] = "Archer's Mind",
-    ["location"] = "Dragonstar Arena",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Arms of Relequen"] = {
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Arms of Relequen",
-    ["isTrash"] = false,
-    ["location"] = "Cloudrest",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Barkskin"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Barkskin",
-    ["location"] = "Elden Hollow",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Battlefield Acrobat"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Battlefield Acrobat",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Blood Moon"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Blood Moon",
-    ["isTrash"] = false,
-    ["location"] = "March of Sacrifices",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Blooddrinker"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Blooddrinker",
-    ["isTrash"] = false,
-    ["location"] = "Bloodroot Forge",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Bone Pirate's Tatters"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Bone Pirate's Tatters",
-    ["isTrash"] = false,
-    ["location"] = "Blackheart Haven",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Briarheart"] = {
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Briarheart",
-    ["isTrash"] = false,
-    ["location"] = "Wrothgar",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
-  },
-  ["Coward's Gear"] = {
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["isTrash"] = true,
-    ["name"] = "Coward's Gear",
-    ["location"] = "Battlegrounds",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Crusader"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Crusader",
-    ["location"] = "Volenfell",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Embershield"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["isTrash"] = true,
-    ["name"] = "Embershield",
-    ["location"] = "City of Ash",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Sunderflame"] = {
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Sunderflame",
-    ["isTrash"] = true,
-    ["location"] = "City of Ash",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Fiord's Legacy"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Fiord's Legacy",
-    ["location"] = "Eastmarch",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Tormentor"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Tormentor",
-    ["location"] = "The Banished Cells",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Seventh Legion Brute"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Seventh Legion Brute",
-    ["location"] = "Bangkorai",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Ebon Armory"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Ebon Armory",
-    ["location"] = "Crypt of Hearts",
-    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
-  },
-  ["Sheer Venom"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Sheer Venom",
-    ["location"] = "Imperial City Prison",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Essence Thief"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Essence Thief",
-    ["location"] = "White-Gold Tower",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Night Mother's Embrace"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Night Mother's Embrace",
-    ["location"] = "Deshaan",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Spelunker"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Spelunker",
-    ["location"] = "Spindleclutch",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Spriggan's Thorns"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Spriggan's Thorns",
-    ["location"] = "Bangkorai",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Automated Defense"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Automated Defense",
-    ["location"] = "Halls of Fabrication",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Unfathomable Darkness"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Unfathomable Darkness",
-    ["location"] = "The Clockwork City",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Strength of the Automaton"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Strength of the Automaton",
-    ["location"] = "Darkshade Caverns",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Battalion Defender"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Battalion Defender",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Viper's Sting"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Viper's Sting",
-    ["location"] = "Fungal Grotto",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Meridia's Blessed Armor"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Meridia's Blessed Armor",
-    ["location"] = "Coldharbour",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Night Terror"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Night Terror",
-    ["location"] = "Stormhaven",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Vicious Serpent"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Vicious Serpent",
-    ["location"] = "Aetherian Archive, Hel Ra Citadel, Sanctum Ophidia",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
-  },
-  ["Champion of the Hist"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Champion of the Hist",
-    ["location"] = "Murkmire",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Draugr's Heritage"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Draugr's Heritage",
-    ["location"] = "The Rift",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Akaviri Dragonguard"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Akaviri Dragonguard",
-    ["location"] = "Eastmarch",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Brands of Imperium"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Brands of Imperium",
-    ["location"] = "White-Gold Tower",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Sergeant's Mail"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Sergeant's Mail",
-    ["location"] = "Wayrest Sewers",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Darkstride"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Darkstride",
-    ["location"] = "Rivenspire",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Defiler"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Defiler",
-    ["location"] = "Vvardenfell",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Hatchling's Shell"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Hatchling's Shell",
-    ["location"] = "Shadowfen",
-    ["itemTypesText"] = "Heavy",
+  ["Adept Rider"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Crafting Station Summerset", "Northern Shimmerene" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Aegis Caller"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Unhallowed Grave" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
   },
   ["Aegis of Galenwe"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Aegis of Galenwe",
-    ["location"] = "Cloudrest Normal",
-    ["itemTypesText"] = "Heavy",
+    ["type"] = "Trial",
+    ["locations"] = { "Cloudrest normal" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Durok's Bane"] = {
+  ["Affliction"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Durok's Bane",
-    ["location"] = "Selene's Web",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Berserking Warrior"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Berserking Warrior",
-    ["location"] = "Hel Ra Citadel",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Eternal Warrior"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Eternal Warrior",
-    ["location"] = "Aetherian Archive, Hel Ra Citadel, Sanctum Ophidia",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Knightmare"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Knightmare",
-    ["location"] = "Spindleclutch",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Dreugh King Slayer"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Dreugh King Slayer",
-    ["location"] = "Fungal Grotto",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Wyrd Tree's Blessing"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Wyrd Tree's Blessing",
-    ["location"] = "Glenumbra",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Armor of Truth"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Armor of Truth",
-    ["location"] = "Darkshade Caverns",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Grace of Gloom"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Grace of Gloom",
-    ["location"] = "Summerset",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Leeching Plate"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Leeching Plate",
-    ["location"] = "Imperial City Prison",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Gryphon's Ferocity"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Gryphon's Ferocity",
-    ["location"] = "Summerset",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Heem-Jas' Retribution"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Heem-Jas' Retribution",
-    ["location"] = "Ruins of Mazzatun",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Hircine's Veneer"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Hircine's Veneer",
-    ["location"] = "Selene's Web",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
-  },
-  ["Draugr Hulk"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Draugr Hulk",
-    ["location"] = "Direfrost Keep",
-    ["itemTypesText"] = "Medium",
-  },
-  ["The Ice Furnace"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "The Ice Furnace",
-    ["location"] = "Direfrost Keep",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Witchman Armor"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Witchman Armor",
-    ["location"] = "The Rift",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Order of Diagna"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Order of Diagna",
-    ["location"] = "Alik'r Desert",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Undaunted Bastion"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Undaunted Bastion",
-    ["location"] = "Elden Hollow",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Poisonous Serpent"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Poisonous Serpent",
-    ["location"] = "Hel Ra Citadel",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Plague Doctor"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Plague Doctor",
-    ["location"] = "Deshaan",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Swamp Raider"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Swamp Raider",
-    ["location"] = "Shadowfen",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Sword-Singer"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Sword-Singer",
-    ["location"] = "Alik'r Desert",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Shadow of the Red Mountain"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Shadow of the Red Mountain",
-    ["location"] = "Stonefalls",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Jolting Arms"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Jolting Arms",
-    ["location"] = "Tempest Island",
-    ["itemTypesText"] = "Heavy",
-  },
-  ["Leviathan"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Leviathan",
-    ["location"] = "Crypt of Hearts",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
-  },
-  ["Tooth of Lokkestiiz"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Tooth of Lokkestiiz",
-    ["location"] = "Sunspire",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Senche's Bite"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Senche's Bite",
-    ["location"] = "Reaper's March",
-    ["itemTypesText"] = "Medium",
-  },
-  ["Deadly Strike"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Deadly Strike",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
-  },
-  ["Twice-Fanged Serpent"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Twice-Fanged Serpent",
-    ["location"] = "Sanctum Ophidia",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
-  },
-  ["Tzogvin's Warband"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Tzogvin's Warband",
-    ["location"] = "Frostvault",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
-  },
-  ["Maarselok"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.monster,
-    ["name"] = "Maarselok",
-    ["shoulderChest"] = TGC.enums.undauntedChests.urgalarg,
-    ["helmLocation"] = "Lair of Maarselok",
-    ["itemTypesText"] = "Helm, Shoulder",
-  },
-  ["Endurance"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Endurance",
-    ["location"] = "Dungeonfinder, Imperial City",
-    ["itemTypesText"] = "Jewelry, Shields, Weapons",
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Vlastarus Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
   ["Agility"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Agility",
-    ["location"] = "Dungeonfinder, Imperial City",
-    ["itemTypesText"] = "Jewelry, Shields, Weapons",
+    ["type"] = "Unknown",
+    ["locations"] = { "Imperial City", "Dungeonfinder" },
+    ["items"] = { "Jewels", "Weapons" },
+    ["buildTypes"] = nil
   },
-  ["Willpower"] = {
+  ["Akaviri Dragonguard"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Willpower",
-    ["location"] = "Dungeonfinder, Imperial City",
-    ["itemTypesText"] = "Jewelry, Shields, Weapons",
+    ["type"] = "Overland",
+    ["locations"] = { "Eastmarch" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Vengeance Leech"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Vengeance Leech",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Jewelry, Shields, Weapons",
-  },
-  ["Plague Slinger"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Plague Slinger",
-    ["location"] = "Scalecaller Peak",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
-  },
-  ["Rattlecage"] = {
+  ["Alessia's Bulwark"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Rattlecage",
-    ["location"] = "Vaults of Madness",
-    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+    ["type"] = "Craftable",
+    ["locations"] = { "Alik'r Desert (Alezer Kotu)", "Malabal Tor (Chancel of Divine Entreaty)", "Eastmarch (Hammerhome)" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Vengeance Leech"] = {
+  ["Alessian Order"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Vengeance Leech",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Jewelry, Shields, Weapons",
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Vlastarus Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Salvation"] = {
+  ["Almalexia's Mercy"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Cropsford Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Amber Plasm"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Ruins of Mazzatun" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Ancient Dragonguard"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Salvation",
-    ["location"] = "Malabal Tor",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+    ["type"] = "Craftable",
+    ["locations"] = { "Southern-Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Way of Air"] = {
+  ["Archer's Mind"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Way of Air",
-    ["location"] = "Craglorn",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
   },
-  ["Way of Fire"] = {
-    ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Way of Fire",
-    ["location"] = "Craglorn",
-    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+  ["Armor Master"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Imperial City", "Memorial District" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Storm Knight's Plate"] = {
+  ["Armor of the Seducer"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Stormhaven", "Grahtwood", "Deshaan" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Armor of the Trainee"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Storm Knight's Plate",
-    ["location"] = "Stormhaven",
-    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+    ["type"] = "Overland",
+    ["locations"] = { "Stros M'Kai", "Khenarthi's Roost", "Bleakrock Isle", "Betnikh", "Bal Foyen" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Armor of the Veiled Heritance"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Auridon" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Armor of Truth"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Darkshade Caverns I", "Darkshade Caverns II" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Arms of Relequen"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Cloudrest" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Ashen Grip"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Glenumbra (Par Molag)", "Auridon (Beacon Falls)", "Stonefalls (Magmaflow Overlook)" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Aspect of Mazzatun"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Ruins of Mazzatun" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Assassin's Guile"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Vvardenfell", "Marandus" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Auroran's Thunder"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Depths of Malatar" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Automated Defense"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Halls of Fabrication" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Azureblight Reaper"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Lair of Maarselok" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Bahraha's Curse"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Hew's Bane" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Balorgh"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "March of Sacrifices", "Urgalarg Chief-bane's undaunted chest" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Bani's Torment"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Icereach" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Barkskin"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Elden Hollow I", "Elden Hollow II" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Bastion of the Heartland"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Vlastarus Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Battalion Defender"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Rewards of the Worthy" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Battlefield Acrobat"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Beckoning Steel"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Vlastarus Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Beekeeper's Gear"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Greenshade" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Berserking Warrior"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Hel Ra Citadel" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Black Rose"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Blessing of the Potentates"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Vlastarus Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Blood Moon"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "March of Sacrifices" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Blooddrinker"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Bloodroot Forge" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Bloodlord's Embrace"] = {
+    ["isTrash"] = true,
+    ["type"] = "Mythic",
+    ["locations"] = { "Antiquities" },
+    ["items"] = { "" },
+    ["buildTypes"] = nil
+  },
+  ["Bloodspawn"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Spindleclutch II", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Bloodthorn's Touch"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Glenumbra" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Bone Pirate's Tatters"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Blackheart Haven" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Brands of Imperium"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "White-Gold Tower" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Briarheart"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Wrothgar" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Bright-Throat's Boast"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Murkmire" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Buffer of the Swift"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Cropsford Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Burning Spellweave"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "City of Ash I", "City of Ash II" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Call of the Undertaker"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Caluurion's Legacy"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Fang Lair" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Caustic Arrow"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Champion of the Hist"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Murkmire" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Chaotic Whirlwind"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Chaotic Whirlwind (Perfected)"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Chokethorn"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Elden Hollow I", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Claw of Yolnahkriin"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Sunspire" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Clever Alchemist"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Hew's Bane", "No Shira Workshop" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Coldharbour's Favorite"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Combat Physician"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Wayrest Sewers I", "Wayrest Sewers II" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Concentrated Force"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Concentrated Force (Perfected)"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Coward's Gear"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Battlegrounds" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Crafty Alfiq"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
   },
   ["Crest of Cyrodiil"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Crest of Cyrodiil",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Vlastarus Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Shalk Exoskeleton"] = {
+  ["Critical Riposte"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Shalk Exoskeleton",
-    ["location"] = "Stonefalls",
-    ["itemTypesText"] = "Heavy, Jewelry, Shields, Weapons",
+    ["type"] = "Craftable",
+    ["locations"] = { "Cyrodiil", "Vlasterus" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Soldier of Anguish"] = {
+  ["Cruel Flurry"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Soldier of Anguish",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
   },
-  ["Steadfast Hero"] = {
+  ["Crusader"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.pvp,
-    ["name"] = "Steadfast Hero",
-    ["location"] = "Cyrodiil",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+    ["type"] = "Dungeon",
+    ["locations"] = { "Volenfell" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
   },
-  ["Storm Master"] = {
+  ["Crushing Wall"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Curse Eater"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Cropsford Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Curse of Doylemish"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Storm Master",
-    ["location"] = "Tempest Island",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+    ["type"] = "Dungeon",
+    ["locations"] = { "Scalecaller Peak" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Daedric Trickery"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Vvardenfell" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Daring Corsair"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Southern-Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Darkstride"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Rivenspire" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Dauntless Combatant"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Cyrodiil", "Cropsford" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Dead-Water's Guile"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Murkmire" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Deadly Strike"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "PvP Vendor Bruma Town" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Death's Wind"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Glenumbra", "Auridon", "Stonefalls" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Defending Warrior"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Aetherian Archive" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
   ["Defensive Position"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Defensive Position",
-    ["location"] = "Asylum Sanctorium",
-    ["itemTypesText"] = "Sword and Shield",
-  },
-  ["Trappings of Invigoration"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Trappings of Invigoration",
-    ["location"] = "Fang Lair",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
-  },
-  ["Hide of the Werewolf"] = {
     ["isTrash"] = true,
-    ["type"] = TGC.enums.setTypes.overworld,
-    ["name"] = "Hide of the Werewolf",
-    ["location"] = "Glenumbra",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
   },
-  ["Savage Werewolf"] = {
+  ["Defensive Position (Perfected)"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Defiler"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Vvardenfell" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Desert Rose"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Savage Werewolf",
-    ["location"] = "Moon Hunter Keep",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Cropsford Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Destructive Impact"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Destructive Mage"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Hel Ra Citadel" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Disciplined Slash"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Disciplined Slash (Perfected)"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Domihaus"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Falkreath Hold", "Urgarlag" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Dragon's Appetite"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Western Skyrim" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Dragon's Defilement"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Lair of Maarselok" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Dragonguard Elite"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Southern-Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Draugr Hulk"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Direfrost Keep" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Draugr's Heritage"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "The Rift" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Draugr's Rest"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Falkreath Hold" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Draugrkin's Grip"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Unhallowed Grave" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Dreamer's Mantle"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Stormhaven" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Dreugh King Slayer"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Fungal Grotto I", "Fungal Grotto II" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
   ["Dro'Zakar's Claws"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Dro'Zakar's Claws",
-    ["location"] = "Moongrave Fane",
-    ["itemTypesText"] = "Jewelry, Medium, Shields, Weapons",
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Moongrave Fane" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
   },
-  ["Z'en's Redress"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Z'en's Redress",
-    ["location"] = "Lair of Maarselok",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  ["Duneripper's Scales"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Volenfell" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Hollowfang Thirst"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.dungeon,
-    ["name"] = "Hollowfang Thirst",
-    ["location"] = "Moongrave Fane",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+  ["Durok's Bane"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Selene's Web" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Timeless Blessing"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Timeless Blessing",
-    ["location"] = "Asylum Sanctorium",
-    ["itemTypesText"] = "Destruction, Restoration",
+  ["Eagle Eye"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Bruma PvP Vendor" },
+    ["items"] = { "Jewels", "Weapons" },
+    ["buildTypes"] = nil
   },
-  ["Timeless Blessing (Perfected)"] = {
+  ["Earthgore"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Timeless Blessing (Perfected)",
-    ["location"] = "Asylum Sanctorium",
-    ["itemTypesText"] = "Destruction, Restoration",
+    ["type"] = "Monster Set",
+    ["locations"] = { "Bloodroot Forge", "Urgarlag" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Grand Rejuvenation"] = {
+  ["Ebon Armory"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.arena,
-    ["name"] = "Grand Rejuvenation",
-    ["location"] = "Dragonstar Arena Vet",
-    ["itemTypesText"] = "Restoration",
+    ["type"] = "Dungeon",
+    ["locations"] = { "Crypt of Hearts I", "Crypt of Hearts II" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Precise Regeneration"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.arena,
-    ["name"] = "Precise Regeneration",
-    ["location"] = "Maelstrom Arena Vet",
-    ["itemTypesText"] = "Restoration",
+  ["Elemental Succession"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
   },
-  ["Perfect Mender's Ward"] = {
+  ["Elf Bane"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.arena,
-    ["name"] = "Perfect Mender's Ward",
-    ["location"] = "Blackrose Prison",
-    ["itemTypesText"] = "Restoration",
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Vlastarus Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Mender's Ward"] = {
-    ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.arena,
-    ["name"] = "Mender's Ward",
-    ["location"] = "Blackrose Prison",
-    ["itemTypesText"] = "Restoration",
+  ["Embershield"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "City of Ash I", "City of Ash II" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
-  ["Perfected False God's Devotion"] = {
+  ["Endurance"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "Perfected False God's Devotion",
-    ["location"] = "Sunspire",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+    ["type"] = "Unknown",
+    ["locations"] = { "Imperial City", "Dungeonfinder" },
+    ["items"] = { "Jewels", "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Engine Guardian"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Darkshade Caverns II", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Essence Thief"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "White-Gold Tower" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Eternal Hunt"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Hew's Bane" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Eternal Vigor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Western Skyrim &amp; Blackreach" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Eternal Warrior"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Hel Ra Citadel", "Aetherian Archive", "Sanctum Ophidia" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Eye of Nahviintaas"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Sunspire" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Eyes of Mara"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Eyevea" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
   },
   ["False God's Devotion"] = {
     ["isTrash"] = false,
-    ["type"] = TGC.enums.setTypes.trial,
-    ["name"] = "False God's Devotion",
-    ["location"] = "Sunspire",
-    ["itemTypesText"] = "Jewelry, Light, Shields, Weapons",
+    ["type"] = "Trial",
+    ["locations"] = { "Sunspire" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
   },
+  ["Fasalla's Guile"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Home Town Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Fiord's Legacy"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Eastmarch" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Flame Blossom"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Bloodroot Forge" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Flanking Strategist"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "The Gold Coast" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Footman's Fortune"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Fortified Brass"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "The Clockwork City" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Frozen Watcher"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Depths of Malatar" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Galerion's Revenge"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Gallant Charge"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Glorious Defender"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Gossamer"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Cradle of Shadows" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Grace of Gloom"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Summerset" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Grace of the Ancients"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Cropsford PvP Vendor" },
+    ["items"] = { "Jewels", "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Grand Rejuvenation"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Grave Guardian"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Unhallowed Grave" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Grave-Stake Collector"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Murkmire" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Green Pact"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Grahtwood" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Grothdarr"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Vaults of Madness", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Grundwulf"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Moongrave Fane" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Gryphon's Ferocity"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Summerset Zone" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hagraven's Garden"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Bloodroot Forge" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hand of Mephala"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Cradle of Shadows" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hanu's Compassion"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "March of Sacrifices" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hatchling's Shell"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Shadowfen" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Haven of Ursus"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "March of Sacrifices" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hawk's Eye"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Bruma Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Healer's Habit"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Healing Mage"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Aetherian Archive" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Heem-Jas' Retribution"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Ruins of Mazzatun" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hide of Morihaus"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "The Gold Coast" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hide of the Werewolf"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Glenumbra" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hircine's Veneer"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Selene's Web" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hist Bark"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Rivenspire", "Greenshade", "Shadowfen" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hiti's Hearth"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Icereach" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hollowfang Thirst"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Moongrave Fane" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hunding's Rage"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Bangkorai", "Reaper's March", "The Rift" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Hunt Leader"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Iceheart"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Direfrost Keep", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Icy Conjuror"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Frostvault" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Ilambris"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Crypt of Hearts I", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Immortal Warrior"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Sanctum Ophidia" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Imperial Physique"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Impregnable Armor"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Battlegrounds" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Indomitable Fury"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Infallible Mage"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Hel Ra Citadel", "Aetherian Archive", "Sanctum Ophidia" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Infernal Guardian"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "City of Ash I", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Innate Axiom"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "The Clockwork City" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Inventor's Guard"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Halls of Fabrication" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Ironblood"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Falkreath Hold" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Jailbreaker"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "The Banished Cells I", "The Banished Cells II" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Jailer's Tenacity"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Moon Hunter Keep" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Jolting Arms"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Tempest Island" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Jorvuld's Guidance"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Scalecaller Peak" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Kagrenac's Hope"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "The Earth Forge (AD =Reapers March - Rawl'kha // EP = The Rift - Riften // DC = Bankorai - Evermore)" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Kjalnar's Nightmare"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Unhallowed Grave" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Knight Slayer"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Battlegrounds" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Knight-Errant's Mail"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Blackheart Haven" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Knightmare"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Spindleclutch I", "Spindleclutch II" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Kra'gh"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Fungal Grotto I", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Kvatch Gladiator"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "The Gold Coast" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Kyne's Kiss"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Bruma Elilte Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Kyne's Wind"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Kyne's Aegis" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Lamia's Song"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Arx Corinium" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Law of Julianos"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Wrothgar", "Boreal Forge" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Leeching Plate"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Imperial City Prison" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Leki's Focus"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Home Base Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Leviathan"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Crypt of Hearts I", "Crypt of Hearts II" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Light of Cyrodiil"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Cropsford Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Light Speaker"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Elden Hollow I", "Elden Hollow II" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Livewire"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "The Clockwork City" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Lord Warden"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Imperial City Prison", "Urgarlag" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Lunar Bastion"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Maw of Lorkhaj" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Maarselok"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Lair of Maarselok" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Mad Tinkerer"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "The Clockwork City" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Magicka Furnace"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Direfrost Keep" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Magnus' Gift"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Rivenspire", "Greenshade", "Shadowfen" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Malacath's Band of Brutality"] = {
+    ["isTrash"] = false,
+    ["type"] = "Mythic",
+    ["locations"] = { "Antiquities" },
+    ["items"] = { "" },
+    ["buildTypes"] = nil
+  },
+  ["Mantle of Siroria"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Cloudrest" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Marauder's Haste"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Southern-Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Mark of the Pariah"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Wrothgar" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Marksman's Crest"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Home Town Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Master Architect"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Halls of Fabrication" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Maw of the Infernal"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "The Banished Cells II", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Mechanical Acuity"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Pavillion of Artifice", "The Clockwork City" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Medusa"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Arx Corinium" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Mender's Ward"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Merciless Charge"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Meridia's Blessed Armor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Coldharbour" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Meritorious Service"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Might of the Lost Legion"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Murkmire" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Mighty Chudan"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Ruins of Mazzatun", "Urgarlag" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Mighty Glacier"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Frostvault" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Molag Kena"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "White-Gold Tower", "Urgarlag" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Moon Hunter"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Moon Hunter Keep" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Moondancer"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Maw of Lorkhaj" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Morkuldin"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Wrothgar" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Mother Ciannait"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Icereach" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Mother's Sorrow"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Deshaan" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Naga Shaman"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Murkmire" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Necropotence"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Rivenspire" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Nerien'eth"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Crypt of Hearts II", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Netch's Touch"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Darkshade Caverns I", "Darkshade Caverns II" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["New Moon Acolyte"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Southern-Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Night Mother's Embrace"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Deshaan" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Night Mother's Gaze"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Bangkorai", "Reaper's March", "The Rift" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Night Terror"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Stormhaven" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Night's Silence"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Glenumbra", "Auridon", "Stonefalls" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Nightflame"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Elden Hollow II", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Nikulas' Heavy Armor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Blessed Crucible" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Noble Duelist's Silks"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Blessed Crucible" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Noble's Conquest"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Imperial City" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Nocturnal's Favor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Summerset Crafting Station" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Oblivion's Edge"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Vaults of Madness" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Oblivion's Foe"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Coldharbour" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Order of Diagna"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Alik'r Desert" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Orgnum's Scales"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "The Earth Forge" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Overwhelming Surge"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Tempest Island" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Para Bellum"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Pelinal's Aptitude"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "The Gold Coast" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Aegis of Galenwe"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Cloudrest veteran" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Arms of Relequen"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Cloudrest veteran" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Gallant Charge"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Kyne's Wind"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Kyne's Aegis" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Mantle of Siroria"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Cloudrest veteran" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Mender's Ward"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Radial Uppercut"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Roaring Opportunist"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Kyne's Aegis" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Spectral Cloak"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Vestment of Olorime"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Cloudrest veteran" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Virulent Shot"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Vrol's Command"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Kyne's Aegis" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Wild Impulse"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfect Yandir's Might"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Kyne's Aegis" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Caustic Arrow"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Claw of Yolnahkriin"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Veteran Sunspire" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Cruel Flurry"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Crushing Wall"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Destructive Impact"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Eye of Nahviintaas"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Veteran Sunspire" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected False God's Devotion"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Veteran Sunspire" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Grand Rejuvenation"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Merciless Charge"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Precise Regeneration"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Puncturing Remedy"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Rampaging Slash"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Stinging Slashes"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Thunderous Volley"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Titanic Cleave"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena [vet]" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Perfected Tooth of Lokkestiiz"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Veteran Sunspire" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Permafrost"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Phoenix"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Piercing Spray"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Piercing Spray (Perfected)"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Pillar of Nirn"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Falkreath Hold" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Pirate Skeleton"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Blackheart Haven", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Plague Doctor"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Deshaan" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Plague Slinger"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Scalecaller Peak" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Poisonous Serpent"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Hel Ra Citadel" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Powerful Assault"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Prayer Shawl"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Spindleclutch I", "Spindleclutch II" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Precise Regeneration"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Prisoner's Rags"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Coldharbour" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Puncturing Remedy"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Queen's Elegance"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Auridon" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Quick Serpent"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Aetherian Archive" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Radial Uppercut"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Rampaging Slash"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Ranger's Gait"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Grahtwood" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Rattlecage"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Vaults of Madness" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Ravager"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil in Vlastarus Town", "Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Reactive Armor"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Redistributor"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Imperial City", "Arboretum District" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Renald's Resolve"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Moongrave Fane" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Ring of the Wild Hunt"] = {
+    ["isTrash"] = false,
+    ["type"] = "Mythic",
+    ["locations"] = { "Antiquities" },
+    ["items"] = { "" },
+    ["buildTypes"] = nil
+  },
+  ["Roar of Alkosh"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Maw of Lorkhaj" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Roaring Opportunist"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Kyne's Aegis" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Robes of Alteration Mastery"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Cropsford Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Robes of Destruction Mastery"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Robes of the Hist"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Shadowfen" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Robes of the Withered Hand"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Alik'r Desert" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Robes of Transmutation"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Rewards of the Worthy" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Salvation"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Malabal Tor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sanctuary"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "The Banished Cells I", "The Banished Cells II" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Savage Werewolf"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Moon Hunter Keep" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Scathing Mage"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Imperial City Prison" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Scavenging Demise"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Depths of Malatar" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Scourge Harvester"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Wayrest Sewers II", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Selene"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Selene's Web", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sellistrix"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Arx Corinium", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Senchal Defender"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Southern-Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Senche-raht's Grit"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Senche's Bite"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Reaper's March" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sentinel of Rkugamz"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Darkshade Caverns I", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sentry"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Bruma Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sergeant's Mail"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Wayrest Sewers I", "Wayrest Sewers II" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Seventh Legion Brute"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Bangkorai" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shacklebreaker"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Vvardenfell" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shadow Dancer's Raiment"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Greenshade" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shadow of the Red Mountain"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Stonefalls" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shadow Walker"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Bruma Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shadowrend"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "The Banished Cells I", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shalidor's Curse"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Eyevea" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shalk Exoskeleton"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Stonefalls" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sheer Venom"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Imperial City Prison" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shield Breaker"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shield of the Valiant"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Bruma Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Shroud of the Lich"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Crypt of Hearts I", "Crypt of Hearts II" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Silks of the Sun"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Stonefalls" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sithis' Touch"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "The Gold Coast" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Skooma Smuggler"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Reaper's March" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Slimecraw"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Wayrest Sewers I", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sload's Semblance"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Summerset Crafting Station" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Snow Treaders"] = {
+    ["isTrash"] = false,
+    ["type"] = "Mythic",
+    ["locations"] = { "Antiquities" },
+    ["items"] = { "" },
+    ["buildTypes"] = nil
+  },
+  ["Soldier of Anguish"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Song of Lamae"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Alik'r Desert", "Malabal Tor", "Eastmarch" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Soulshine"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Reaper's March" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Spawn of Mephala"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Fungal Grotto II", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Spectral Cloak"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Spectre's Eye"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Coldharbour" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Spell Parasite"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Blackreach - Western Skyrim" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Spell Power Cure"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "White-Gold Tower" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Spell Strategist"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Spelunker"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Spindleclutch I", "Spindleclutch II" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Spider Cultist Cowl"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Fungal Grotto I", "Fungal Grotto II" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Spinner's Garments"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Malabal Tor" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Spriggan's Thorns"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Bangkorai" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Steadfast Hero"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Stendarr's Embrace"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Eastmarch" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Stinging Slashes"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Stonekeeper"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Frostvault", "Urgalarg Chief-bane's undaunted chest" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Storm Knight's Plate"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Stormhaven" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Storm Master"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Tempest Island" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Stormfist"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Tempest Island", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Strength of the Automaton"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Darkshade Caverns I", "Darkshade Caverns II" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Stuhn's Favor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Western Skyrim" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Stygian"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Coldharbour" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sunderflame"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "City of Ash I", "City of Ash II" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Swamp Raider"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Shadowfen" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Swarm Mother"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Spindleclutch I", "Maj" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sword Dancer"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Blessed Crucible" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Sword-Singer"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Alik'r Desert" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Symphony of Blades"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Depths of Malatar", "Urgalarg Chief-bane's undaunted chest" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Syrabane's Grip"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Grahtwood" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Syvarra's Scales"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Hew's Bane" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Tava's Favor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Hew's Bane" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["The Arch-Mage"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Cropsford Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["The Ice Furnace"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Direfrost Keep" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["The Juggernaut"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Vlastarus Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["The Morag Tong"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Bruma Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["The Troll King"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Blessed Crucible", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["The Worm's Raiment"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Vaults of Madness" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Thews of the Harbinger"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Thrassian Stranglers"] = {
+    ["isTrash"] = false,
+    ["type"] = "Mythic",
+    ["locations"] = { "Antiquities" },
+    ["items"] = { "" },
+    ["buildTypes"] = nil
+  },
+  ["Thunderbug's Carapace"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Malabal Tor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Thunderous Volley"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Thurvokun"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Fang Lair", "Urgarlag Undaunted Chest" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Timeless Blessing"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Timeless Blessing (Perfected)"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Asylum Sanctorium" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Titanborn Strength"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Icereach" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Titanic Cleave"] = {
+    ["isTrash"] = false,
+    ["type"] = "Arena",
+    ["locations"] = { "Dragonstar Arena" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Tooth of Lokkestiiz"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Sunspire" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Toothrow"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Wayrest Sewers I", "Wayrest Sewers II" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Torc of Tonal Constancy"] = {
+    ["isTrash"] = true,
+    ["type"] = "Mythic",
+    ["locations"] = { "Antiquities" },
+    ["items"] = { "" },
+    ["buildTypes"] = nil
+  },
+  ["Tormentor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "The Banished Cells I", "The Banished Cells II" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Torug's Pact"] = {
+    ["isTrash"] = false,
+    ["type"] = "Craftable",
+    ["locations"] = { "Grahtwood (Fisherman's Isle). Stormhaven (Hammerdeath Workshop). Deshaan (Lake Hlaalu Retreat)." },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Trappings of Invigoration"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Fang Lair" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Treasure Hunter"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Volenfell" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Tremorscale"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Volenfell", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Trial by Fire"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Wrothgar" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Trinimac's Valor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Wrothgar" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Twice-Born Star"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Craglorn" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Twice-Fanged Serpent"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Sanctum Ophidia" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Twilight Remedy"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Maw of Lorkhaj" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Twilight's Embrace"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Stormhaven", "Grahtwood", "Deshaan" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Twin Sisters"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Auridon" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Tzogvin's Warband"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Frostvault" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Ulfnor's Favor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Fang Lair" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Unchained Aggressor"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Cyrodiil", "Bruma" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Undaunted Bastion"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Elden Hollow I", "Elden Hollow II" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Undaunted Infiltrator"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Arx Corinium" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Undaunted Unweaver"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Blackheart Haven" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Unfathomable Darkness"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "The Clockwork City" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Valkyn Skoria"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "City of Ash II", "Glirion" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vampire Cloak"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Rivenspire" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vampire Lord"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Bangkorai" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vampire's Kiss"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Alik'r Desert", "Malabal Tor", "Eastmarch" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vanguard's Challenge"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Battlegrounds" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Varen's Legacy"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "The Gold Coast" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vastarie's Tutelage"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Velidreth"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Cradle of Shadows", "Urgarlag" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vengeance Leech"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Bruma Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Venomous Smite"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Western Skyrim &amp; Blackreach" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vestment of Olorime"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Cloudrest normal" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vestments of the Warlock"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Selene's Web" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vesture of Darloc Brae"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Elsweyr" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vicecanon of Venom"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Imperial Sewers" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vicious Death"] = {
+    ["isTrash"] = false,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Home Base Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vicious Serpent"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Hel Ra Citadel", "Aetherian Archive", "Sanctum Ophidia" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Viper's Sting"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Fungal Grotto I", "Fungal Grotto II" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Virulent Shot"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Vrol's Command"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Kyne's Aegis" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Vykosa"] = {
+    ["isTrash"] = true,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Moon Hunter Keep", "Urgarlag Chief-bane" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["War Machine"] = {
+    ["isTrash"] = false,
+    ["type"] = "Trial",
+    ["locations"] = { "Halls of Fabrication" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["War Maiden"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Vvardenfell" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Ward of Cyrodiil"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Bruma Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Warrior-Poet"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Vvardenfell" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Warrior's Fury"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Home Base Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Way of Air"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Craglorn" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Way of Fire"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Craglorn" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Way of Martial Knowledge"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "Craglorn" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Way of the Arena"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Craglorn" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Whitestrake's Retribution"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Rivenspire", "Greenshade", "Shadowfen" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Widowmaker"] = {
+    ["isTrash"] = true,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Cradle of Shadows" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Wild Impulse"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Blackrose Prison" },
+    ["items"] = { "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Wilderqueen's Arch"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Greenshade" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Willow's Path"] = {
+    ["isTrash"] = true,
+    ["type"] = "Craftable",
+    ["locations"] = { "Bangkorai", "Reaper's March", "The Rift" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Willpower"] = {
+    ["isTrash"] = false,
+    ["type"] = "Unknown",
+    ["locations"] = { "Imperial City", "Dungeonfinder" },
+    ["items"] = { "Jewels", "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Winter's Respite"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Western Skyrim" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Winterborn"] = {
+    ["isTrash"] = true,
+    ["type"] = "Arena",
+    ["locations"] = { "Maelstrom Arena" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Wisdom of Vanus"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Summerset Zone" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Wise Mage"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Sanctum Ophidia" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Witchman Armor"] = {
+    ["isTrash"] = false,
+    ["type"] = "Overland",
+    ["locations"] = { "The Rift" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Wizard's Riposte"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Battlegrounds", "Guildstore" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Wrath of the Imperium"] = {
+    ["isTrash"] = true,
+    ["type"] = "PvP",
+    ["locations"] = { "Cyrodiil", "Cropsford Elite Gear Vendor" },
+    ["items"] = { "Jewels", "Weapons" },
+    ["buildTypes"] = nil
+  },
+  ["Wyrd Tree's Blessing"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "Glenumbra" },
+    ["items"] = { "Jewels", "Weapons", "Heavy Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Yandir's Might"] = {
+    ["isTrash"] = true,
+    ["type"] = "Trial",
+    ["locations"] = { "Kyne's Aegis" },
+    ["items"] = { "Jewels", "Weapons", "Medium Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Ysgramor's Birthright"] = {
+    ["isTrash"] = true,
+    ["type"] = "Overland",
+    ["locations"] = { "The Rift" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Z'en's Redress"] = {
+    ["isTrash"] = false,
+    ["type"] = "Dungeon",
+    ["locations"] = { "Lair of Maarselok" },
+    ["items"] = { "Jewels", "Weapons", "Light Armor" },
+    ["buildTypes"] = nil
+  },
+  ["Zaan"] = {
+    ["isTrash"] = false,
+    ["type"] = "Monster Set",
+    ["locations"] = { "Scalecaller Peak", "Urgarlag Chief-bane's undaunted chest" },
+    ["items"] = { "Light Armor", "Medium Armor", "Heavy Armor" },
+    ["buildTypes"] = nil
+  }
 }

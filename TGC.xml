@@ -69,6 +69,11 @@
         </Label>
       </Controls>
     </TopLevelControl>
+    <Control name="TgcDynamicDropDown" inherits="ZO_ComboBox" virtual="true">
+      <OnInitialized>
+        ZO_ComboBox:New(self)
+      </OnInitialized>
+    </Control>
     <Button name="GuildRecruitLeaderboardRowTemplate" virtual="true">
         <Dimensions y="30" />
         <Anchor point="RIGHT" relativeTo="$(parent)" />

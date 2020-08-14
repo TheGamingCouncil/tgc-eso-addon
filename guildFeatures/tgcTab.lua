@@ -1,8 +1,12 @@
 local sceneName = "tgcGuildMenu"
 local descriptor = "tgcGuildMenu"
 local listData = nil
+local guildId = nil
 
 function TGC.SetGuildTabHook( LMM2 )
+
+  local guilds = TGC.guildList or TGC.GetGuilds()
+  guildId = guilds[1]
 
   TGC.GuildTabCreateScene()
  
@@ -49,6 +53,26 @@ function TGC.SetGuildTabHook( LMM2 )
   LMM2:AddMenuItem(descriptor, sceneName, categoryLayoutInfo, nil)
 
   listData = guildRecruitLeaderboardList:New(TgcGuildMenuLeaderboard)
+
+  local leaderBorderGuildPicker = CreateControlFromVirtual("leaderBoardGuildPicker", TgcGuildMenuLeaderboard, "TgcDynamicDropDown")
+
+  leaderBorderGuildPicker:SetDimensions(250, 30)
+  leaderBorderGuildPicker:SetAnchor(TOPRIGHT, TgcGuildMenuLeaderboard, TOPRIGHT, 280, 0)
+
+  local choices = {}
+  for i=1,#guilds do
+    choices[GetGuildName( guilds[i] )] = guilds[i]
+  end
+  local dropdown = ZO_ComboBox_ObjectFromContainer(leaderBorderGuildPicker)
+  dropdown:SetSelectedItem(GetGuildName( guilds[1] ))
+  dropdown:SetSortsItems(false)
+  local function OnItemSelect(_, choiceText, choice)
+   listData:RefreshData()
+  end	
+  for key, value in pairs(choices) do
+		local entry = dropdown:CreateItemEntry(key, OnItemSelect)
+		dropdown:AddItem(entry)
+  end
   
 end
 
@@ -116,18 +140,6 @@ end
 
 function guildRecruitLeaderboardList:BuildMasterList()
   self.masterList = {}
-
-  local trimList = {}
-  local maxSecondsLast = 60 * 60 * 24 * 7 * 3
-  --trim saved list
-  for k, v in ipairs(TGC.rosterDb.invitedHistory) do 
-    if TGC.rosterDb.invitedHistory[k].timeStamp > GetTimeStamp() - maxSecondsLast then
-      table.insert( trimList, TGC.rosterDb.invitedHistory[k] )
-    end
-  end
-
-  --TGC.rosterDb.invitedHistory = trimList
-
   local currentDateTime = os.date("!*t")
   --each set is from wday 2 - hour 6 
   local day = 60 * 60 * 24
@@ -148,50 +160,42 @@ function guildRecruitLeaderboardList:BuildMasterList()
   local startOfCurrentWeek = endOfCurrentWeek - ( day * 7 )
   local startOfLastWeek = endOfCurrentWeek - ( day * 14 )
 
+  guildData = TGC.db.roster.guildData[guildId]
+
   local dropListCW = {}
   local dropListLW = {}
-  for k, v in pairs(TGC.rosterDb.priorMembers) do
-    if TGC.rosterDb.priorMembers[k].eventType == 8 and TGC.rosterDb.priorMembers[k].member ~= nil then
-      local gmtTimeStamp = os.time( os.date("!*t", TGC.rosterDb.priorMembers[k].timeStamp ) )
+  for k, v in pairs(guildData.priorMembers) do
+    if guildData.priorMembers[k].eventType == 8 and guildData.priorMembers[k].member ~= nil then
+      local gmtTimeStamp = os.time( os.date("!*t", guildData.priorMembers[k].timeStamp ) )
       if gmtTimeStamp > startOfCurrentWeek then
-        dropListCW[TGC.rosterDb.priorMembers[k].member] = true
+        dropListCW[guildData.priorMembers[k].member] = true
       elseif gmtTimeStamp > startOfLastWeek then
-        dropListLW[TGC.rosterDb.priorMembers[k].member] = true
+        dropListLW[guildData.priorMembers[k].member] = true
       end
     end
   end
 
   local playerList = {}
 
-  for k, v in ipairs(TGC.rosterDb.invitedHistory) do
+  for k, v in ipairs(guildData.inviteHistory) do
 
-    local gmtTimeStamp = os.time( os.date("!*t", TGC.rosterDb.invitedHistory[k].timeStamp ) )
-    if gmtTimeStamp > startOfCurrentWeek and dropListCW[TGC.rosterDb.invitedHistory[k].invitee] == nil then
-      if playerList[TGC.rosterDb.invitedHistory[k].member] == nil then
-        playerList[TGC.rosterDb.invitedHistory[k].member] = { thisweek = 0, lastweek = 0 }
+    local gmtTimeStamp = os.time( os.date("!*t", guildData.inviteHistory[k].timeStamp ) )
+    if gmtTimeStamp > startOfCurrentWeek and dropListCW[guildData.inviteHistory[k].invitee] == nil then
+      if playerList[guildData.inviteHistory[k].member] == nil then
+        playerList[guildData.inviteHistory[k].member] = { thisweek = 0, lastweek = 0 }
       end
-      playerList[TGC.rosterDb.invitedHistory[k].member].thisweek = playerList[TGC.rosterDb.invitedHistory[k].member].thisweek + 1
-    elseif gmtTimeStamp > startOfLastWeek and dropListLW[TGC.rosterDb.invitedHistory[k].invitee] == nil then
-      if playerList[TGC.rosterDb.invitedHistory[k].member] == nil then
-        playerList[TGC.rosterDb.invitedHistory[k].member] = { thisweek = 0, lastweek = 0 }
+      playerList[guildData.inviteHistory[k].member].thisweek = playerList[guildData.inviteHistory[k].member].thisweek + 1
+    elseif gmtTimeStamp > startOfLastWeek and dropListLW[guildData.inviteHistory[k].invitee] == nil then
+      if playerList[guildData.inviteHistory[k].member] == nil then
+        playerList[guildData.inviteHistory[k].member] = { thisweek = 0, lastweek = 0 }
       end
-      playerList[TGC.rosterDb.invitedHistory[k].member].lastweek = playerList[TGC.rosterDb.invitedHistory[k].member].lastweek + 1
+      playerList[guildData.inviteHistory[k].member].lastweek = playerList[guildData.inviteHistory[k].member].lastweek + 1
     end
   end
 
   for k, v in pairs(playerList) do
     table.insert(self.masterList, { playername = k, thisweek = v.thisweek, lastweek = v.lastweek } )
   end
-
-  --local killingBlows = db.KillingBlowList -- My SV
-  --if killingBlows then
-    --for k, v in ipairs(killingBlows) do
-    --  local data = v
-      --table.insert(self.masterList, { playername = "@alexdragian", thisweek = 5, lastweek = 10 } )
-      --table.insert(self.masterList, { playername = "@arc", thisweek = 2, lastweek = 3 } )
-      --table.insert(self.masterList, { playername = "@chance", thisweek = -5002, lastweek = -303 } )
-    --end
-  --end
   
 end
 

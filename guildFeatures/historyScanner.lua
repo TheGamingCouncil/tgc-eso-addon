@@ -1,27 +1,85 @@
 function TGC.SetupHistoryScans()
-  TGC.personalInvites = {}
-  TGC.NewScan()
+  TGC.NewScan( 1 )
 end
 
-function TGC.ScanLoop()
-  TGC.NewScan()
-  zo_callLater(function() TGC.ScanLoop() end, 15000)
+local function trimHistory( guildId )
+  if( TGC.db.roster.guildData[guildId] == nil ) then
+    TGC.db.roster.guildData[guildId] = {
+      lastScan = 0,
+      inviteHistory = {},
+      priorMembers = {}
+    }
+  else
+    local trimList = {}
+    local maxSecondsLast = 60 * 60 * 24 * 7 * 3
+    --trim saved list
+    for k, v in ipairs(TGC.db.roster.guildData[guildId].inviteHistory) do 
+      if TGC.db.roster.guildData[guildId].inviteHistory[k].timeStamp > GetTimeStamp() - maxSecondsLast then
+        table.insert( trimList, TGC.db.roster.guildData[guildId].inviteHistory[k] )
+      end
+    end
+  
+    TGC.db.roster.guildData[guildId].inviteHistory = trimList
+  end
 end
 
-function TGC.NewScan()
-  RequestMoreGuildHistoryCategoryEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
-  zo_callLater(function() TGC.ScanHistory() end, 10000)
+function TGC.NewScan( guildIndex )
+  local guilds = TGC.guildList or TGC.GetGuilds()
+  if guilds[guildIndex] ~= nil then
+    local guildId = guilds[guildIndex]
+    trimHistory( guildId )
+    TGC.ScanHistory( guildId, guildIndex + 1 )
+  else
+    zo_callLater(function() TGC.SetupHistoryScans() end, 60 * 1000)
+  end
 end
 
-function TGC.MapEventsToMemory()
-  local scanTime = TGC.rosterDb.lastScan
-  local numberOfEvents = GetNumGuildEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
-  local currentEvent = TGC.lastScanEvents + 1
+function TGC.ScanHistory( guildId, nextGuildIndex, oldNumberOfEvents, badLoads )
+  badLoads = badLoads or 0
+  oldNumberOfEvents = oldNumberOfEvents or 0
+
+  local numberOfEvents = GetNumGuildEvents(guildId, GUILD_HISTORY_GENERAL_ROSTER)
+  local _, secondsLast = GetGuildEventInfo(guildId, GUILD_HISTORY_GENERAL_ROSTER, numberOfEvents)
+
+  local maxSecondsLast = 60 * 60 * 24 * 7 * 3
+  local lastEventTimeStamp = GetTimeStamp() - secondsLast
+  if numberOfEvents > 0 then
+    if DoesGuildHistoryCategoryHaveMoreEvents(guildId, GUILD_HISTORY_GENERAL_ROSTER)
+     and badLoads < 10 and lastEventTimeStamp > TGC.db.roster.guildData[guildId].lastScan
+     and secondsLast < maxSecondsLast then
+      d( "guildId " .. guildId )
+      badLoads = TGC.Roe3ScanRequestMoreEvents( guildId, badLoads )
+      zo_callLater(function() TGC.ScanHistory(guildId, nextGuildIndex, numberOfEvents, badLoads) end, 5000)
+    else
+      TGC.MapEventsToMemory(guildId, nextGuildIndex)
+      TGC.NewScan( nextGuildIndex )
+    end
+  end
+end
+
+function TGC.Roe3ScanRequestMoreEvents( guildId, badLoads )
+  if DoesGuildHistoryCategoryHaveOutstandingRequest(guildId, GUILD_HISTORY_GENERAL_ROSTER) then
+    return 0
+  elseif IsGuildHistoryCategoryRequestQueued(guildId, GUILD_HISTORY_GENERAL_ROSTER) then
+    return 0
+  elseif RequestMoreGuildHistoryCategoryEvents(guildId, GUILD_HISTORY_GENERAL_ROSTER, true) then
+    return 0
+  elseif IsGuildHistoryCategoryRequestQueued(guildId, GUILD_HISTORY_GENERAL_ROSTER) then
+    return 0
+  else
+    return badLoads + 1
+  end
+end
+
+function TGC.MapEventsToMemory( guildId )
+  local scanTime = TGC.db.roster.guildData[guildId].lastScan
+  local numberOfEvents = GetNumGuildEvents(guildId, GUILD_HISTORY_GENERAL_ROSTER)
+  local currentEvent = 1
   local eventTimeStamp = GetTimeStamp()
   local eventMap = {}
   while currentEvent <= numberOfEvents do
     local theEvent = {}
-    theEvent.eventType, theEvent.secondsSince, theEvent.member, theEvent.invitee = GetGuildEventInfo(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER, currentEvent)
+    theEvent.eventType, theEvent.secondsSince, theEvent.member, theEvent.invitee = GetGuildEventInfo(guildId, GUILD_HISTORY_GENERAL_ROSTER, currentEvent)
     eventTimeStamp = GetTimeStamp() - theEvent.secondsSince
     
     if scanTime < eventTimeStamp then
@@ -30,95 +88,21 @@ function TGC.MapEventsToMemory()
 
     theEvent.timeStamp = eventTimeStamp
     theEvent.secondsSince = nil
-    if eventTimeStamp > TGC.rosterDb.lastScan and ( theEvent.eventType == 1 or theEvent.eventType == 7 or theEvent.eventType == 8 or theEvent.eventType == 12 ) then
-      table.insert( eventMap, theEvent )
+    if eventTimeStamp > TGC.db.roster.guildData[guildId].lastScan then
+      if theEvent.eventType == 1 then
+        table.insert( eventMap, theEvent )
+      elseif theEvent.eventType == 8 then
+        TGC.db.roster.guildData[guildId].priorMembers[theEvent.member] = theEvent
+      elseif theEvent.eventType == 12 then
+        TGC.db.roster.guildData[guildId].priorMembers[theEvent.invitee] = theEvent
+      end
     end
     currentEvent = currentEvent + 1
   end
   
-  local historyMembers = {}
   for i = #eventMap, 1, -1 do
-    local eventData = eventMap[i]
-    TGC.MapEventToMemory( historyMembers, eventData )
+    table.insert(TGC.db.roster.guildData[guildId].inviteHistory, eventMap[i])
   end
 
-  local historyRemovals = {}
-  for k, v in pairs(historyMembers) do
-    if not TGC.guildMembers[k] then
-      TGC.rosterDb.priorMembers[k] = { eventType = 8 }
-      historyRemovals[k] = v
-    end
-  end
-
-  for k, v in pairs(historyRemovals) do
-    historyMembers[k] = nil
-  end
-  TGC.rosterDb.lastScan = scanTime
-end
-
-function TGC.MapEventToMemory( historyMembers, eventData )
-  if eventData.eventType == 1 then
-    -- Invitation
-    if TGC.personalInvites[eventData.invitee] then
-      TGC.personalInvites[eventData.invitee] = nil
-    end
-
-    if TGC.rosterDb.priorMembers[eventData.invitee] then
-      TGC.rosterDb.priorMembers[eventData.invitee] = nil
-    end
-    
-    if not TGC.guildMembers[eventData.invitee] then
-      TGC.rosterDb.invitedMembers[eventData.invitee] = eventData
-      table.insert(TGC.rosterDb.invitedHistory, eventData )
-    end
-  elseif eventData.eventType == 7 then
-    -- Join
-    if TGC.rosterDb.invitedMembers[eventData.member] then
-      TGC.rosterDb.invitedMembers[eventData.member] = nil
-    end
-    if TGC.rosterDb.priorMembers[eventData.member] then
-      TGC.rosterDb.priorMembers[eventData.member] = nil
-    end
-    historyMembers[eventData.member] = eventData
-  elseif eventData.eventType == 8 then
-    -- Drop
-    if historyMembers[eventData.member] then
-      historyMembers[eventData.member] = nil
-    end
-    TGC.rosterDb.priorMembers[eventData.member] = eventData
-  elseif eventData.eventType == 12 then
-    -- Kicked
-    if historyMembers[eventData.invitee] then
-      historyMembers[eventData.invitee] = nil
-    end
-    TGC.rosterDb.priorMembers[eventData.invitee] = eventData
-  end
-end
-
-function TGC.ScanHistory( oldNumberOfEvents, badLoads )
-
-  badLoads = badLoads or 0
-  oldNumberOfEvents = oldNumberOfEvents or 0
-
-  local numberOfEvents = GetNumGuildEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
-  local _, secondsLast = GetGuildEventInfo(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER, numberOfEvents)
-
-  local maxSecondsLast = 60 * 60 * 24 * 7 * 3
-  local lastEventTimeStamp = GetTimeStamp() - secondsLast
-  if numberOfEvents > 0 then
-    if numberOfEvents > oldNumberOfEvents then badLoads = 0 else badLoads = badLoads + 1 end
-    if TGC.firstScan and DoesGuildHistoryCategoryHaveMoreEvents(TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER)
-      and badLoads < 10 and lastEventTimeStamp > TGC.rosterDb.lastScan and ( TGC.db.options.guildOptions.scanHistory or secondsLast < maxSecondsLast ) then
-        RequestMoreGuildHistoryCategoryEvents( TGC.guildId, GUILD_HISTORY_GENERAL_ROSTER )
-      zo_callLater(function() TGC.ScanHistory(numberOfEvents, badLoads) end, 10000)
-    else
-      if TGC.firstScan then
-        TGC.firstScan = false
-        TGC.ScanLoop()
-      end
-      TGC.MapEventsToMemory()
-      TGC.lastScanEvents = numberOfEvents
-    end
-  end
-
+  TGC.db.roster.guildData[guildId].lastScan = scanTime
 end

@@ -1,35 +1,6 @@
 function TGC.LoadDatabase()
   local TGCGuildVarDefaults = {
-    guildName = "The Gaming Council",
-    guildEvents = {
-      signupList = {},
-      eventList = {}
-    },
-    inventories = {
-      chests = {},
-      characters = {},
-      bank = {}
-    },
     options = {
-      guildOptions = {
-        randomMessages = {
-          "Hi, are you looking for a social/trials guild by chance? ^.^",
-          "Hi, are you looking for a guild by chance? :)",
-          "Hi, are you looking for a social and trials guild by chance? :)"
-        },
-        scanHistory = false
-      },
-      setTracker = {
-        tankRole = true,
-        stamDpsRole = true,
-        magDpsRole = true,
-        healRole = true,
-        supportRole = true,
-        pvpType = true,
-        pveType = true,
-        duplicateCount = 2,
-        onlyCorrectTrait = false
-      },
       mapFlags = {
         homePreviewsZone = false,
         homePreviews = false,
@@ -46,18 +17,39 @@ function TGC.LoadDatabase()
   }
 
   local TGCGuildRosterDefaults = {
-    lastScan = 0,
-    invitedMembers = {},
-    invitedHistory = {},
-    priorMembers = {},
+    options = {
+      guilds = {}
+    },
+    guildData = {}
   }
 
-  local TGCGearDB = {
-    sets = {},
-    builds = {}
+  local TGCSetDataDefaults = {
+    options = {
+      core = {
+        disabled = false,
+        junkNonSets = true,
+        junkLowLevel = true
+      },
+      environment = {
+        pvpType = true,
+        pveType = true
+      },
+      role = {
+        tankRole = true,
+        stamDpsRole = true,
+        magDpsRole = true,
+        healRole = true,
+        otherRole = true,
+        disabled = false
+      }
+    },
+    setOverrides = {},
+    customBuilds = {}
   }
 
-  TGC.rosterDb = ZO_SavedVars:NewAccountWide("TGC_SavedRosterData", 2, nil, TGCGuildRosterDefaults )
-  TGC.db = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 7, nil, TGCGuildVarDefaults )
-  TGC.gearDb = ZO_SavedVars:NewAccountWide("TGC_SavedGear", 1, nil, TGCSetDB )
+  TGC.db = {
+    roster = ZO_SavedVars:NewAccountWide("TGC_SavedRosterData", 4, nil, TGCGuildRosterDefaults ),
+    default = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 8, nil, TGCGuildVarDefaults ),
+    setData = ZO_SavedVars:NewAccountWide("TGC_SavedSetData", 3, nil, TGCSetDataDefaults )
+  }
 end

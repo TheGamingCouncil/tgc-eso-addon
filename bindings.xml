@@ -4,15 +4,6 @@
 			<Action name="TGC_DEBUG">
 				<Up>TGC.Debug()</Up>
 			</Action>
-			<Action name="TGC_GUILD_INVITE">
-				<Up>TGC.GuildInvite()</Up>
-			</Action>
-			<Action name="TGC_GUILD_ASK">
-				<Up>TGC.GuildAsk()</Up>
-			</Action>
-			<Action name="TGC_HIDE_MAP_CLUTTER">
-				<Up>TGC.HideMapClutter()</Up>
-			</Action>
 			<Action name="TGC_GUILD_MENU">
 				<Down>return ZO_KeybindStrip_HandleKeybindDown(keybind)</Down>
 			</Action>
