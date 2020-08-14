@@ -167,39 +167,41 @@ function guildRecruitLeaderboardList:BuildMasterList()
 
   guildData = TGC.db.roster.guildData[guildId]
 
-  local dropListCW = {}
-  local dropListLW = {}
-  for k, v in pairs(guildData.priorMembers) do
-    if guildData.priorMembers[k].eventType == 8 and guildData.priorMembers[k].member ~= nil then
-      local gmtTimeStamp = os.time( os.date("!*t", guildData.priorMembers[k].timeStamp ) )
-      if gmtTimeStamp > startOfCurrentWeek then
-        dropListCW[guildData.priorMembers[k].member] = true
-      elseif gmtTimeStamp > startOfLastWeek then
-        dropListLW[guildData.priorMembers[k].member] = true
+  if guildData ~= nil and guildData.priorMembers ~= nil and guildData.inviteHistory ~= nil then
+    local dropListCW = {}
+    local dropListLW = {}
+    for k, v in pairs(guildData.priorMembers) do
+      if guildData.priorMembers[k].eventType == 8 and guildData.priorMembers[k].member ~= nil then
+        local gmtTimeStamp = os.time( os.date("!*t", guildData.priorMembers[k].timeStamp ) )
+        if gmtTimeStamp > startOfCurrentWeek then
+          dropListCW[guildData.priorMembers[k].member] = true
+        elseif gmtTimeStamp > startOfLastWeek then
+          dropListLW[guildData.priorMembers[k].member] = true
+        end
       end
     end
-  end
 
-  local playerList = {}
+    local playerList = {}
 
-  for k, v in ipairs(guildData.inviteHistory) do
+    for k, v in ipairs(guildData.inviteHistory) do
 
-    local gmtTimeStamp = os.time( os.date("!*t", guildData.inviteHistory[k].timeStamp ) )
-    if gmtTimeStamp > startOfCurrentWeek and dropListCW[guildData.inviteHistory[k].invitee] == nil then
-      if playerList[guildData.inviteHistory[k].member] == nil then
-        playerList[guildData.inviteHistory[k].member] = { thisweek = 0, lastweek = 0 }
+      local gmtTimeStamp = os.time( os.date("!*t", guildData.inviteHistory[k].timeStamp ) )
+      if gmtTimeStamp > startOfCurrentWeek and dropListCW[guildData.inviteHistory[k].invitee] == nil then
+        if playerList[guildData.inviteHistory[k].member] == nil then
+          playerList[guildData.inviteHistory[k].member] = { thisweek = 0, lastweek = 0 }
+        end
+        playerList[guildData.inviteHistory[k].member].thisweek = playerList[guildData.inviteHistory[k].member].thisweek + 1
+      elseif gmtTimeStamp > startOfLastWeek and dropListLW[guildData.inviteHistory[k].invitee] == nil then
+        if playerList[guildData.inviteHistory[k].member] == nil then
+          playerList[guildData.inviteHistory[k].member] = { thisweek = 0, lastweek = 0 }
+        end
+        playerList[guildData.inviteHistory[k].member].lastweek = playerList[guildData.inviteHistory[k].member].lastweek + 1
       end
-      playerList[guildData.inviteHistory[k].member].thisweek = playerList[guildData.inviteHistory[k].member].thisweek + 1
-    elseif gmtTimeStamp > startOfLastWeek and dropListLW[guildData.inviteHistory[k].invitee] == nil then
-      if playerList[guildData.inviteHistory[k].member] == nil then
-        playerList[guildData.inviteHistory[k].member] = { thisweek = 0, lastweek = 0 }
-      end
-      playerList[guildData.inviteHistory[k].member].lastweek = playerList[guildData.inviteHistory[k].member].lastweek + 1
     end
-  end
 
-  for k, v in pairs(playerList) do
-    table.insert(self.masterList, { playername = k, thisweek = v.thisweek, lastweek = v.lastweek } )
+    for k, v in pairs(playerList) do
+      table.insert(self.masterList, { playername = k, thisweek = v.thisweek, lastweek = v.lastweek } )
+    end
   end
   
 end

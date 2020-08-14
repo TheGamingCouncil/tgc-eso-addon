@@ -47,7 +47,6 @@ function TGC.ScanHistory( guildId, nextGuildIndex, oldNumberOfEvents, badLoads )
     if DoesGuildHistoryCategoryHaveMoreEvents(guildId, GUILD_HISTORY_GENERAL_ROSTER)
      and badLoads < 10 and lastEventTimeStamp > TGC.db.roster.guildData[guildId].lastScan
      and secondsLast < maxSecondsLast then
-      d( "guildId " .. guildId )
       badLoads = TGC.Roe3ScanRequestMoreEvents( guildId, badLoads )
       zo_callLater(function() TGC.ScanHistory(guildId, nextGuildIndex, numberOfEvents, badLoads) end, 5000)
     else
