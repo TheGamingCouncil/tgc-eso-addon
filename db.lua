@@ -23,26 +23,40 @@ function TGC.LoadDatabase()
     guildData = {}
   }
 
-  local TGCSetDataDefaults = {
-    options = {
-      core = {
-        disabled = false,
-        junkNonSets = true,
-        junkLowLevel = true
-      },
-      environment = {
-        pvpType = true,
-        pveType = true
-      },
-      role = {
-        tankRole = true,
-        stamDpsRole = true,
-        magDpsRole = true,
-        healRole = true,
-        otherRole = true,
-        disabled = false
-      }
+  local TGCSetOptionsDefaults = {
+    core = {
+      disabled = false,
+      junkNonSets = true,
+      junkLowLevel = true,
+      trashGuides = false,
+      showBuilds = true
     },
+    environment = {
+      disabled = false,
+      pvp = true,
+      pve = true
+    },
+    role = {
+      disabled = false,
+      tank = true,
+      stam = true,
+      mag = true,
+      heal = true,
+      support = true,
+      other = true
+    },
+    class = {
+      disabled = false,
+      dk = true,
+      blade = true,
+      sorc = true,
+      plar = true,
+      den = true,
+      cro = true
+    }
+  };
+
+  local TGCSetDataDefaults = {
     setOverrides = {},
     customBuilds = {}
   }
@@ -50,6 +64,7 @@ function TGC.LoadDatabase()
   TGC.db = {
     roster = ZO_SavedVars:NewAccountWide("TGC_SavedRosterData", 4, nil, TGCGuildRosterDefaults ),
     default = ZO_SavedVars:NewAccountWide("TGC_SavedVariables", 8, nil, TGCGuildVarDefaults ),
-    setData = ZO_SavedVars:NewAccountWide("TGC_SavedSetData", 3, nil, TGCSetDataDefaults )
+    setData = ZO_SavedVars:NewAccountWide("TGC_SavedSetData", 4, nil, TGCSetDataDefaults ),
+    setOptions = ZO_SavedVars:NewAccountWide("TGC_SavedSetOptions", 3, nil, TGCSetOptionsDefaults ),
   }
 end

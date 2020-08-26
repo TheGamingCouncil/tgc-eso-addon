@@ -6,8 +6,43 @@ function breakLocation( location ){
   return location.split( "," ).map( location => location.trim() );
 }
 
-function buildTypes( builds ){
-  return "nil"
+function makeBuild( buildData ){
+  return `{
+        ["name"] = "${buildData.name}",
+        ["environment"] = TGC.enums.environment.${buildData.use ? buildData.use.toLowerCase() : "any"},
+        ["class"] = TGC.enums.class.${buildData.class || "any"},
+        ["role"] = TGC.enums.role.${buildData.type || "any"},
+        ["equipmentList"] = {}
+      }`;
+}
+
+function makeGuide( guideData ){
+    return `{
+        ["name"] = "${guideData.name}",
+        ["environment"] = TGC.enums.environment.${guideData.use ? guideData.use.toLowerCase() : "any"},
+        ["class"] = TGC.enums.class.${guideData.class || "any"},
+        ["role"] = TGC.enums.role.${guideData.type || "any"}
+      }`;
+}
+
+function buildGuideData( unfilteredSetBuilds ){
+  const setBuilds = Object.keys( unfilteredSetBuilds ).filter( buildUrl => builds[buildUrl].guide );
+  if( setBuilds.length > 0 ){ 
+    return `{\n      ${setBuilds.map( buildLink => makeGuide( builds[buildLink] ) ).join( ', ' ) }\n    }`;
+  }
+  else{
+    return "{}";
+  }
+}
+
+function buildSetBuilds( unfilteredSetBuilds ){
+  const setBuilds = Object.keys( unfilteredSetBuilds ).filter( buildUrl => !builds[buildUrl].guide );
+  if( setBuilds.length > 0 ){ 
+    return `{\n      ${setBuilds.map( buildLink => makeBuild( builds[buildLink] ) ).join( ', ' ) }\n    }`;
+  }
+  else{
+    return "{}";
+  }
 }
 
 function setToLua( set ){
@@ -17,7 +52,8 @@ function setToLua( set ){
     ["type"] = "${set.type}",
     ["locations"] = { "${breakLocation(set.location).join('", "')}" },
     ["items"] = { "${set.itemTypes.join('", "')}" },
-    ["buildTypes"] = ${buildTypes( set.builds )}
+    ["builds"] = ${buildSetBuilds( set.builds )},
+    ["guides"] = ${buildGuideData( set.builds )}
   }`;
 }
 

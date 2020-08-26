@@ -68,9 +68,16 @@ TGC.enums.roles = {
   support = 4005
 }
 
-TGC.enums.env = {
-  pvp = 5000,
-  pve = 5001
+TGC.enums.environment = {
+  pvp = 1,
+  pve = 2,
+  any = 0
+}
+
+TGC.enums.envNames = {
+ [0] = "AnyUse",
+ [1] = "PvP",
+ [2] = "PvE"
 }
 
 TGC.enums.setTypes = {
@@ -95,14 +102,48 @@ TGC.enums.undauntedChestText = {
   [8002] = "Urgarlag Chief-Bane"
 }
 
-TGC.enums.classes = {
-  templar = 4000,
-  dragonknight = 4001,
-  sorcerer = 4002,
-  nightblade = 4003,
-  warden = 4004,
-  necromancer = 4005,
-  any = 4006
+TGC.enums.class = {
+  plar = 1,
+  dk = 2,
+  sorc = 3,
+  blade = 4,
+  den = 5,
+  cro = 6,
+  wolf = 11,
+  vamp = 12,
+  any = 0
+}
+
+TGC.enums.classesNames = {
+  [0] = "AnyClass",
+  [1] = "Templar",
+  [2] = "Dragonknight",
+  [3] = "Sorcerer",
+  [4] = "Nightblade",
+  [5] = "Warden",
+  [6] = "Necromancer",
+  [11] = "WereWolf",
+  [12] = "Vampire"
+}
+
+TGC.enums.role = {
+  mag = 1,
+  stam = 2,
+  heal = 3,
+  tank = 4,
+  support = 5,
+  other = 6,
+  any = 0
+}
+
+TGC.enums.buildTypeName = {
+  [0] = "AnyRole",
+  [1] = "MagicDps",
+  [2] = "StaminaDps",
+  [3] = "Healer",
+  [4] = "Tank",
+  [5] = "Support",
+  [6] = "Other"
 }
 
 TGC.enums.setWeights = {

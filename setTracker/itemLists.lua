@@ -142,7 +142,7 @@ function TGC.AddSetIndicator(control, bagID, slotIndex, itemLink, relativePoint,
     else
       control:SetTexture("/TGC/assets/" .. linkType .. ".dds")
     end
-    control:SetHidden(TGC.db.setData.options.core.disabled)
+    control:SetHidden(TGC.db.setOptions.core.disabled)
     HandleTooltips(control, linkType, icontext, setName)
   end
 
@@ -170,19 +170,19 @@ function TGC.AddSetIndicator(control, bagID, slotIndex, itemLink, relativePoint,
     local creator = GetItemCreatorName( bagID, slotIndex )
     if creator == nil or creator == "" then
       if level < 50 or champLevel < 160 then
-        if hasSet and TGC.db.setData.options.core.junkLowLevel then
+        if hasSet and TGC.db.setOptions.core.junkLowLevel then
           linkName = "junk"
           linkText = "|cff0000Junk|r\nBelow CP160"
-        elseif hasSet and TGC.db.setData.options.core.junkLowLevel == false then
+        elseif hasSet and TGC.db.setOptions.core.junkLowLevel == false then
           linkName, linkText = TGC.CheckSetDatabase( setName, TGC.NormaliseEquipType( itemType, bagID, slotIndex, itemLink ) )
-        elseif hasSet == false and TGC.db.setData.options.core.junkNonSets then
+        elseif hasSet == false and TGC.db.setOptions.core.junkNonSets then
           linkName = "junk"
           linkText = "|cff0000Junk|r\nNot in a set"
         end
       else
         if hasSet then
           linkName, linkText = TGC.CheckSetDatabase( setName, TGC.NormaliseEquipType( itemType, bagID, slotIndex, itemLink ) )
-        elseif hasSet == false and TGC.db.setData.options.core.junkNonSets then
+        elseif hasSet == false and TGC.db.setOptions.core.junkNonSets then
           linkName = "junk"
           linkText = "|cff0000Junk|r\nNot in a set"
         end
@@ -264,12 +264,38 @@ end
 
 function TGC.EquipmentText( setData, ignoreTrash )
   local text = ""
-  if( setData["isTrash"] and ignoreTrash == false ) then
+  if( setData["isTrash"] and ignoreTrash == false ) or ( #setData.guides > 0 and #setData.builds == 0 and TGC.db.setOptions.core.trashGuides ) then
     text = "|cff0000Trash|r\n"
   end
+
   text = text .. "|c55ffffTypes|r: " .. setData["type"] .. "\n"
   text = text .. "|c55ffffWeight|r: " .. TGC.NormaliseWeight( setData["items"] ) .. "\n"
   text = text .. "|c55ffffLocations|r:\n" .. table.concat( setData["locations"], "\n" )
+
+  if #setData.builds > 0 then
+    text = text .. "\n|c55ffffBuild Types|r:"
+    local insertTypes = {}
+    for b=1,#setData.builds do
+      local nextType = TGC.enums.envNames[setData.builds[b].environment] .. " "
+      .. TGC.enums.buildTypeName[setData.builds[b].role]
+      if inTable( insertTypes, nextType ) == false then
+        insertTypes[#insertTypes + 1] = nextType
+        text = text .. "\n"
+        .. nextType
+      end
+    end
+  end
+  if #setData.guides > 0 then
+    text = text .. "\n|cffff55Guided|r"
+  end
+  if TGC.db.setOptions.core.showBuilds and #setData.builds > 0 then
+    text = text .. "\n|c55ffffBuilds|r:"
+    for b=1,#setData.builds do
+      text = text .. "\n"
+      .. setData.builds[b].name .. " "
+      .. TGC.enums.classesNames[setData.builds[b].class]
+    end
+  end
   -- text = text .. "|c55ffffTypes|r: " .. setData["itemTypesText"]
   -- text = text .. "\n" .. "|c55ffffLocation|r: " .. setData["location"]
 
@@ -294,6 +320,47 @@ function TGC.GetMergedSetItem( setName )
   end
 end
 
+function TGC.BuildsOfValue( builds, value, type )
+
+end
+
+function TGC.BuildSetTrashOverride( setData )
+  if #setData.builds == 0 then
+    return TGC.db.setOptions.core.trashGuides
+  end
+
+  local loops = {
+    ["environment"] = { "pve", "pvp" },
+    ["role"] = { "tank", "heal", "mag", "stam", "support", "other" },
+    ["class"] = { "dk", "blade", "sorc", "den", "cro", "plar", "wolf", "vamp" },
+  }
+
+  for type, options in pairs(loops) do
+    if TGC.db.setOptions[type].disabled == false then
+      local types = {}
+      for b=1,#setData.builds do
+        local value = setData.builds[b][type]
+        for o=1,#options do
+          local option = options[o]
+          if value == TGC.enums[type][option] then
+            if inTable( types, value ) == false and TGC.db.setOptions[type][option] == true then
+              types[#types + 1] = value
+            end
+          end
+        end
+      end
+      if #types == 0 then
+        return true
+      end
+    end
+  end
+  return false
+end
+
+function TGC.IsOverride( setName )
+  return TGC.db.setData.setOverrides[setName] ~= nil
+end
+
 function TGC.CheckSetDatabase( setName, itemType, ignoreTrash )
   
   if ignoreTrash == nil then
@@ -302,7 +369,7 @@ function TGC.CheckSetDatabase( setName, itemType, ignoreTrash )
 
   local setItem = TGC.GetMergedSetItem( setName )
 
-  if setItem ~= nil and setItem["isTrash"] then
+  if setItem ~= nil and ( setItem["isTrash"] or ( TGC.IsOverride( setName ) == false and TGC.BuildSetTrashOverride( setItem ) ) ) then
     return "trash", TGC.EquipmentText( setItem, ignoreTrash )
   elseif setItem ~= nil then
     --d( "is a build" )
