@@ -2,7 +2,7 @@ TGC = {
   enums = {},
   name = "TGC",
   addon = "TGC",
-  version = "0.0.16"
+  version = "0.0.17"
 }
 
 local LMM2 = LibStub("LibMainMenu-2.0")
