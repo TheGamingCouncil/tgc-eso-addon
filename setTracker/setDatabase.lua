@@ -1307,7 +1307,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -1726,7 +1726,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -3345,7 +3345,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -3937,7 +3937,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -4259,7 +4259,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -4386,7 +4386,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -4510,7 +4510,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -4749,7 +4749,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -5572,7 +5572,7 @@ TGC.setDb = {
       {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -5826,7 +5826,7 @@ TGC.setDb = {
       {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -5921,7 +5921,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -8156,7 +8156,7 @@ TGC.setDb = {
       {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }
@@ -8998,7 +8998,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -9665,7 +9665,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
@@ -9886,7 +9886,7 @@ TGC.setDb = {
       }, {
         ["name"] = "Beamplar",
         ["environment"] = TGC.enums.environment.pve,
-        ["class"] = TGC.enums.class.Beamplar,
+        ["class"] = TGC.enums.class.plar,
         ["role"] = TGC.enums.role.mag,
         ["equipmentList"] = {}
       }, {
