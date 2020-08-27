@@ -72,7 +72,8 @@ function TGC.SetGuildTabHook( LMM2 )
   dropdown:SetSelectedItem(GetGuildName( guilds[1] ))
   dropdown:SetSortsItems(false)
   local function OnItemSelect(_, choiceText, choice)
-   listData:RefreshData()
+    guildId = choices[choiceText]
+    listData:RefreshData()
   end	
   for key, value in pairs(choices) do
 		local entry = dropdown:CreateItemEntry(key, OnItemSelect)
